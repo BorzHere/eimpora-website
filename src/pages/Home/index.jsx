@@ -62,7 +62,7 @@ export default function Home() {
 
                 <Link
                   to="/platform"
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-sm font-medium text-orange-400 border border-white/20 bg-orange-500/5 hover:bg-white/10 hover:border-brand-500/40 transition-all"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-sm font-medium text-white border border-white/20 bg-white/5 hover:bg-white/10 hover:border-brand-500/40 transition-all"
                 >
                   Explore Platform Architecture
                 </Link>
