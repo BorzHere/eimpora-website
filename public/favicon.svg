@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <linearGradient id="eimporaTopLeft" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F5FF" />
+      <stop offset="60%" stop-color="#00D2FF" />
+      <stop offset="100%" stop-color="#00A5E0" />
+    </linearGradient>
+
+    <linearGradient id="eimporaTopRight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00E5FF" />
+      <stop offset="100%" stop-color="#008EA8" />
+    </linearGradient>
+
+    <linearGradient id="eimporaMidTop" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F0FF" />
+      <stop offset="100%" stop-color="#00A8E8" />
+    </linearGradient>
+
+    <linearGradient id="eimporaMidShadow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#008EA8" />
+      <stop offset="100%" stop-color="#004D63" />
+    </linearGradient>
+
+    <linearGradient id="eimporaBottomOuter" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00D2FF" />
+      <stop offset="50%" stop-color="#0096C7" />
+      <stop offset="100%" stop-color="#004356" />
+    </linearGradient>
+
+    <linearGradient id="eimporaBottomInner" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0077B6" />
+      <stop offset="100%" stop-color="#002D3A" />
+    </linearGradient>
+  </defs>
+
+  <path d="M10 28L50 5V25L26 39L10 72V28Z" fill="url(#eimporaTopLeft)" />
+  <path d="M50 5L90 28L73 38L50 25V5Z" fill="url(#eimporaTopRight)" />
+  <path d="M26 47L50 33L73 47L50 40Z" fill="url(#eimporaMidTop)" />
+  <path d="M26 47L50 40L73 47L50 61Z" fill="url(#eimporaMidShadow)" />
+  <path d="M26 61L50 75L73 61L50 67Z" fill="url(#eimporaBottomInner)" />
+  <path d="M10 72L26 61L50 75L73 61L90 72L50 95L10 72Z" fill="url(#eimporaBottomOuter)" />
+</svg>
