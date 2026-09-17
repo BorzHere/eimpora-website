@@ -37,7 +37,7 @@ export default function CTASection({
 
           <Link
             to="/pricing"
-            className=" w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-medium text-white border border-white/20 bg-white/5 hover:bg-white/10 hover:border-brand-500/40 transition-all text-sm"
+            className=" w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-medium text-orange-400 hover:text-orange-500 border border-white/20 bg-orange-500/5 hover:border-orange-500/40 transition-all text-sm"
           >
             {secondaryCtaText}
           </Link>
@@ -45,15 +45,15 @@ export default function CTASection({
 
         <div className="mt-10 pt-8 border-t border-white/10 flex flex-wrap items-center justify-center gap-8 text-xs font-medium text-slate-400">
           <div className="flex items-center gap-2">
-            <CheckCircle2 className="w-4 h-4 text-brand-400" />
+            <CheckCircle2 className="w-4 h-4 text-orange-400" />
             Dedicated Tenant Architecture
           </div>
           <div className="flex items-center gap-2">
-            <CheckCircle2 className="w-4 h-4 text-brand-400" />
+            <CheckCircle2 className="w-4 h-4 text-orange-400" />
             25 Canonical Modules Included
           </div>
           <div className="flex items-center gap-2">
-            <CheckCircle2 className="w-4 h-4 text-brand-400" />
+            <CheckCircle2 className="w-4 h-4 text-orange-400" />
             Custom SLA & Support Commitments
           </div>
         </div>

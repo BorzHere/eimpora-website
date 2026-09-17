@@ -43,7 +43,7 @@ const DESKTOP_MODULES = [
     name: 'Multi-Entity Payroll Engine',
     badge: 'Zero Discrepancy',
     icon: Banknote,
-    color: 'from-emerald-500 to-teal-600',
+    color: 'from-orange-500 to-amber-600',
     tagline: 'Automated multi-currency payroll processing with instant statutory lock.',
     metrics: [
       { label: 'Monthly Cycle', value: '$4.62M' },
@@ -73,7 +73,7 @@ const DESKTOP_MODULES = [
     name: 'Biometric Attendance & Shift Sync',
     badge: 'Real-Time Sync',
     icon: Clock,
-    color: 'from-purple-500 to-indigo-600',
+    color: 'from-cyan-500 to-teal-600',
     tagline: 'Hardware biometric terminal ingestion and geofenced mobile attendance.',
     metrics: [
       { label: 'Punch Reliability', value: '99.9%' },
@@ -103,7 +103,7 @@ const DESKTOP_MODULES = [
     name: 'Governed AI & Flight Intelligence',
     badge: 'AI Engine',
     icon: Sparkles,
-    color: 'from-brand-500 to-cyan-600',
+    color: 'from-orange-500 to-rose-600',
     tagline: 'Predictive turn-over alerts and intelligent policy-guided automation.',
     metrics: [
       { label: 'Turnover Risk Precision', value: '94.2%' },
@@ -229,7 +229,7 @@ export default function DesktopModuleSection() {
       />
 
       {/* Desktop Window Frame Container */}
-      <div className="mt-12 relative rounded-2xl border border-slate-300 bg-navy-950 text-white shadow-2xl overflow-hidden transition-all duration-500 ">
+      <div className="mt-12 relative rounded-2xl border border-slate-300 bg-navy-950 text-white shadow-2xl overflow-hidden transition-all duration-500">
 
         {/* Top Desktop Window Bar */}
         <div className="flex items-center justify-between border-b border-white/10 px-4 py-3 bg-navy-900/90 backdrop-blur-md select-none">
@@ -258,7 +258,7 @@ export default function DesktopModuleSection() {
 
             <button
               onClick={startBootSequence}
-              className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-brand-500/10 border border-brand-500/30 text-brand-300 hover:bg-brand-500/20 transition-all text-xs font-semibold"
+              className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-orange-500/10 border border-orange-500/30 text-orange-300 hover:bg-orange-500/20 transition-all text-xs font-semibold"
               title="Replay System Boot Animation"
             >
               <RotateCcw className="w-3.5 h-3.5" />
@@ -274,12 +274,12 @@ export default function DesktopModuleSection() {
           {bootStage === 'loading' && (
             <div className="flex flex-col items-center justify-center py-16 space-y-6 animate-fade-in text-center max-w-lg mx-auto">
               <div className="relative">
-                <div className="w-20 h-20 rounded-2xl bg-gradient-to-tr from-brand-500 via-cyan-400 to-brand-300 p-0.5 shadow-cyan-glow-lg animate-pulse">
+                <div className="w-20 h-20 rounded-2xl bg-gradient-to-tr from-brand-500 via-orange-400 to-brand-300 p-0.5 shadow-cyan-glow-lg animate-pulse">
                   <div className="w-full h-full bg-navy-950 rounded-2xl flex items-center justify-center">
                     <Cpu className="w-10 h-10 text-brand-400 animate-bounce" />
                   </div>
                 </div>
-                <div className="absolute -bottom-1 -right-1 w-6 h-6 rounded-full bg-brand-500 text-navy-950 flex items-center justify-center font-bold text-xs shadow-md">
+                <div className="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-brand-500 text-navy-950 flex items-center justify-center font-bold text-[11px] shadow-md">
                   4.2
                 </div>
               </div>
@@ -290,7 +290,7 @@ export default function DesktopModuleSection() {
                     <Terminal className="w-3.5 h-3.5" />
                     Initializing Desktop Kernel
                   </span>
-                  <span className="font-mono text-brand-400">{loadingProgress}%</span>
+                  <span className="font-mono text-orange-400">{loadingProgress}%</span>
                 </div>
 
                 {/* Progress Bar */}
@@ -316,7 +316,7 @@ export default function DesktopModuleSection() {
           {bootStage === 'reveal-name' && (
             <div className="flex flex-col items-center justify-center py-16 space-y-6 text-center animate-fade-in">
               <div className="inline-flex items-center gap-2 rounded-full border border-brand-400/40 bg-brand-500/10 px-4 py-1.5 text-xs font-semibold text-brand-300 shadow-cyan-glow uppercase tracking-widest animate-pulse">
-                <Sparkles className="w-4 h-4 text-brand-400" />
+                <Sparkles className="w-4 h-4 text-orange-400" />
                 Boot Authorization Passed
               </div>
 
@@ -331,7 +331,7 @@ export default function DesktopModuleSection() {
               </div>
 
               <div className="flex items-center gap-2 text-xs text-slate-400 font-mono">
-                <RefreshCw className="w-3.5 h-3.5 animate-spin text-brand-400" />
+                <RefreshCw className="w-3.5 h-3.5 animate-spin text-orange-400" />
                 Rendering Desktop Module Interface...
               </div>
             </div>
@@ -347,7 +347,7 @@ export default function DesktopModuleSection() {
                     <h3 className="font-display text-xl font-bold text-white">
                       Eimpora Desktop Workstation
                     </h3>
-                    <span className="px-2 py-0.5 rounded text-[10px] font-extrabold bg-brand-500/20 text-brand-300 border border-brand-500/30 uppercase tracking-wider">
+                    <span className="px-2 py-0.5 rounded text-[10px] font-extrabold bg-orange-500/20 text-orange-300 border border-orange-500/30 uppercase tracking-wider">
                       v4.2 Enterprise
                     </span>
                   </div>
@@ -369,19 +369,22 @@ export default function DesktopModuleSection() {
                 {DESKTOP_MODULES.map((mod) => {
                   const Icon = mod.icon;
                   const isActive = mod.id === selectedModuleId;
+                  const isOrangeModule = mod.color.includes('orange') || mod.color.includes('amber');
                   return (
                     <button
                       key={mod.id}
                       onClick={() => setSelectedModuleId(mod.id)}
                       className={`group relative p-3 rounded-xl border text-left transition-all duration-200 flex flex-col justify-between ${isActive
-                        ? 'bg-gradient-to-b from-navy-850 to-navy-900 border-brand-400/60 shadow-cyan-glow'
+                        ? isOrangeModule
+                          ? 'bg-gradient-to-b from-navy-850 to-navy-900 border-orange-500/80 shadow-lg shadow-orange-500/10'
+                          : 'bg-gradient-to-b from-navy-850 to-navy-900 border-cyan-400/80 shadow-cyan-glow'
                         : 'bg-navy-900/40 border-white/5 hover:border-white/20 hover:bg-navy-900/70'
                         }`}
                     >
                       {isActive && (
                         <span className="absolute -top-1 -right-1 flex h-3 w-3">
-                          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75" />
-                          <span className="relative inline-flex rounded-full h-3 w-3 bg-brand-400" />
+                          <span className={`animate-ping absolute inline-flex h-full w-full rounded-full opacity-75 ${isOrangeModule ? 'bg-orange-400' : 'bg-cyan-400'}`} />
+                          <span className={`relative inline-flex rounded-full h-3 w-3 ${isOrangeModule ? 'bg-orange-400' : 'bg-cyan-400'}`} />
                         </span>
                       )}
 
@@ -395,7 +398,7 @@ export default function DesktopModuleSection() {
                       </div>
 
                       <div>
-                        <div className={`text-xs font-bold transition-colors ${isActive ? 'text-brand-300' : 'text-slate-200 group-hover:text-white'}`}>
+                        <div className={`text-xs font-bold transition-colors ${isActive ? (isOrangeModule ? 'text-orange-300' : 'text-cyan-300') : 'text-slate-200 group-hover:text-white'}`}>
                           {mod.name}
                         </div>
                       </div>
@@ -410,8 +413,8 @@ export default function DesktopModuleSection() {
                 {/* Left Overview Column */}
                 <div className="lg:col-span-7 space-y-5">
                   <div className="space-y-2">
-                    <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded bg-brand-500/10 border border-brand-500/20 text-xs font-bold text-brand-300">
-                      <Zap className="w-3.5 h-3.5 text-brand-400" />
+                    <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded bg-orange-500/10 border border-orange-500/20 text-xs font-bold text-orange-300">
+                      <Zap className="w-3.5 h-3.5 text-orange-400" />
                       Active Desktop Module View
                     </div>
                     <h4 className="font-display text-2xl font-bold text-white flex items-center gap-2">
@@ -424,14 +427,17 @@ export default function DesktopModuleSection() {
 
                   {/* Metrics Cards */}
                   <div className="grid grid-cols-3 gap-3">
-                    {activeModule.metrics.map((m, idx) => (
-                      <div key={idx} className="p-3 rounded-lg border border-white/10 bg-navy-950/60">
-                        <div className="text-[11px] text-slate-400 font-medium">{m.label}</div>
-                        <div className="text-base sm:text-lg font-bold text-brand-300 font-display mt-0.5">
-                          {m.value}
+                    {activeModule.metrics.map((m, idx) => {
+                      const isOrangeVal = idx % 2 === 1;
+                      return (
+                        <div key={idx} className="p-3 rounded-lg border border-white/10 bg-navy-950/60">
+                          <div className="text-[11px] text-slate-400 font-medium">{m.label}</div>
+                          <div className={`text-base sm:text-lg font-bold font-display mt-0.5 ${isOrangeVal ? 'text-orange-400' : 'text-cyan-300'}`}>
+                            {m.value}
+                          </div>
                         </div>
-                      </div>
-                    ))}
+                      );
+                    })}
                   </div>
 
                   {/* Core Capabilities */}
@@ -442,7 +448,7 @@ export default function DesktopModuleSection() {
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
                       {activeModule.features.map((feat, idx) => (
                         <div key={idx} className="flex items-start gap-2 text-slate-300 p-2 rounded bg-white/5 border border-white/5">
-                          <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                          <CheckCircle2 className={`w-4 h-4 ${idx % 2 === 0 ? 'text-orange-400' : 'text-emerald-400'} shrink-0 mt-0.5`} />
                           <span>{feat}</span>
                         </div>
                       ))}
@@ -477,7 +483,7 @@ export default function DesktopModuleSection() {
                         <div key={idx} className="p-3 rounded-lg border border-white/5 bg-navy-900/60 flex items-center justify-between text-xs">
                           <div>
                             <div className="font-semibold text-white">{item.label}</div>
-                            <div className="text-[11px] text-brand-300 font-mono mt-0.5">{item.val}</div>
+                            <div className="text-[11px] text-orange-300 font-mono mt-0.5">{item.val}</div>
                           </div>
                           <span className="text-[10px] font-bold text-slate-300 bg-white/10 px-2 py-0.5 rounded">
                             {item.status}
@@ -488,8 +494,8 @@ export default function DesktopModuleSection() {
                   </div>
 
                   {/* Operational Security Footnote */}
-                  <div className="p-3 rounded-lg border border-brand-500/20 bg-brand-500/5 text-xs text-slate-300 flex items-center gap-2.5">
-                    <ShieldCheck className="w-5 h-5 text-brand-400 shrink-0" />
+                  <div className="p-3 rounded-lg border border-orange-500/20 bg-orange-500/5 text-xs text-slate-300 flex items-center gap-2.5">
+                    <ShieldCheck className="w-5 h-5 text-orange-400 shrink-0" />
                     <p className="text-[11px] leading-tight">
                       All desktop module mutations are verified against RBAC security matrices and hashed into the immutable central log.
                     </p>

@@ -24,8 +24,8 @@ export default function Footer() {
 
           {/* Column 2: Platform & AI */}
           <div className="space-y-3">
-            <h4 className="font-display font-semibold text-white text-sm uppercase tracking-wider">Platform & AI</h4>
-            <ul className="space-y-3 text-[13px]">
+            <h4 className="font-display font-semibold text-brand-500 text-sm uppercase tracking-wider">Platform & AI</h4>
+            <ul className="space-y-3 text-[13px] text-white/85">
               <li><Link to="/platform" className="hover:text-brand-400 transition-colors">Platform Architecture</Link></li>
               <li><Link to="/platform#layers" className="hover:text-brand-400 transition-colors">5-Layer Architecture</Link></li>
               <li><Link to="/platform#roles" className="hover:text-brand-400 transition-colors">Role-Based Experiences</Link></li>
@@ -37,22 +37,22 @@ export default function Footer() {
 
           {/* Column 3: Canonical Modules */}
           <div className="space-y-3">
-            <h4 className="font-display font-semibold text-white text-sm uppercase tracking-wider">Product Modules</h4>
-            <ul className="space-y-3 text-[13px]">
+            <h4 className="font-display font-semibold text-brand-500 text-sm uppercase tracking-wider">Product Modules</h4>
+            <ul className="space-y-3 text-[13px] text-white/85">
               <li><Link to="/modules/core-hr" className="hover:text-brand-400 transition-colors">Core HR & Registry</Link></li>
               <li><Link to="/modules/attendance" className="hover:text-brand-400 transition-colors">Time & Attendance Engine</Link></li>
               <li><Link to="/modules/payroll" className="hover:text-brand-400 transition-colors">Multi-Entity Payroll</Link></li>
               <li><Link to="/modules/recruitment" className="hover:text-brand-400 transition-colors">ATS & AI Recruiting</Link></li>
               <li><Link to="/modules/performance" className="hover:text-brand-400 transition-colors">Performance & OKRs</Link></li>
               <li><Link to="/modules/workforce-planning" className="hover:text-brand-400 transition-colors">Workforce Planning</Link></li>
-              <li><Link to="/modules" className="hover:text-brand-400 transition-colors text-brand-400 font-semibold">Explore All 25 Modules →</Link></li>
+              <li><Link to="/modules" className="hover:text-brand-400 transition-colors text-orange-300 font-medium">Explore All 25 Modules →</Link></li>
             </ul>
           </div>
 
           {/* Column 4: Industries & Legal */}
           <div className="space-y-3">
-            <h4 className="font-display font-semibold text-white text-sm uppercase tracking-wider">Industries & Trust</h4>
-            <ul className="space-y-3 text-[13px]">
+            <h4 className="font-display font-semibold text-brand-500 text-sm uppercase tracking-wider">Industries & Trust</h4>
+            <ul className="space-y-3 text-[13px] text-white/85">
               <li><Link to="/industries/manufacturing" className="hover:text-brand-400 transition-colors">Manufacturing</Link></li>
               <li><Link to="/industries/healthcare" className="hover:text-brand-400 transition-colors">Healthcare Systems</Link></li>
               <li><Link to="/industries/banking-finance" className="hover:text-brand-400 transition-colors">Banking & Finance</Link></li>
@@ -66,7 +66,7 @@ export default function Footer() {
 
         <div className="mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between text-xs text-slate-400 gap-4">
           <p>© {new Date().getFullYear()} Eimpora Software Technologies Inc. All rights reserved. Enterprise Workforce Operating Platform.</p>
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-6 text-white/85">
             <Link to="/privacy" className="hover:text-white transition-colors">Privacy</Link>
             <Link to="/terms" className="hover:text-white transition-colors">Terms</Link>
             <Link to="/security" className="hover:text-white transition-colors">Security</Link>

@@ -94,10 +94,10 @@ export default function BookDemo() {
     <>
       <section className="relative pt-44 pb-36 bg-navy-950 text-white overflow-hidden text-center">
         <div className="absolute inset-0 bg-radial-glow opacity-80" aria-hidden="true" />
-        
+
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8  z-10">
           <div className="inline-flex items-center gap-2 rounded-full border border-brand-500/30 bg-brand-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-brand-400 backdrop-blur-md mb-6">
-            <Sparkles className="w-4 h-4 text-brand-400 animate-pulse" />
+            <Sparkles className="w-3.5 h-3.5 text-orange-400 animate-pulse" />
             Private Discovery Session
           </div>
 
@@ -106,7 +106,7 @@ export default function BookDemo() {
             <span className="text-gradient-cyan">Eimpora Platform Demo.</span>
           </h1>
 
-          <p className="mt-4 text-base sm:text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
+          <p className="mt-4 text-base sm:text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed font-light">
             Schedule a specialist-led walkthrough tailored specifically to your organization's legal entity structure, shift operations, multi-currency payroll, and compliance requirements.
           </p>
         </div>
@@ -144,7 +144,7 @@ export default function BookDemo() {
                     </p>
                   </div>
 
-                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-cyan-500/40 bg-cyan-500/10 text-cyan-400 text-[11px] font-bold tracking-wide uppercase shrink-0">
+                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-brand-500/40 bg-brand-500/10 text-brand-400 text-[11px] font-bold tracking-wide uppercase shrink-0">
                     Enterprise Priority
                   </div>
                 </div>
@@ -153,7 +153,7 @@ export default function BookDemo() {
               {/* Primary Area of Interest Selector */}
               <div className="space-y-3">
                 <label className="text-xs font-semibold text-slate-300 block">
-                  Primary Area of Interest <span className="text-brand-400">*</span>
+                  Primary Area of Interest <span className="text-orange-400">*</span>
                 </label>
 
                 <div className="flex flex-wrap gap-2">
@@ -164,8 +164,8 @@ export default function BookDemo() {
                         key={area}
                         type="button"
                         onClick={() => setActiveInterest(area)}
-                        className={`px-3.5 py-2 rounded-xl text-xs font-bold transition-all duration-200 cursor-pointer ${isActive
-                          ? 'bg-gradient-to-r from-brand-400 to-brand-300 text-navy-950 shadow-cyan-glow scale-105'
+                        className={`px-3.5 py-2 rounded-lg text-xs font-bold transition-all duration-200 cursor-pointer ${isActive
+                          ? 'bg-gradient-to-r from-brand-400 to-brand-500 text-navy-950 shadow-cyan-glow scale-105'
                           : 'bg-navy-900/60 text-slate-300 border border-white/10 hover:border-white/30 hover:text-white'
                           }`}
                       >
@@ -183,7 +183,7 @@ export default function BookDemo() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div className="space-y-1">
                     <label className="text-xs font-semibold text-slate-300 block">
-                      Full Name <span className="text-brand-400">*</span>
+                      Full Name <span className="text-orange-400">*</span>
                     </label>
                     <input
                       type="text"
@@ -197,7 +197,7 @@ export default function BookDemo() {
 
                   <div className="space-y-1">
                     <label className="text-xs font-semibold text-slate-300 block">
-                      Work Email <span className="text-brand-400">*</span>
+                      Work Email <span className="text-orange-400">*</span>
                     </label>
                     <input
                       type="email"
@@ -214,7 +214,7 @@ export default function BookDemo() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div className="space-y-1">
                     <label className="text-xs font-semibold text-slate-300 block">
-                      Organization / Entity <span className="text-brand-400">*</span>
+                      Organization / Entity <span className="text-orange-400">*</span>
                     </label>
                     <input
                       type="text"
@@ -228,7 +228,7 @@ export default function BookDemo() {
 
                   <div className="space-y-1">
                     <label className="text-xs font-semibold text-slate-300 block">
-                      Job Title <span className="text-brand-400">*</span>
+                      Job Title <span className="text-orange-400">*</span>
                     </label>
                     <input
                       type="text"
@@ -245,7 +245,7 @@ export default function BookDemo() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div className="space-y-1 relative">
                     <label className="text-xs font-semibold text-slate-300 block">
-                      Workforce Size <span className="text-brand-400">*</span>
+                      Workforce Size <span className="text-orange-400">*</span>
                     </label>
                     <div className="relative">
                       <select
@@ -265,7 +265,7 @@ export default function BookDemo() {
 
                   <div className="space-y-1 relative">
                     <label className="text-xs font-semibold text-slate-300 block">
-                      Headquarters Region <span className="text-brand-400">*</span>
+                      Headquarters Region <span className="text-orange-400">*</span>
                     </label>
                     <div className="relative">
                       <select
@@ -352,7 +352,7 @@ export default function BookDemo() {
 
               {/* Top Eyebrow */}
               <div className="flex items-center gap-2 text-xs font-extrabold text-brand-600 uppercase tracking-widest">
-                <span className="h-0.5 w-6 bg-brand-600 inline-block" />
+                <span className="h-0.5 w-6 bg-orange-600 inline-block" />
                 EIMPORA PRIVATE DEMONSTRATION
               </div>
 
@@ -373,8 +373,8 @@ export default function BookDemo() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
 
                 {/* Feature 1 */}
-                <div className="space-y-2 p-5 rounded-2xl border border-slate-200 bg-white shadow-sm hover:border-brand-500/40 transition-colors">
-                  <div className="w-9 h-9 rounded-xl bg-brand-500/10 border border-brand-500/20 flex items-center justify-center text-brand-600">
+                <div className="space-y-2 p-5 rounded-2xl border border-slate-200 bg-white shadow-sm hover:border-orange-500/40 transition-colors">
+                  <div className="w-9 h-9 rounded-xl bg-orange-500/10 border border-orange-500/20 flex items-center justify-center text-orange-600">
                     <Sparkles className="w-4 h-4" />
                   </div>
                   <h3 className="font-display text-sm font-bold text-navy-950">
@@ -386,8 +386,8 @@ export default function BookDemo() {
                 </div>
 
                 {/* Feature 2 */}
-                <div className="space-y-2 p-5 rounded-2xl border border-slate-200 bg-white shadow-sm hover:border-brand-500/40 transition-colors">
-                  <div className="w-9 h-9 rounded-xl bg-brand-500/10 border border-brand-500/20 flex items-center justify-center text-brand-600">
+                <div className="space-y-2 p-5 rounded-2xl border border-slate-200 bg-white shadow-sm hover:border-cyan-500/40 transition-colors">
+                  <div className="w-9 h-9 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-600">
                     <Lock className="w-4 h-4" />
                   </div>
                   <h3 className="font-display text-sm font-bold text-navy-950">
@@ -399,8 +399,8 @@ export default function BookDemo() {
                 </div>
 
                 {/* Feature 3 */}
-                <div className="space-y-2 p-5 rounded-2xl border border-slate-200 bg-white shadow-sm hover:border-brand-500/40 transition-colors">
-                  <div className="w-9 h-9 rounded-xl bg-brand-500/10 border border-brand-500/20 flex items-center justify-center text-brand-600">
+                <div className="space-y-2 p-5 rounded-2xl border border-slate-200 bg-white shadow-sm hover:border-orange-500/40 transition-colors">
+                  <div className="w-9 h-9 rounded-xl bg-orange-500/10 border border-orange-500/20 flex items-center justify-center text-orange-600">
                     <BarChart3 className="w-4 h-4" />
                   </div>
                   <h3 className="font-display text-sm font-bold text-navy-950">
@@ -412,8 +412,8 @@ export default function BookDemo() {
                 </div>
 
                 {/* Feature 4 */}
-                <div className="space-y-2 p-5 rounded-2xl border border-slate-200 bg-white shadow-sm hover:border-brand-500/40 transition-colors">
-                  <div className="w-9 h-9 rounded-xl bg-brand-500/10 border border-brand-500/20 flex items-center justify-center text-brand-600">
+                <div className="space-y-2 p-5 rounded-2xl border border-slate-200 bg-white shadow-sm hover:border-cyan-500/40 transition-colors">
+                  <div className="w-9 h-9 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-600">
                     <Users className="w-4 h-4" />
                   </div>
                   <h3 className="font-display text-sm font-bold text-navy-950">

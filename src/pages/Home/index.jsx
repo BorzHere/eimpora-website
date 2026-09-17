@@ -28,7 +28,7 @@ export default function Home() {
   return (
     <div className="space-y-0">
       {/* SECTION 1 — ENTERPRISE HERO (DARK SECTION WITH EIMPORA HEXAGON SVG) */}
-      <section className="relative pt-32  pb-24 overflow-hidden bg-navy-950 text-white">
+      <section className="relative pt-32 pb-24 overflow-hidden bg-navy-950 text-white">
         <div className="absolute inset-0 bg-radial-glow opacity-80" aria-hidden="true" />
         <div className="absolute inset-0 bg-grid-pattern opacity-30" aria-hidden="true" />
 
@@ -37,8 +37,8 @@ export default function Home() {
 
             {/* Left Column: Hero Copy & CTA */}
             <div className="lg:col-span-6 text-left space-y-6">
-              <div className="inline-flex items-center gap-2 rounded-full border border-brand-500/25 bg-brand-500/10 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-widest text-brand-400 backdrop-blur-md">
-                <Sparkles className="w-3.5 h-3.5" />
+              <div className="inline-flex items-center gap-2 rounded-full border border-orange-500/30 bg-gradient-to-r from-orange-500/10 via-amber-500/10 to-orange-500/10 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-widest text-orange-400 backdrop-blur-md">
+                <Sparkles className="w-3.5 h-3.5 text-orange-400" />
                 AI-Embedded Enterprise Workforce Platform
               </div>
 
@@ -62,7 +62,7 @@ export default function Home() {
 
                 <Link
                   to="/platform"
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-sm font-medium text-white border border-white/20 bg-white/5 hover:bg-white/10 hover:border-brand-500/40 transition-all"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-sm font-medium text-orange-400 hover:text-orange-500 border border-white/20 bg-orange-500/5 hover:border-orange-500/40 transition-all"
                 >
                   Explore Platform Architecture
                 </Link>
@@ -70,21 +70,21 @@ export default function Home() {
 
               {/* Trust Indicators */}
               <div className="pt-6 border-t border-white/10 flex flex-wrap items-center gap-6 text-xs text-slate-400">
-                <Link to="/modules" className="flex items-center gap-2 hover:text-brand-400 transition-colors">
-                  <ShieldCheck className="w-4 h-4 text-brand-400" />
+                <Link to="/modules" className="flex items-center gap-2 hover:text-orange-400 transition-colors">
+                  <ShieldCheck className="w-4 h-4 text-orange-400" />
                   25 Canonical Modules
                 </Link>
-                <Link to="/solutions/time-payroll-operations" className="flex items-center gap-2 hover:text-brand-400 transition-colors">
-                  <ShieldCheck className="w-4 h-4 text-brand-400" />
+                <Link to="/solutions/time-payroll-operations" className="flex items-center gap-2 hover:text-cyan-400 transition-colors">
+                  <ShieldCheck className="w-4 h-4 text-cyan-400" />
                   Multi-Entity & Multi-Currency
                 </Link>
-                <Link to="/security" className="flex items-center gap-2 hover:text-brand-400 transition-colors">
-                  <ShieldCheck className="w-4 h-4 text-brand-400" />
+                <Link to="/security" className="flex items-center gap-2 hover:text-orange-400 transition-colors">
+                  <ShieldCheck className="w-4 h-4 text-orange-400" />
                   AES-256 Hashed Audit
                 </Link>
               </div>
             </div>
-            <div></div>
+            <div />
 
             {/* Right Column: Interactive EimporaHexagon SVG */}
             <div className="lg:col-span-5 flex justify-end items-end">
@@ -129,20 +129,20 @@ export default function Home() {
             </div>
 
             {/* Connected Eimpora State */}
-            <div className="lg:col-span-7 rounded-2xl border border-brand-500/40 bg-navy-950 text-white p-6 space-y-4 shadow-xl">
+            <div className="lg:col-span-7 rounded-2xl border border-orange-500/30 bg-navy-950 text-white p-6 space-y-4 shadow-xl shadow-orange-500/5">
               <div className="flex items-center justify-between border-b border-white/10 pb-3">
-                <span className="text-xs font-bold uppercase tracking-wider text-brand-400">Eimpora Unified State</span>
-                <span className="text-[10px] font-semibold text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">1 Connected Operating Substrate</span>
+                <span className="text-xs font-bold uppercase tracking-wider text-orange-400">Eimpora Unified State</span>
+                <span className="text-[10px] font-semibold text-orange-400 bg-orange-500/10 border border-orange-500/20 px-2.5 py-0.5 rounded-full">1 Connected Operating Substrate</span>
               </div>
               <div className="grid grid-cols-3 gap-3 text-xs">
-                <Link to="/modules/core-hr" className="p-3 rounded-lg border border-brand-500/30 bg-brand-500/10 text-white font-medium hover:border-brand-400 transition-colors">Core HR & Org</Link>
-                <Link to="/modules/attendance" className="p-3 rounded-lg border border-brand-500/30 bg-brand-500/10 text-white font-medium hover:border-brand-400 transition-colors">Biometric Shift Sync</Link>
-                <Link to="/modules/payroll" className="p-3 rounded-lg border border-brand-500/30 bg-brand-500/10 text-white font-medium hover:border-brand-400 transition-colors">Multi-Entity Payroll</Link>
-                <Link to="/ai" className="p-3 rounded-lg border border-brand-500/30 bg-brand-500/10 text-white font-medium hover:border-brand-400 transition-colors">Governed AI Engine</Link>
-                <Link to="/modules/recruitment" className="p-3 rounded-lg border border-brand-500/30 bg-brand-500/10 text-white font-medium hover:border-brand-400 transition-colors">ATS & Onboarding</Link>
-                <Link to="/modules/executive-dashboards" className="p-3 rounded-lg border border-brand-500/30 bg-brand-500/10 text-white font-medium hover:border-brand-400 transition-colors">Executive Command</Link>
+                <Link to="/modules/core-hr" className="p-3 rounded-lg border border-cyan-500/30 bg-cyan-500/10 text-white font-medium hover:border-cyan-400 transition-colors">Core HR & Org</Link>
+                <Link to="/modules/attendance" className="p-3 rounded-lg border border-orange-500/30 bg-orange-500/10 text-white font-medium hover:border-orange-400 transition-colors">Biometric Shift Sync</Link>
+                <Link to="/modules/payroll" className="p-3 rounded-lg border border-orange-500/30 bg-orange-500/10 text-white font-medium hover:border-orange-400 transition-colors">Multi-Entity Payroll</Link>
+                <Link to="/ai" className="p-3 rounded-lg border border-cyan-500/30 bg-cyan-500/10 text-white font-medium hover:border-cyan-400 transition-colors">Governed AI Engine</Link>
+                <Link to="/modules/recruitment" className="p-3 rounded-lg border border-orange-500/30 bg-orange-500/10 text-white font-medium hover:border-orange-400 transition-colors">ATS & Onboarding</Link>
+                <Link to="/modules/executive-dashboards" className="p-3 rounded-lg border border-cyan-500/30 bg-cyan-500/10 text-white font-medium hover:border-cyan-400 transition-colors">Executive Command</Link>
               </div>
-              <p className="text-xs text-brand-300 font-semibold">Zero-penny payroll discrepancies, real-time biometric synchronization, and 100% auditable workflow execution.</p>
+              <p className="text-xs text-orange-300 font-semibold">Zero-penny payroll discrepancies, real-time biometric synchronization, and 100% auditable workflow execution.</p>
             </div>
           </div>
         </div>
@@ -160,30 +160,36 @@ export default function Home() {
 
           <div className="mt-12 space-y-4">
             {[
-              { num: 'Layer 1', title: 'Experience & Access Layer', desc: 'Web command center, mobile biometric app, self-service portals, and Slack/Teams integrations.', link: '/platform#layers' },
-              { num: 'Layer 2', title: 'Talent Lifecycle & Operations Domain', desc: 'Core HR, ATS recruitment, onboarding, leave, attendance biometrics, and LMS skills.', link: '/platform#lifecycle' },
-              { num: 'Layer 3', title: 'Multi-Entity Payroll & Financial Engine', desc: 'Multi-currency payroll calculation, statutory compliance, expense scanning, and bank payout.', link: '/modules/payroll' },
-              { num: 'Layer 4', title: 'Governed AI & Predictive Intelligence', desc: 'Payroll anomaly checks, turnover flight risk prediction, candidate match scoring, and policy rule validation.', link: '/ai' },
-              { num: 'Layer 5', title: 'Shared Platform & Governance Substrate', desc: 'AES-256 column encryption, RBAC matrix, immutable audit log, and API webhook gateway.', link: '/security' },
-            ].map((layer, idx) => (
-              <div
-                key={idx}
-                className="group p-6 rounded-xl border border-white/10 bg-navy-900/60 hover:border-brand-500/40 hover:bg-navy-900 transition-all flex flex-col md:flex-row items-start md:items-center justify-between gap-4"
-              >
-                <div className="flex items-center gap-4">
-                  <span className="text-xs font-bold text-brand-400 uppercase tracking-widest px-3 py-1 rounded-md bg-brand-500/10 border border-brand-500/20">
-                    {layer.num}
-                  </span>
-                  <div>
-                    <h3 className="font-display font-bold text-lg text-white group-hover:text-brand-300 transition-colors">{layer.title}</h3>
-                    <p className="text-xs text-slate-300 mt-1">{layer.desc}</p>
+              { num: 'Layer 1', title: 'Experience & Access Layer', desc: 'Web command center, mobile biometric app, self-service portals, and Slack/Teams integrations.', link: '/platform#layers', color: 'cyan' },
+              { num: 'Layer 2', title: 'Talent Lifecycle & Operations Domain', desc: 'Core HR, ATS recruitment, onboarding, leave, attendance biometrics, and LMS skills.', link: '/platform#lifecycle', color: 'orange' },
+              { num: 'Layer 3', title: 'Multi-Entity Payroll & Financial Engine', desc: 'Multi-currency payroll calculation, statutory compliance, expense scanning, and bank payout.', link: '/modules/payroll', color: 'orange' },
+              { num: 'Layer 4', title: 'Governed AI & Predictive Intelligence', desc: 'Payroll anomaly checks, turnover flight risk prediction, candidate match scoring, and policy rule validation.', link: '/ai', color: 'cyan' },
+              { num: 'Layer 5', title: 'Shared Platform & Governance Substrate', desc: 'AES-256 column encryption, RBAC matrix, immutable audit log, and API webhook gateway.', link: '/security', color: 'orange' },
+            ].map((layer, idx) => {
+              const isOrange = layer.color === 'orange';
+              return (
+                <div
+                  key={idx}
+                  className="group p-6 rounded-xl border border-white/10 bg-navy-900/60 hover:border-orange-500/40 hover:bg-navy-900 transition-all flex flex-col md:flex-row items-start md:items-center justify-between gap-4"
+                >
+                  <div className="flex items-center gap-4">
+                    <span className={`text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-md border ${isOrange
+                      ? 'text-orange-400 bg-orange-500/10 border-orange-500/20'
+                      : 'text-cyan-400 bg-cyan-500/10 border-cyan-500/20'
+                      }`}>
+                      {layer.num}
+                    </span>
+                    <div>
+                      <h3 className="font-display font-bold text-lg text-white group-hover:text-orange-300 transition-colors">{layer.title}</h3>
+                      <p className="text-xs text-slate-300 mt-1">{layer.desc}</p>
+                    </div>
                   </div>
+                  <Link to={layer.link} className={`inline-flex items-center gap-1.5 text-xs font-semibold ${isOrange ? 'text-orange-400 hover:text-white' : 'text-cyan-400 hover:text-white'} transition-colors`}>
+                    View Layer Specs <ArrowRight className="w-4 h-4" />
+                  </Link>
                 </div>
-                <Link to={layer.link} className="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-400 hover:text-white transition-colors">
-                  View Layer Specs <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -210,7 +216,7 @@ export default function Home() {
                   key={tab.id}
                   onClick={() => setActiveWorkspaceTab(tab.id)}
                   className={`px-4 py-2 rounded-lg text-xs font-bold transition-all ${activeWorkspaceTab === tab.id
-                    ? 'bg-navy-950 text-white shadow-md'
+                    ? 'bg-navy-950 text-white shadow-md border-b-2 border-orange-500'
                     : 'text-slate-600 hover:text-navy-950'
                     }`}
                 >
@@ -269,41 +275,44 @@ export default function Home() {
             />
             <Link
               to="/modules"
-              className="mt-4 md:mt-0 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brand-400 hover:text-white transition-colors"
+              className="mt-4 md:mt-0 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-orange-400 hover:text-white transition-colors"
             >
               Explore Complete Module Catalog <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {MODULES_DATA.slice(0, 6).map((mod) => (
-              <GlassCard key={mod.slug} className="p-6 flex flex-col justify-between" dark={true}>
-                <div>
-                  <div className="flex items-center justify-between text-xs text-brand-400 font-semibold mb-2">
-                    <span>{mod.domainName}</span>
-                    <span className="text-[10px] text-slate-400 border border-white/10 px-2 py-0.5 rounded">Module</span>
-                  </div>
-                  <h3 className="font-display font-bold text-lg text-white mb-2">{mod.name}</h3>
-                  <p className="text-xs text-slate-300 leading-relaxed">{mod.summary}</p>
+            {MODULES_DATA.slice(0, 6).map((mod, idx) => {
+              const isOrange = idx % 2 === 1;
+              return (
+                <GlassCard key={mod.slug} className="p-6 flex flex-col justify-between" dark={true}>
+                  <div>
+                    <div className="flex items-center justify-between text-xs font-semibold mb-2">
+                      <span className={isOrange ? 'text-orange-400' : 'text-cyan-400'}>{mod.domainName}</span>
+                      <span className="text-[10px] text-slate-400 border border-white/10 px-2 py-0.5 rounded">Module</span>
+                    </div>
+                    <h3 className="font-display font-bold text-lg text-white mb-2">{mod.name}</h3>
+                    <p className="text-xs text-slate-300 leading-relaxed">{mod.summary}</p>
 
-                  <div className="mt-4 pt-4 border-t border-white/10 space-y-1.5">
-                    {mod.capabilities.slice(0, 3).map((cap, idx) => (
-                      <div key={idx} className="flex items-center gap-2 text-xs text-slate-300">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-brand-400 shrink-0" />
-                        <span className="truncate">{cap}</span>
-                      </div>
-                    ))}
+                    <div className="mt-4 pt-4 border-t border-white/10 space-y-1.5">
+                      {mod.capabilities.slice(0, 3).map((cap, cIdx) => (
+                        <div key={cIdx} className="flex items-center gap-2 text-xs text-slate-300">
+                          <CheckCircle2 className={`w-3.5 h-3.5 ${cIdx % 2 === 0 ? 'text-orange-400' : 'text-cyan-400'} shrink-0`} />
+                          <span className="truncate">{cap}</span>
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                </div>
 
-                <div className="mt-6 pt-4 border-t border-white/10 flex items-center justify-between">
-                  <span className="text-[11px] text-slate-400">{mod.roles[0]}</span>
-                  <Link to={`/modules/${mod.slug}`} className="text-xs font-bold text-brand-400 hover:text-white flex items-center gap-1">
-                    Module Specs <ChevronRight className="w-3.5 h-3.5" />
-                  </Link>
-                </div>
-              </GlassCard>
-            ))}
+                  <div className="mt-6 pt-4 border-t border-white/10 flex items-center justify-between">
+                    <span className="text-[11px] text-slate-400">{mod.roles[0]}</span>
+                    <Link to={`/modules/${mod.slug}`} className={`text-xs font-bold ${isOrange ? 'text-orange-400 hover:text-white' : 'text-cyan-400 hover:text-white'} flex items-center gap-1`}>
+                      Module Specs <ChevronRight className="w-3.5 h-3.5" />
+                    </Link>
+                  </div>
+                </GlassCard>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -348,7 +357,7 @@ export default function Home() {
                   'Emergency SOS broadcast and lone-worker safety check'
                 ].map((feat, idx) => (
                   <div key={idx} className="flex items-center gap-3 text-xs text-slate-700 font-medium">
-                    <CheckCircle2 className="w-4 h-4 text-brand-600 shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-orange-600 shrink-0" />
                     <span>{feat}</span>
                   </div>
                 ))}
@@ -383,26 +392,29 @@ export default function Home() {
 
           <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { title: 'RBAC Authorization', desc: 'Granular field-level privacy masking and role-based access scoping.', icon: Lock, link: '/security' },
-              { title: 'Immutable Audit', desc: 'Cryptographically hashed audit log capturing every record edit and view.', icon: ShieldCheck, link: '/security' },
-              { title: 'Multi-Entity Scoping', desc: 'Isolated legal entity and cost center data separation.', icon: Network, link: '/platform#multi-entity' },
-              { title: '99.99% Availability', desc: 'Multi-region high availability with continuous data redundancy.', icon: Activity, link: '/security' }
-            ].map((pillar, idx) => (
-              <GlassCard key={idx} className="p-6 flex flex-col justify-between" dark={true}>
-                <div>
-                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-500/10 text-brand-400 mb-4">
-                    <pillar.icon className="w-5 h-5" />
+              { title: 'RBAC Authorization', desc: 'Granular field-level privacy masking and role-based access scoping.', icon: Lock, link: '/security', color: 'cyan' },
+              { title: 'Immutable Audit', desc: 'Cryptographically hashed audit log capturing every record edit and view.', icon: ShieldCheck, link: '/security', color: 'orange' },
+              { title: 'Multi-Entity Scoping', desc: 'Isolated legal entity and cost center data separation.', icon: Network, link: '/platform#multi-entity', color: 'cyan' },
+              { title: '99.99% Availability', desc: 'Multi-region high availability with continuous data redundancy.', icon: Activity, link: '/security', color: 'orange' }
+            ].map((pillar, idx) => {
+              const isOrange = pillar.color === 'orange';
+              return (
+                <GlassCard key={idx} className="p-6 flex flex-col justify-between" dark={true}>
+                  <div>
+                    <div className={`flex h-10 w-10 items-center justify-center rounded-xl mb-4 ${isOrange ? 'bg-orange-500/10 text-orange-400' : 'bg-cyan-500/10 text-cyan-400'}`}>
+                      <pillar.icon className="w-5 h-5" />
+                    </div>
+                    <h3 className="font-display font-bold text-base text-white mb-2">{pillar.title}</h3>
+                    <p className="text-xs text-slate-300 leading-relaxed">{pillar.desc}</p>
                   </div>
-                  <h3 className="font-display font-bold text-base text-white mb-2">{pillar.title}</h3>
-                  <p className="text-xs text-slate-300 leading-relaxed">{pillar.desc}</p>
-                </div>
-                <div className="mt-4 pt-3 border-t border-white/10 flex justify-end">
-                  <Link to={pillar.link} className="text-xs font-semibold text-brand-400 hover:text-white flex items-center gap-1">
-                    Details <ChevronRight className="w-3.5 h-3.5" />
-                  </Link>
-                </div>
-              </GlassCard>
-            ))}
+                  <div className="mt-4 pt-3 border-t border-white/10 flex justify-end">
+                    <Link to={pillar.link} className={`text-xs font-semibold ${isOrange ? 'text-orange-400 hover:text-white' : 'text-cyan-400 hover:text-white'} flex items-center gap-1`}>
+                      Details <ChevronRight className="w-3.5 h-3.5" />
+                    </Link>
+                  </div>
+                </GlassCard>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -425,7 +437,7 @@ export default function Home() {
                   key={ind.slug}
                   onClick={() => setSelectedIndustry(idx)}
                   className={`w-full text-left p-4 rounded-xl border transition-all flex items-center justify-between ${selectedIndustry === idx
-                    ? 'border-brand-500 bg-navy-950 text-white shadow-md'
+                    ? 'border-brand-500 bg-navy-900 text-white shadow-md'
                     : 'border-slate-200 bg-slate-50 text-slate-800 hover:bg-slate-100'
                     }`}
                 >
@@ -442,8 +454,8 @@ export default function Home() {
                 return (
                   <div className="space-y-4">
                     <div className="flex items-center justify-between border-b border-slate-200 pb-3">
-                      <span className="text-xs font-bold uppercase tracking-wider text-brand-700">{currentInd.title}</span>
-                      <Link to={`/industries/${currentInd.slug}`} className="text-xs font-semibold text-brand-700 hover:text-navy-950 flex items-center gap-1">
+                      <span className="text-xs font-bold uppercase tracking-wider text-orange-600">{currentInd.title}</span>
+                      <Link to={`/industries/${currentInd.slug}`} className="text-xs font-semibold text-orange-600 hover:text-navy-950 flex items-center gap-1">
                         Full Industry Profile <ArrowRight className="w-3.5 h-3.5" />
                       </Link>
                     </div>
@@ -453,7 +465,7 @@ export default function Home() {
                       <span className="text-xs font-semibold text-navy-950 block">Key Operational Challenges Solved:</span>
                       {currentInd.challenges.slice(0, 3).map((ch, idx) => (
                         <div key={idx} className="flex items-center gap-2 text-xs text-slate-700">
-                          <CheckCircle2 className="w-3.5 h-3.5 text-brand-600 shrink-0" />
+                          <CheckCircle2 className="w-3.5 h-3.5 text-orange-600 shrink-0" />
                           <span>{ch}</span>
                         </div>
                       ))}
@@ -486,29 +498,29 @@ export default function Home() {
                 <tr className="border-b border-white/10 bg-navy-950/80">
                   <th className="p-4 font-bold text-white uppercase tracking-wider">Evaluation Dimension</th>
                   <th className="p-4 font-bold text-rose-400 uppercase tracking-wider">Fragmented Point Suites</th>
-                  <th className="p-4 font-bold text-brand-400 uppercase tracking-wider">Eimpora Enterprise Unified</th>
+                  <th className="p-4 font-bold text-brand-500 uppercase tracking-wider">Eimpora Enterprise Unified</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-white/5 text-slate-300">
                 <tr>
                   <td className="p-4 font-semibold text-white">Data Consistency</td>
                   <td className="p-4 text-rose-300">Nightly batch syncs with frequent discrepancy gaps</td>
-                  <td className="p-4 text-brand-300 font-semibold">1 Real-time authoritative global substrate</td>
+                  <td className="p-4 text-cyan-300 font-semibold">1 Real-time authoritative global substrate</td>
                 </tr>
                 <tr>
                   <td className="p-4 font-semibold text-white">Biometric Shift Sync</td>
                   <td className="p-4 text-rose-300">Manual timesheet imports into payroll software</td>
-                  <td className="p-4 text-brand-300 font-semibold">Direct hardware terminal push into payroll engine</td>
+                  <td className="p-4 text-orange-300 font-semibold">Direct hardware terminal push into payroll engine</td>
                 </tr>
                 <tr>
                   <td className="p-4 font-semibold text-white">Decision Intelligence</td>
                   <td className="p-4 text-rose-300">Isolated chatbot windows without policy rules</td>
-                  <td className="p-4 text-brand-300 font-semibold">Embedded governed AI with human authorization</td>
+                  <td className="p-4 text-orange-300 font-semibold">Embedded governed AI with human authorization</td>
                 </tr>
                 <tr>
                   <td className="p-4 font-semibold text-white">Audit Readiness</td>
                   <td className="p-4 text-rose-300">Scattered log files across 5 vendor platforms</td>
-                  <td className="p-4 text-brand-300 font-semibold">Immutable cryptographically hashed central log</td>
+                  <td className="p-4 text-cyan-300 font-semibold">Immutable cryptographically hashed central log</td>
                 </tr>
               </tbody>
             </table>

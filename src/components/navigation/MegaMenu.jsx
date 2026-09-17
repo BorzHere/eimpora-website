@@ -27,7 +27,7 @@ export default function MegaMenu({ activeTab, onClose }) {
               <Link
                 to="/platform"
                 onClick={onClose}
-                className="mt-6 inline-flex items-center gap-2 text-xs font-semibold text-brand-400 hover:text-brand-300 transition-colors"
+                className="mt-6 inline-flex items-center gap-2 text-xs font-semibold text-orange-400 hover:text-brand-300 transition-colors"
               >
                 Explore Full Platform Architecture <ArrowRight className="w-4 h-4" />
               </Link>
@@ -41,7 +41,7 @@ export default function MegaMenu({ activeTab, onClose }) {
               >
                 <div className="font-semibold text-sm text-white group-hover:text-brand-400 flex items-center justify-between">
                   Architecture Layers
-                  <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity text-orange-400" />
                 </div>
                 <p className="mt-1 text-xs text-slate-400">5-layer stack from employee experience down to shared governance.</p>
               </Link>
@@ -53,7 +53,7 @@ export default function MegaMenu({ activeTab, onClose }) {
               >
                 <div className="font-semibold text-sm text-white group-hover:text-brand-400 flex items-center justify-between">
                   Role-Based Surfaces
-                  <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity text-orange-400" />
                 </div>
                 <p className="mt-1 text-xs text-slate-400">Tailored UI portals for Employees, Managers, HR, and Executives.</p>
               </Link>
@@ -65,7 +65,7 @@ export default function MegaMenu({ activeTab, onClose }) {
               >
                 <div className="font-semibold text-sm text-white group-hover:text-brand-400 flex items-center justify-between">
                   Lifecycle Workflow Flow
-                  <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity text-orange-400 " />
                 </div>
                 <p className="mt-1 text-xs text-slate-400">Plan → Recruit → Hire → Onboard → Operate → Pay → Develop.</p>
               </Link>
@@ -77,7 +77,7 @@ export default function MegaMenu({ activeTab, onClose }) {
               >
                 <div className="font-semibold text-sm text-white group-hover:text-brand-400 flex items-center justify-between">
                   Multi-Entity Engine
-                  <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity text-orange-400" />
                 </div>
                 <p className="mt-1 text-xs text-slate-400">Global legal entity, regional branch, and cost-center hierarchy.</p>
               </Link>
@@ -97,7 +97,7 @@ export default function MegaMenu({ activeTab, onClose }) {
             <div className="grid grid-cols-5 gap-6">
               <div>
                 <div className="flex items-center gap-2 font-display font-semibold text-sm text-white mb-3">
-                  <Users className="w-4 h-4 text-brand-400" /> People Ops
+                  <Users className="w-4 h-4 text-orange-400" /> People Ops
                 </div>
                 <div className="space-y-2">
                   <Link to="/modules/core-hr" onClick={onClose} className="block text-xs text-slate-300 hover:text-brand-400">Core HR & Profiles</Link>
@@ -110,7 +110,7 @@ export default function MegaMenu({ activeTab, onClose }) {
 
               <div>
                 <div className="flex items-center gap-2 font-display font-semibold text-sm text-white mb-3">
-                  <Clock className="w-4 h-4 text-brand-400" /> Workforce Ops
+                  <Clock className="w-4 h-4 text-orange-400" /> Workforce Ops
                 </div>
                 <div className="space-y-2">
                   <Link to="/modules/attendance" onClick={onClose} className="block text-xs text-slate-300 hover:text-brand-400">Time & Attendance</Link>
@@ -123,7 +123,7 @@ export default function MegaMenu({ activeTab, onClose }) {
 
               <div>
                 <div className="flex items-center gap-2 font-display font-semibold text-sm text-white mb-3">
-                  <Banknote className="w-4 h-4 text-brand-400" /> Payroll & Finance
+                  <Banknote className="w-4 h-4 text-orange-400" /> Payroll & Finance
                 </div>
                 <div className="space-y-2">
                   <Link to="/modules/payroll" onClick={onClose} className="block text-xs text-slate-300 hover:text-brand-400">Multi-Entity Payroll</Link>
@@ -136,7 +136,7 @@ export default function MegaMenu({ activeTab, onClose }) {
 
               <div>
                 <div className="flex items-center gap-2 font-display font-semibold text-sm text-white mb-3">
-                  <Target className="w-4 h-4 text-brand-400" /> Talent Management
+                  <Target className="w-4 h-4 text-orange-400" /> Talent Management
                 </div>
                 <div className="space-y-2">
                   <Link to="/modules/recruitment" onClick={onClose} className="block text-xs text-slate-300 hover:text-brand-400">ATS Recruiting</Link>
@@ -149,7 +149,7 @@ export default function MegaMenu({ activeTab, onClose }) {
 
               <div>
                 <div className="flex items-center gap-2 font-display font-semibold text-sm text-white mb-3">
-                  <Sparkles className="w-4 h-4 text-brand-400" /> Intelligence & Strategy
+                  <Sparkles className="w-4 h-4 text-orange-400" /> Intelligence & Strategy
                 </div>
                 <div className="space-y-2">
                   <Link to="/modules/workforce-planning" onClick={onClose} className="block text-xs text-slate-300 hover:text-brand-400">Workforce Planning</Link>

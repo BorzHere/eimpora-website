@@ -71,7 +71,7 @@ export default function Header() {
               onClick={() => setActiveMega(null)}
               className="px-3.5 py-2 rounded-lg text-sm font-medium text-slate-300 hover:text-white hover:bg-white/5 transition-colors inline-flex items-center gap-1.5"
             >
-              <Sparkles className="w-3.5 h-3.5 text-brand-400" />
+              <Sparkles className="w-3.5 h-3.5 text-orange-400" />
               AI
             </Link>
 
@@ -136,11 +136,11 @@ export default function Header() {
                 onClick={() => setActiveMega(activeMega === 'more' ? null : 'more')}
                 className={`px-3.5 py-2 rounded-lg text-sm font-medium transition-colors inline-flex items-center gap-1.5 cursor-pointer ${activeMega === 'more'
                   ? 'text-brand-300 bg-white/10'
-                  : 'text-brand-400 hover:text-white hover:bg-white/5'
+                  : 'text-orange-400 hover:text-white hover:bg-white/5'
                   }`}
               >
                 More
-                <ChevronDown className={`w-3.5 h-3.5 transition-transform ${activeMega === 'more' ? 'rotate-180 text-brand-300' : 'text-brand-400'}`} />
+                <ChevronDown className={`w-3.5 h-3.5 transition-transform ${activeMega === 'more' ? 'rotate-180 text-brand-300' : 'text-orange-400'}`} />
               </button>
 
               {activeMega === 'more' && (

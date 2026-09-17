@@ -1,12 +1,12 @@
 import React from "react";
 
 const nodes = [
-  { label: "People", x: 149.9, y: 55 },
-  { label: "Payroll", x: 268, y: 125 },
-  { label: "AI", x: 268, y: 260 },
-  { label: "Analytics", x: 149.9, y: 330 },
-  { label: "Talent", x: 32, y: 260 },
-  { label: "Operations", x: 32, y: 125 },
+  { label: "People", x: 149.9, y: 55, color: "#22d3ee" },
+  { label: "Payroll", x: 268, y: 125, color: "#ff7a00" },
+  { label: "AI", x: 268, y: 260, color: "#22d3ee" },
+  { label: "Analytics", x: 149.9, y: 330, color: "#ff7a00" },
+  { label: "Talent", x: 32, y: 260, color: "#22d3ee" },
+  { label: "Operations", x: 32, y: 125, color: "#ff7a00" },
 ];
 
 function hexPoints(cx, cy, radius) {
@@ -21,8 +21,8 @@ function hexPoints(cx, cy, radius) {
 
 export default function EimporaHexagon() {
   return (
-    <div className="relative flex min-h-[480px] w-full items-center justify-center ">
-      {/* Ambient glow */}
+    <div className="relative flex min-h-[480px] w-full items-center justify-center select-none">
+      {/* Ambient glows (Cyan + Orange) */}
       <div className="absolute h-[360px] w-[360px] rounded-full bg-cyan-400/10 blur-[90px]" />
       <div className="absolute right-10 top-20 h-[180px] w-[180px] rounded-full bg-cyan-300/10 blur-[70px]" />
 
@@ -35,6 +35,12 @@ export default function EimporaHexagon() {
             <stop offset="0%" stopColor="#22d3ee" />
             <stop offset="50%" stopColor="#06b6d4" />
             <stop offset="100%" stopColor="#67e8f9" />
+          </linearGradient>
+
+          <linearGradient id="orangeStroke" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stopColor="#ff7a00" />
+            <stop offset="50%" stopColor="#ff5500" />
+            <stop offset="100%" stopColor="#ff9900" />
           </linearGradient>
 
           <linearGradient id="centerFill" x1="0" y1="0" x2="1" y2="1">
@@ -58,7 +64,7 @@ export default function EimporaHexagon() {
             points={hexPoints(150, 192, 136)}
             fill="none"
             stroke="#22d3ee"
-            strokeOpacity="0.15"
+            strokeOpacity="0.2"
             strokeWidth="1"
             strokeDasharray="4 7"
           />
@@ -66,8 +72,8 @@ export default function EimporaHexagon() {
           <polygon
             points={hexPoints(150, 192, 110)}
             fill="none"
-            stroke="#22d3ee"
-            strokeOpacity="0.1"
+            stroke="#ff7a00"
+            strokeOpacity="0.15"
             strokeWidth="1"
           />
         </g>
@@ -80,9 +86,9 @@ export default function EimporaHexagon() {
             y1="192"
             x2={node.x}
             y2={node.y}
-            stroke="url(#cyanStroke)"
+            stroke={node.color === "#ff7a00" ? "url(#orangeStroke)" : "url(#cyanStroke)"}
             strokeWidth="1"
-            strokeOpacity="0.22"
+            strokeOpacity="0.3"
             strokeDasharray="3 5"
             className="hex-line"
             style={{
@@ -103,25 +109,25 @@ export default function EimporaHexagon() {
           >
             <polygon
               points={hexPoints(node.x, node.y, 37)}
-              fill="rgba(8, 20, 27, 0.78)"
-              stroke="url(#cyanStroke)"
-              strokeWidth="1"
-              strokeOpacity="0.55"
+              fill="rgba(8, 20, 27, 0.85)"
+              stroke={node.color === "#ff7a00" ? "url(#orangeStroke)" : "url(#cyanStroke)"}
+              strokeWidth="1.2"
+              strokeOpacity="0.7"
             />
 
             <polygon
               points={hexPoints(node.x, node.y, 31)}
               fill="none"
-              stroke="#22d3ee"
+              stroke={node.color}
               strokeWidth="0.6"
-              strokeOpacity="0.21"
+              strokeOpacity="0.3"
             />
 
             <circle
               cx={node.x}
               cy={node.y - 9}
               r="3"
-              fill="#67e8f9"
+              fill={node.color}
               filter="url(#glow)"
             />
 
@@ -129,9 +135,9 @@ export default function EimporaHexagon() {
               x={node.x}
               y={node.y + 10}
               textAnchor="middle"
-              fill="#dffbff"
+              fill="#ffffff"
               fontSize="8.5"
-              fontWeight="500"
+              fontWeight="600"
               letterSpacing="0.2"
             >
               {node.label}
@@ -152,12 +158,12 @@ export default function EimporaHexagon() {
           <polygon
             points={hexPoints(150, 192, 57)}
             fill="none"
-            stroke="#67e8f9"
-            strokeWidth="0.7"
-            strokeOpacity="0.4"
+            stroke="#ff7a00"
+            strokeWidth="0.8"
+            strokeOpacity="0.5"
           />
 
-          <circle cx="150" cy="167" r="4" fill="#67e8f9" />
+          <circle cx="150" cy="167" r="4" fill="#ff7a00" filter="url(#glow)" />
 
           <text
             x="150"
@@ -175,8 +181,9 @@ export default function EimporaHexagon() {
             x="150"
             y="209"
             textAnchor="middle"
-            fill="#67e8f9"
+            fill="#22d3ee"
             fontSize="5.5"
+            fontWeight="600"
             letterSpacing="1"
           >
             ENTERPRISE INTELLIGENCE
@@ -188,8 +195,8 @@ export default function EimporaHexagon() {
         {nodes.map((node, index) => (
           <circle
             key={`particle-${index}`}
-            r="2.2"
-            fill="#67e8f9"
+            r="2.4"
+            fill={node.color}
             filter="url(#glow)"
           >
             <animate
@@ -206,7 +213,7 @@ export default function EimporaHexagon() {
             />
             <animate
               attributeName="opacity"
-              values="0;1;0"
+              values="0.2;1;0.2"
               dur={`${4 + index * 0.35}s`}
               repeatCount="indefinite"
             />
@@ -239,10 +246,10 @@ export default function EimporaHexagon() {
 
         @keyframes linePulse {
           0%, 100% {
-            stroke-opacity: 0.12;
+            stroke-opacity: 0.15;
           }
           50% {
-            stroke-opacity: 0.48;
+            stroke-opacity: 0.55;
           }
         }
 

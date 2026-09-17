@@ -95,7 +95,7 @@ export function LogoMark({ className = "h-8 w-8" }) {
 
 export function Logo({ className = "", variant = "light", showWordmark = true, size = "md" }) {
   const textPrimary = variant === "dark" ? "text-navy-950" : "text-white";
-  const textSecondary = variant === "dark" ? "text-slate-500" : "text-brand-400/80";
+  const textSecondary = variant === "dark" ? "text-slate-500" : "text-orange-400/80";
 
   const isLg = size === "lg";
   const isXl = size === "xl";

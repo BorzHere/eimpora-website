@@ -88,7 +88,7 @@ export default function AIInsightPanel() {
         <div className="md:col-span-7 rounded-xl border border-white/10 bg-navy-950/70 p-4 flex flex-col justify-between">
           <div>
             <div className="flex items-center justify-between text-xs text-slate-400 mb-2">
-              <span>AI Confidence Index: <strong className="text-brand-400">{current.confidence}</strong></span>
+              <span>AI Confidence Index: <strong className="text-orange-400">{current.confidence}</strong></span>
               <span className="text-slate-300 font-semibold">{current.status}</span>
             </div>
             <h4 className="font-display text-base font-bold text-white mb-2">{current.title}</h4>
