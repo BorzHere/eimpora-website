@@ -52,7 +52,7 @@ export default function Solutions() {
                   onClick={() => setSelectedSolution(idx)}
                   className={`w-full text-left p-4 rounded-xl border transition-all flex items-center justify-between ${
                     selectedSolution === idx
-                      ? 'border-brand-500 bg-navy-950 text-white shadow-md'
+                      ? 'border-navy-900 bg-navy-800 text-white shadow-md'
                       : 'border-slate-200 bg-white text-slate-800 hover:bg-slate-100'
                   }`}
                 >
@@ -60,7 +60,7 @@ export default function Solutions() {
                     <span className={`text-[10px] font-bold uppercase tracking-wider block ${selectedSolution === idx ? 'text-brand-400' : 'text-brand-700'}`}>{sol.category}</span>
                     <span className="font-display font-bold text-sm">{sol.title}</span>
                   </div>
-                  <ChevronRight className={`w-4 h-4 ${selectedSolution === idx ? 'text-brand-400' : 'text-slate-400'}`} />
+                  <ChevronRight className={`w-4 h-4 ${selectedSolution === idx ? 'text-brand-400' : 'text-orange-400'}`} />
                 </button>
               ))}
             </div>
@@ -74,7 +74,7 @@ export default function Solutions() {
                     <div className="border-b border-slate-200 pb-4">
                       <span className="text-xs font-bold uppercase tracking-widest text-brand-700">{currentSol.category}</span>
                       <h2 className="font-display font-bold text-2xl text-navy-950 mt-1">{currentSol.title}</h2>
-                      <p className="text-sm text-brand-800 font-medium mt-1">{currentSol.tagline}</p>
+                      <p className="text-sm text-orange-800 font-medium mt-1">{currentSol.tagline}</p>
                     </div>
 
                     <div className="space-y-3">

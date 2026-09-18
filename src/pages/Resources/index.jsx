@@ -65,7 +65,7 @@ export default function Resources() {
                 onClick={() => setSelectedCat(cat.id)}
                 className={`px-4 py-2 rounded-lg text-xs font-bold transition-all ${
                   selectedCat === cat.id
-                    ? 'bg-navy-950 text-white shadow-md'
+                    ? 'bg-brand-500 text-white shadow-md'
                     : 'text-slate-600 hover:text-navy-950'
                 }`}
               >
@@ -81,14 +81,14 @@ export default function Resources() {
                   <div className="flex items-center justify-between text-xs text-brand-700 font-bold mb-3">
                     <span>{res.categoryName}</span>
                     <span className="flex items-center gap-1 text-slate-500">
-                      <Clock className="w-3.5 h-3.5 text-brand-600" /> {res.readTime}
+                      <Clock className="w-3.5 h-3.5 text-orange-600" /> {res.readTime}
                     </span>
                   </div>
                   <h3 className="font-display font-bold text-2xl text-navy-950 mb-3">{res.title}</h3>
                   <p className="text-sm text-slate-600 leading-relaxed mb-4">{res.summary}</p>
 
                   <div className="p-3 rounded-lg bg-slate-50 border border-slate-200 text-xs text-slate-700 mb-4 font-medium">
-                    <span className="font-semibold text-navy-950 block mb-0.5">Target Audience:</span>
+                    <span className="font-semibold text-orange-900 block mb-0.5">Target Audience:</span>
                     <p>{res.audience}</p>
                   </div>
                 </div>
@@ -99,7 +99,7 @@ export default function Resources() {
                     to={`/resources/${res.slug}`}
                     className="inline-flex items-center gap-1 text-xs font-bold text-brand-700 hover:text-navy-950 transition-colors uppercase tracking-wider"
                   >
-                    Read Full Guide <ChevronRight className="w-4 h-4" />
+                    Read Full Guide <ChevronRight className="w-4 h-4 " />
                   </Link>
                 </div>
               </div>

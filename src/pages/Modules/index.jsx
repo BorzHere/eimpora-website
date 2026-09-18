@@ -66,7 +66,7 @@ export default function Modules() {
                 onClick={() => setSelectedDomain(dom.id)}
                 className={`px-4 py-2 rounded-lg text-xs font-bold transition-all ${
                   selectedDomain === dom.id
-                    ? 'bg-navy-950 text-white shadow-md'
+                    ? 'bg-brand-600 text-white shadow-md'
                     : 'text-slate-600 hover:text-navy-950'
                 }`}
               >
@@ -106,8 +106,8 @@ export default function Modules() {
                     ))}
                   </div>
 
-                  <div className="mt-4 p-3 rounded-lg border border-brand-200 bg-brand-50 text-[11px] text-slate-800">
-                    <span className="font-semibold text-brand-800 block mb-0.5">Embedded AI Capability:</span>
+                  <div className="mt-4 p-3 rounded-lg border border-orange-200 bg-orange-50 text-[11px] text-slate-800">
+                    <span className="font-semibold text-orange-800 block mb-0.5">Embedded AI Capability:</span>
                     <p>{mod.aiFeature}</p>
                   </div>
                 </div>
@@ -116,9 +116,9 @@ export default function Modules() {
                   <span className="text-[11px] text-slate-500 font-medium">{mod.roles[0]}</span>
                   <Link
                     to={`/modules/${mod.slug}`}
-                    className="inline-flex items-center gap-1 text-xs font-bold text-brand-700 hover:text-navy-950 transition-colors"
+                    className="inline-flex items-center gap-1 text-xs font-bold text-orange-700 hover:text-navy-950 transition-colors"
                   >
-                    Full Module Specs <ChevronRight className="w-4 h-4" />
+                    Full Module Specs <ChevronRight className="w-4 h-4 " />
                   </Link>
                 </div>
               </div>

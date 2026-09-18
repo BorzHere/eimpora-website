@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { 
-  ArrowLeft, ArrowRight, CheckCircle2, Building2, ShieldCheck, 
+import {
+  ArrowLeft, ArrowRight, CheckCircle2, Building2, ShieldCheck,
   Activity, Layers, FileText, HelpCircle, ChevronDown, ChevronUp, Sparkles, Workflow
 } from 'lucide-react';
 import SectionHeading from '../../components/common/SectionHeading';
@@ -49,68 +49,71 @@ export default function IndustryDetail() {
   ];
 
   return (
-    <div className="space-y-20 pt-32 pb-12">
+    <div className="space-y-20 ">
       {/* Back Link */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <Link to="/industries" className="inline-flex items-center gap-2 text-xs font-semibold text-slate-400 hover:text-brand-400 transition-colors">
-          <ArrowLeft className="w-4 h-4" /> Back to Industry Solutions
-        </Link>
-      </div>
-
-      {/* Hero Section */}
-      <section className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-hidden rounded-2xl">
+      <div className=' relative space-y-16 pt-20 pb-12'>
         <Stars />
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-          <div className="lg:col-span-8 space-y-4">
-            <span className="inline-flex items-center gap-2 rounded-full border border-brand-500/30 bg-brand-500/10 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-widest text-brand-400">
-              Industry Solution Profile
-            </span>
-            <h1 className="font-display text-4xl sm:text-5xl font-bold tracking-tight text-white leading-tight">
-              {industry.title}
-            </h1>
-            <p className="text-lg text-brand-300 font-medium">{industry.tagline}</p>
-            <p className="text-sm sm:text-base text-slate-300 leading-relaxed border-l-2 border-brand-500/40 pl-4 py-1">
-              <span className="font-bold text-white block mb-0.5">Target Workforce Profile:</span>
-              {industry.workforceProfile}
-            </p>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Link to="/industries" className="inline-flex items-center gap-2 text-xs font-semibold text-slate-400 hover:text-brand-400 transition-colors">
+            <ArrowLeft className="w-4 h-4" /> Back to Industry Solutions
+          </Link>
+        </div>
 
-            <div className="pt-4 flex flex-wrap gap-4">
-              <Link
-                to="/book-demo"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-xs font-bold text-navy-950 bg-gradient-to-r from-brand-400 to-brand-300 hover:from-brand-300 hover:to-brand-glow transition-all shadow-cyan-glow uppercase tracking-wider"
-              >
-                Schedule Industry Consultation <ArrowRight className="w-4 h-4" />
-              </Link>
-            </div>
-          </div>
+        {/* Hero Section */}
+        <section className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-hidden rounded-2xl">
 
-          {/* Industry Governance Snapshot Box */}
-          <div className="lg:col-span-4 rounded-2xl border border-brand-500/30 bg-navy-900/90 p-6 space-y-4 shadow-cyan-glow">
-            <h3 className="font-display font-bold text-base text-white border-b border-white/10 pb-3 flex items-center gap-2">
-              <ShieldCheck className="w-4 h-4 text-brand-400" /> Domain Telemetry
-            </h3>
-            <div className="space-y-3 text-xs">
-              <div>
-                <span className="text-slate-400 block mb-1">Regulatory Standard:</span>
-                <span className="font-semibold text-emerald-400">{industry.governance}</span>
-              </div>
-              <div className="pt-2 border-t border-white/10">
-                <span className="text-slate-400 block mb-1">C-Suite Analytics Focus:</span>
-                <span className="font-semibold text-brand-300">{industry.analyticsFocus}</span>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            <div className="lg:col-span-8 space-y-4">
+              <span className="inline-flex items-center gap-2 rounded-full border border-brand-500/30 bg-brand-500/10 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-widest text-brand-400">
+                Industry Solution Profile
+              </span>
+              <h1 className="font-display text-4xl sm:text-5xl font-bold tracking-tight text-white leading-tight">
+                {industry.title}
+              </h1>
+              <p className="text-lg text-brand-300 font-medium">{industry.tagline}</p>
+              <p className="text-sm sm:text-base text-slate-300 leading-relaxed border-l-2 border-brand-500/40 pl-4 py-1">
+                <span className="font-bold text-white block mb-0.5">Target Workforce Profile:</span>
+                {industry.workforceProfile}
+              </p>
+
+              <div className="pt-4 flex flex-wrap gap-4">
+                <Link
+                  to="/book-demo"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-xs font-bold text-navy-950 bg-gradient-to-r from-brand-400 to-brand-300 hover:from-brand-300 hover:to-brand-glow transition-all shadow-cyan-glow uppercase tracking-wider"
+                >
+                  Schedule Industry Consultation <ArrowRight className="w-4 h-4" />
+                </Link>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Verified Metrics Row */}
-      <section className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-          <MetricCard title="Compliance Rate" value="100.0%" change="Statutory Lock" changeType="positive" iconName="ShieldCheck" />
-          <MetricCard title="Audit Readiness" value="Instant" change="Zero Lag" changeType="positive" iconName="CheckCircle2" />
-          <MetricCard title="Processing Speedup" value="4.5x" change="Automated" changeType="positive" iconName="Activity" />
-        </div>
-      </section>
+            {/* Industry Governance Snapshot Box */}
+            <div className="lg:col-span-4 rounded-2xl border border-brand-500/30 bg-navy-900/90 p-6 space-y-4 shadow-cyan-glow">
+              <h3 className="font-display font-bold text-base text-white border-b border-white/10 pb-3 flex items-center gap-2">
+                <ShieldCheck className="w-4 h-4 text-brand-400" /> Domain Telemetry
+              </h3>
+              <div className="space-y-3 text-xs">
+                <div>
+                  <span className="text-slate-400 block mb-1">Regulatory Standard:</span>
+                  <span className="font-semibold text-emerald-400">{industry.governance}</span>
+                </div>
+                <div className="pt-2 border-t border-white/10">
+                  <span className="text-slate-400 block mb-1">C-Suite Analytics Focus:</span>
+                  <span className="font-medium text-orange-400">{industry.analyticsFocus}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Verified Metrics Row */}
+        <section className=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            <MetricCard title="Compliance Rate" value="100.0%" change="Statutory Lock" changeType="positive" iconName="ShieldCheck" />
+            <MetricCard title="Audit Readiness" value="Instant" change="Zero Lag" changeType="positive" iconName="CheckCircle2" />
+            <MetricCard title="Processing Speedup" value="4.5x" change="Automated" changeType="positive" iconName="Activity" />
+          </div>
+        </section>
+      </div>
 
       {/* Specific Industry Challenges Solved */}
       <div className="bg-navy-800/30 py-20">
@@ -241,9 +244,9 @@ export default function IndustryDetail() {
                   {faq.q}
                 </span>
                 {openFaq === idx ? (
-                  <ChevronUp className="w-4 h-4 text-brand-400 shrink-0" />
+                  <ChevronUp className="w-4 h-4 text-orange-500 shrink-0" />
                 ) : (
-                  <ChevronDown className="w-4 h-4 text-slate-400 shrink-0" />
+                  <ChevronDown className="w-4 h-4 text-orange-400 shrink-0" />
                 )}
               </button>
 

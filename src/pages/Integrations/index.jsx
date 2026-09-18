@@ -78,8 +78,6 @@ export default function Integrations() {
           </div>
       </section>
 
-      
-
       {/* Connectors Catalog (LIGHT SECTION) */}
       <section className="relative py-24 bg-slate-50 text-navy-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -91,7 +89,7 @@ export default function Integrations() {
                 onClick={() => setSelectedCategory(cat.id)}
                 className={`px-4 py-2 rounded-lg text-xs font-bold transition-all ${
                   selectedCategory === cat.id
-                    ? 'bg-navy-950 text-white shadow-md'
+                    ? 'bg-brand-600 text-white shadow-md'
                     : 'text-slate-600 hover:text-navy-950'
                 }`}
               >
@@ -112,14 +110,14 @@ export default function Integrations() {
                     </span>
                   </div>
                   <h3 className="font-display font-bold text-xl text-navy-950 mb-1">{item.name}</h3>
-                  <p className="text-xs text-brand-800 font-medium mb-3">{item.tagline}</p>
+                  <p className="text-xs text-orange-800 font-medium mb-3">{item.tagline}</p>
                   <p className="text-xs text-slate-600 leading-relaxed mb-4">{item.description}</p>
 
                   <div className="space-y-1.5 pt-3 border-t border-slate-100">
                     <span className="text-[11px] font-semibold text-navy-950 block mb-1">Key Technical Features:</span>
                     {item.features.slice(0, 3).map((feat, idx) => (
                       <div key={idx} className="flex items-center gap-2 text-xs text-slate-700 font-medium">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-brand-600 shrink-0" />
+                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 shrink-0" />
                         <span className="truncate">{feat}</span>
                       </div>
                     ))}
@@ -128,7 +126,7 @@ export default function Integrations() {
 
                 <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
                   <span>Sync Direction: <strong className="text-navy-950">{item.syncDirection}</strong></span>
-                  <Link to="/book-demo" className="text-brand-700 font-bold hover:underline">
+                  <Link to="/book-demo" className="text-orange-700 font-bold hover:underline">
                     Integration Ready →
                   </Link>
                 </div>

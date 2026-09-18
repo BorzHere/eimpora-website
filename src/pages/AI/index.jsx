@@ -181,7 +181,7 @@ export default function AI() {
                   >
                     <div className="flex items-center justify-between text-xs mb-1">
                       <span className="font-semibold text-brand-400">{c.category}</span>
-                      <span className="text-[10px] text-slate-400">{c.confidence} Confidence</span>
+                      <span className="text-[10px] text-orange-300">{c.confidence} Confidence</span>
                     </div>
                     <h4 className="font-display font-bold text-sm text-white">{c.title}</h4>
                     <p className="text-xs text-slate-400 mt-1 truncate">{c.department}</p>

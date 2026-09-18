@@ -49,7 +49,7 @@ export default function Industries() {
                     <span className="text-[11px] font-semibold text-navy-950 block mb-1">Key Challenges Solved:</span>
                     {ind.challenges.slice(0, 2).map((ch, idx) => (
                       <div key={idx} className="flex items-center gap-2 text-xs text-slate-700">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-brand-600 shrink-0" />
+                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
                         <span className="truncate">{ch}</span>
                       </div>
                     ))}
@@ -58,7 +58,7 @@ export default function Industries() {
 
                 <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
                   <span className="text-[10px] text-slate-500 uppercase tracking-widest font-semibold">{ind.modulesPackage.length} Core Modules</span>
-                  <Link to={`/industries/${ind.slug}`} className="text-xs font-bold text-brand-700 hover:text-navy-950 flex items-center gap-1">
+                  <Link to={`/industries/${ind.slug}`} className="text-xs font-bold text-orange-600 hover:text-orange-700 flex items-center gap-1">
                     Industry Profile <ChevronRight className="w-4 h-4" />
                   </Link>
                 </div>

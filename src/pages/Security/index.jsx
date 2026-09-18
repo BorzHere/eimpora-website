@@ -122,7 +122,7 @@ export default function Security() {
         <Stars />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
           <div className="inline-flex items-center gap-2 rounded-full border border-brand-500/30 bg-brand-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-brand-400 backdrop-blur-md">
-            <ShieldCheck className="w-4 h-4 text-brand-400 animate-pulse" />
+            <ShieldCheck className="w-3.5 h-3.5 text-brand-400 animate-pulse" />
             Zero-Trust Enterprise Trust & Governance
           </div>
 
@@ -136,22 +136,22 @@ export default function Security() {
           </p>
 
           {/* Trust Stat Pills */}
-          <div className="pt-6 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-            <div className="p-4 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md text-center">
-              <div className="text-2xl font-bold font-display text-brand-300">SOC 2 Type II</div>
-              <div className="text-xs text-slate-400 mt-1 font-medium">Audited & Certified</div>
+          <div className="pt-6 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+            <div className="p-4 rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm text-center">
+              <div className="text-2xl font-bold font-display text-orange-400">SOC 2 Type II</div>
+              <div className="text-xs text-slate-300 mt-1 font-medium">Audited & Certified</div>
             </div>
-            <div className="p-4 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md text-center">
-              <div className="text-2xl font-bold font-display text-emerald-400">AES-256 GCM</div>
-              <div className="text-xs text-slate-400 mt-1 font-medium">Column-Level Encryption</div>
+            <div className="p-4 rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm text-center">
+              <div className="text-2xl font-bold font-display text-orange-400">AES-256 GCM</div>
+              <div className="text-xs text-slate-300 mt-1 font-medium">Column-Level Encryption</div>
             </div>
-            <div className="p-4 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md text-center">
-              <div className="text-2xl font-bold font-display text-cyan-400">ISO 27001</div>
-              <div className="text-xs text-slate-400 mt-1 font-medium">ISMS Framework Compliance</div>
+            <div className="p-4 rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm text-center">
+              <div className="text-2xl font-bold font-display text-orange-400">ISO 27001</div>
+              <div className="text-xs text-slate-300 mt-1 font-medium">ISMS Framework Compliance</div>
             </div>
-            <div className="p-4 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md text-center">
-              <div className="text-2xl font-bold font-display text-brand-400">99.99%</div>
-              <div className="text-xs text-slate-400 mt-1 font-medium">Uptime SLA Guarantee</div>
+            <div className="p-4 rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm text-center">
+              <div className="text-2xl font-bold font-display text-orange-400">99.99%</div>
+              <div className="text-xs text-slate-300 mt-1 font-medium">Uptime SLA Guarantee</div>
             </div>
           </div>
         </div>
@@ -174,7 +174,7 @@ export default function Security() {
                     <span className="text-xs font-bold text-brand-400 uppercase tracking-widest px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20">
                       {sec.layer}
                     </span>
-                    <Lock className="w-4 h-4 text-brand-400" />
+                    <Lock className="w-4 h-4 text-orange-400" />
                   </div>
                   <h3 className="font-display font-bold text-xl text-white mb-2">{sec.title}</h3>
                   <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mb-6">{sec.description}</p>
@@ -182,8 +182,8 @@ export default function Security() {
 
                 <div className="space-y-2.5 pt-4 border-t border-white/10">
                   {sec.capabilities.map((cap, cIdx) => (
-                    <div key={cIdx} className="flex items-start gap-2 text-xs text-slate-300">
-                      <CheckCircle2 className="w-4 h-4 text-brand-400 shrink-0 mt-0.5" />
+                    <div key={cIdx} className="flex items-start gap-2 text-xs text-slate-400">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />
                       <span className="leading-snug">{cap}</span>
                     </div>
                   ))}
@@ -224,12 +224,12 @@ export default function Security() {
                     <h3 className="font-display font-bold text-lg text-white group-hover:text-brand-300 transition-colors">
                       {cert.title}
                     </h3>
-                    <span className="text-[11px] font-mono font-semibold text-slate-400 block mt-0.5">
+                    <span className="text-[11px] font-mono font-semibold text-orange-400 block mt-0.5">
                       Standard: {cert.code}
                     </span>
                   </div>
 
-                  <p className="text-xs text-slate-300 leading-relaxed font-light">
+                  <p className="text-xs text-slate-400 leading-relaxed font-light">
                     {cert.desc}
                   </p>
                 </div>
@@ -254,7 +254,7 @@ export default function Security() {
               <button
                 key={idx}
                 onClick={() => setSelectedRoleIndex(idx)}
-                className={`px-4 py-2 rounded-xl text-xs font-bold transition-all duration-200 border ${selectedRoleIndex === idx
+                className={`px-4 py-2 rounded-lg text-xs font-bold transition-all duration-200 border ${selectedRoleIndex === idx
                   ? 'bg-gradient-to-r from-brand-500 to-brand-400 text-navy-950 border-brand-300 shadow-cyan-glow scale-105'
                   : 'bg-white/5 text-slate-300 border-white/10 hover:bg-white/10 hover:text-white'
                   }`}
@@ -336,18 +336,18 @@ export default function Security() {
               return (
                 <div
                   key={idx}
-                  className={`rounded-2xl border transition-all duration-300 overflow-hidden ${isOpen
+                  className={`rounded-xl border transition-all duration-300 overflow-hidden ${isOpen
                     ? 'border-brand-500/40 bg-navy-900/90 shadow-lg shadow-brand-500/5'
                     : 'border-white/10 bg-navy-900/50 hover:border-white/20'
                     }`}
                 >
                   <button
                     onClick={() => setOpenFaq(isOpen ? null : idx)}
-                    className="w-full p-5 text-left flex items-center justify-between gap-4 font-display font-semibold text-base text-white hover:text-brand-300 transition-colors"
+                    className="w-full p-4 text-left flex items-center justify-between gap-4 font-display font-semibold text-base text-white hover:text-brand-300 transition-colors"
                   >
                     <span className={isOpen ? 'text-brand-300' : 'text-white'}>{faq.q}</span>
                     <ChevronDown
-                      className={`w-5 h-5 shrink-0 transition-transform duration-300 ease-in-out ${isOpen ? 'rotate-180 text-brand-400' : 'text-slate-400'
+                      className={`w-5 h-5 shrink-0 transition-transform duration-300 ease-in-out ${isOpen ? 'rotate-180 text-orange-400' : 'text-orange-400'
                         }`}
                     />
                   </button>

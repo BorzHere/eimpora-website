@@ -152,7 +152,7 @@ export default function Platform() {
             ].map((item, idx) => (
               <div key={idx} className="p-6 rounded-2xl border border-slate-200 bg-white shadow-md flex flex-col md:flex-row items-start md:items-center justify-between gap-4 hover:border-brand-500/50 hover:shadow-lg transition-all">
                 <div>
-                  <div className="flex items-center gap-3 text-xs font-bold text-brand-700 uppercase tracking-widest mb-2">
+                  <div className="flex items-center gap-3 text-xs font-bold text-orange-700 uppercase tracking-widest mb-2">
                     <span>{item.layer}</span>
                   </div>
                   <h3 className="font-display font-bold text-xl text-navy-950 mb-2">{item.title}</h3>
@@ -319,11 +319,11 @@ export default function Platform() {
                   className={`w-full text-left p-4 rounded-xl border transition-all flex items-center justify-between ${
                     activeRole === r.id
                       ? 'border-brand-500/50 bg-brand-500/15 text-white shadow-cyan-glow'
-                      : 'border-white/5 bg-navy-900/60 text-slate-300 hover:bg-white/5'
+                      : 'border-white/10 bg-navy-900/60 text-slate-300 hover:bg-white/5'
                   }`}
                 >
                   <span className="font-display text-sm font-semibold">{r.label}</span>
-                  <ArrowRight className={`w-4 h-4 ${activeRole === r.id ? 'text-brand-400' : 'text-slate-500'}`} />
+                  <ArrowRight className={`w-4 h-4 ${activeRole === r.id ? 'text-brand-400' : 'text-orange-500'}`} />
                 </button>
               ))}
             </div>
@@ -339,7 +339,7 @@ export default function Platform() {
                         <span className="text-xs font-bold uppercase tracking-wider text-brand-400">{currentRole.label}</span>
                         <h3 className="font-display font-bold text-2xl text-white mt-1">{currentRole.id} Workspace Surface</h3>
                       </div>
-                      <Link to={currentRole.link} className="text-xs font-bold text-brand-400 hover:text-white flex items-center gap-1">
+                      <Link to={currentRole.link} className="text-xs font-bold text-orange-400 hover:text-orange-300 flex items-center gap-1">
                         View Role Module <ArrowRight className="w-3.5 h-3.5" />
                       </Link>
                     </div>
@@ -349,7 +349,7 @@ export default function Platform() {
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-4">
                       {currentRole.features.map((feat, idx) => (
                         <div key={idx} className="flex items-center gap-2.5 text-xs text-slate-200 p-2.5 rounded-lg bg-white/5 border border-white/5">
-                          <CheckCircle2 className="w-4 h-4 text-brand-400 shrink-0" />
+                          <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
                           <span>{feat}</span>
                         </div>
                       ))}
@@ -460,9 +460,9 @@ export default function Platform() {
                     {faq.q}
                   </span>
                   {openFaq === idx ? (
-                    <ChevronUp className="w-4 h-4 text-brand-400 shrink-0" />
+                    <ChevronUp className="w-4 h-4 text-orange-400 shrink-0" />
                   ) : (
-                    <ChevronDown className="w-4 h-4 text-slate-400 shrink-0" />
+                    <ChevronDown className="w-4 h-4 text-orange-400 shrink-0" />
                   )}
                 </button>
 

@@ -39,7 +39,7 @@ export default function Pricing() {
         <Stars />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="inline-flex items-center gap-2 rounded-full border border-brand-500/30 bg-brand-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-brand-400 backdrop-blur-md mb-6">
-            <Calculator className="w-4 h-4" />
+            <Calculator className="w-3.5 h-3.5" />
             Enterprise Commercial Framework
           </div>
 
@@ -64,7 +64,7 @@ export default function Pricing() {
               <div>
                 <div className="flex items-center justify-between mb-2">
                   <label className="font-display font-bold text-sm text-navy-950">Active Workforce Size:</label>
-                  <span className="font-display font-bold text-lg text-brand-700">{workforceSize.toLocaleString()} Employees</span>
+                  <span className="font-display font-bold text-lg text-orange-600">{workforceSize.toLocaleString()} Employees</span>
                 </div>
                 <input
                   type="range"
@@ -73,7 +73,7 @@ export default function Pricing() {
                   step="250"
                   value={workforceSize}
                   onChange={(e) => setWorkforceSize(parseInt(e.target.value))}
-                  className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-brand-600"
+                  className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-orange-500"
                 />
                 <div className="flex justify-between text-[10px] text-slate-500 mt-1 font-semibold">
                   <span>250 Employees</span>
@@ -94,8 +94,8 @@ export default function Pricing() {
                         onClick={() => toggleDomain(dom.id)}
                         className={`w-full text-left p-3 rounded-xl border text-xs font-semibold transition-all flex items-center justify-between ${
                           isChecked
-                            ? 'border-brand-500 bg-navy-950 text-white shadow-sm'
-                            : 'border-slate-200 bg-slate-50 text-slate-700 hover:bg-slate-100'
+                            ? 'border-brand-500 bg-brand-500/10 text-navy-600 shadow-sm shadow-brand-500/10'
+                            : 'border-slate-200 bg-slate-50 text-slate-700 hover:border-brand-400/60 hover:bg-brand-50'
                         }`}
                       >
                         <span>{dom.name}</span>
@@ -116,8 +116,8 @@ export default function Pricing() {
                       onClick={() => setEntityCount(cnt)}
                       className={`flex-1 py-2 rounded-lg text-xs font-bold transition-all border ${
                         entityCount === cnt
-                          ? 'border-brand-500 bg-navy-950 text-white shadow-sm'
-                          : 'border-slate-200 bg-slate-50 text-slate-700 hover:bg-slate-100'
+                          ? 'border-brand-600 bg-brand-500 text-white shadow-sm shadow-brand-500/10'
+                          : 'border-slate-200 bg-slate-50 text-slate-700 hover:border-brand-400/60 hover:bg-brand-50'
                       }`}
                     >
                       {cnt} {cnt === 1 ? 'Entity' : 'Entities'}
@@ -134,10 +134,10 @@ export default function Pricing() {
                     <button
                       key={m.id}
                       onClick={() => setDeploymentModel(m.id)}
-                      className={`w-full text-left p-3 rounded-xl border text-xs font-semibold transition-all flex items-center justify-between ${
+                      className={`w-full text-left p-3 rounded-lg border text-xs font-semibold transition-all flex items-center justify-between ${
                         deploymentModel === m.id
-                          ? 'border-brand-500 bg-navy-950 text-white shadow-sm'
-                          : 'border-slate-200 bg-slate-50 text-slate-700 hover:bg-slate-100'
+                          ? 'border-navy-900 bg-navy-800 text-white shadow-sm shadow-orange-500/10'
+                          : 'border-slate-200 bg-slate-50 text-slate-700 hover:border-slate-400/60 hover:bg-slate-100'
                       }`}
                     >
                       <span>{m.name}</span>
@@ -177,7 +177,7 @@ export default function Pricing() {
                   </div>
                   <div className="flex items-center justify-between">
                     <span>Product Domains:</span>
-                    <strong className="text-brand-400">{selectedDomains.length} Domains Selected</strong>
+                    <strong className="text-orange-400">{selectedDomains.length} Domains Selected</strong>
                   </div>
                   <div className="flex items-center justify-between">
                     <span>Entities Covered:</span>
@@ -199,7 +199,7 @@ export default function Pricing() {
               <div className="pt-6 border-t border-white/10">
                 <Link
                   to="/book-demo"
-                  className="w-full inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl text-sm font-bold text-navy-950 bg-gradient-to-r from-brand-400 via-brand-300 to-brand-glow hover:from-brand-300 hover:to-brand-400 transition-all shadow-cyan-glow uppercase tracking-wider"
+                  className="w-full inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl text-sm font-bold text-navy-950 bg-gradient-to-r from-brand-400 via-brand-500 to-brand-glow hover:from-brand-300 hover:to-brand-400 transition-all shadow-cyan-glow uppercase tracking-wider"
                 >
                   Request Commercial Proposal <ArrowRight className="w-4 h-4" />
                 </Link>

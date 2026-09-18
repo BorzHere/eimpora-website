@@ -61,7 +61,7 @@ export default function SolutionDetail() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-            <div className="lg:col-span-8 space-y-4">
+            <div className="lg:col-span-8 space-y-4 max-w-lg">
               <span className="inline-flex items-center gap-2 rounded-full border border-brand-500/30 bg-brand-500/10 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-widest text-brand-400">
                 {solution.category}
               </span>
@@ -87,10 +87,10 @@ export default function SolutionDetail() {
               </h3>
               <div className="space-y-3 text-xs">
                 <div>
-                  <span className="text-slate-400 block mb-1">Executive Sponsors:</span>
+                  <span className="text-slate-300 block mb-1">Executive Sponsors:</span>
                   <div className="flex flex-wrap gap-1.5">
                     {(solution.responsibleRoles || ['CHRO', 'CFO', 'HRIS Lead']).map((role, idx) => (
-                      <span key={idx} className="px-2.5 py-1 rounded-md bg-brand-500/15 text-brand-300 font-semibold text-[11px] border border-brand-500/30">
+                      <span key={idx} className="px-2.5 py-1 rounded-md bg-orange-300/10 text-orange-300 font-semibold text-[11px] border border-orange-300/10">
                         {role}
                       </span>
                     ))}
@@ -183,7 +183,7 @@ export default function SolutionDetail() {
                     <span className="h-7 w-7 rounded-full bg-brand-600/10 border border-brand-600/30 text-brand-700 flex items-center justify-center font-bold text-xs shrink-0">
                       0{idx + 1}
                     </span>
-                    <span className="text-xs font-bold uppercase tracking-widest text-slate-500">Step 0{idx + 1}</span>
+                    <span className="text-xs font-bold uppercase tracking-widest text-orange-500">Step 0{idx + 1}</span>
                   </div>
                   <p className="text-sm text-navy-950 font-semibold leading-snug">{stage}</p>
                 </div>
@@ -237,7 +237,7 @@ export default function SolutionDetail() {
               {relevantModuleObjs.map((mObj) => (
                 <GlassCard key={mObj.slug} className="p-6 space-y-3 flex flex-col justify-between" dark={false}>
                   <div className="space-y-2">
-                    <span className="text-[10px] font-bold uppercase tracking-widest text-brand-700">{mObj.domainName}</span>
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-orange-700">{mObj.domainName}</span>
                     <h4 className="font-display font-bold text-base text-navy-950">{mObj.name}</h4>
                     <p className="text-xs text-slate-600 line-clamp-2 leading-relaxed">{mObj.tagline}</p>
                   </div>
@@ -278,7 +278,7 @@ export default function SolutionDetail() {
                     <HelpCircle className="w-4 h-4 text-brand-400 shrink-0" />
                     {faq.q}
                   </span>
-                  <ChevronDown className={`w-4 h-4 text-brand-400 shrink-0 transition-transform duration-300 ${openFaq === idx ? 'rotate-180' : ''}`} />
+                  <ChevronDown className={`w-4 h-4 text-orange-400 shrink-0 transition-transform duration-300 ${openFaq === idx ? 'rotate-180' : ''}`} />
                 </button>
 
                 {openFaq === idx && (

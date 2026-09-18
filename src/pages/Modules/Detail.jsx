@@ -107,7 +107,7 @@ export default function ModuleDetail() {
                 </div>
                 <div>
                   <span className="text-slate-400 block mb-1">Inter-Module Sync:</span>
-                  <span className="font-semibold text-brand-400">{moduleData.connectedModules.join(', ')}</span>
+                  <span className="font-semibold text-orange-400">{moduleData.connectedModules.join(', ')}</span>
                 </div>
                 <div className="pt-2 border-t border-white/10 flex items-center justify-between text-slate-300">
                   <span>Security Standard:</span>
@@ -118,26 +118,25 @@ export default function ModuleDetail() {
           </div>
         </div>
         {/* SECTION 2: Verified Metrics Row (LIGHT SECTION) */}
-      <section className="relative py-20 bg-gradient-to-b from-transparent to-brand-800/15  text-white ">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-            {moduleData.metrics.map((m, idx) => (
-              <MetricCard 
-                key={idx} 
-                title={m.label} 
-                value={m.value} 
-                change="Verified SLA" 
-                changeType="positive" 
-                iconName="CheckCircle2"
-                dark={true} 
-              />
-            ))}
+        <section className="relative py-20 bg-gradient-to-b from-transparent to-brand-800/15  text-white ">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+              {moduleData.metrics.map((m, idx) => (
+                <MetricCard 
+                  key={idx} 
+                  title={m.label} 
+                  value={m.value} 
+                  change="Verified SLA" 
+                  changeType="positive" 
+                  iconName="CheckCircle2"
+                  dark={true} 
+                />
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
       </section>
 
-      
 
       {/* SECTION 3: Capabilities & Technical Explorer (DARK SECTION) */}
       <section className="relative py-24 bg-navy-950 text-white">
@@ -278,7 +277,7 @@ export default function ModuleDetail() {
                     onChange={(e) => setHeadcount(Number(e.target.value))}
                     className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-brand-600 border border-slate-300"
                   />
-                  <div className="flex justify-between text-[11px] text-slate-500 font-medium">
+                  <div className="flex justify-between text-[11px] text-orange-500 font-medium">
                     <span>50 Team Members</span>
                     <span>5,000</span>
                     <span>10,000+ Enterprise</span>
@@ -289,7 +288,7 @@ export default function ModuleDetail() {
               {/* Calculated Output Display */}
               <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="p-6 rounded-2xl border border-slate-200 bg-white text-center space-y-1 shadow-sm">
-                  <div className="text-xs text-slate-500 uppercase font-bold">Monthly Hours Saved</div>
+                  <div className="text-xs text-slat-500 uppercase font-bold">Monthly Hours Saved</div>
                   <div className="font-display text-3xl font-bold text-brand-700">{hoursSavedPerMonth.toLocaleString()} hrs</div>
                   <div className="text-[11px] text-slate-500">Eliminated manual processing</div>
                 </div>
@@ -367,7 +366,7 @@ export default function ModuleDetail() {
               <div key={idx} className="p-6 rounded-2xl border border-slate-200 bg-white relative space-y-2 hover:border-brand-500/50 hover:shadow-lg transition-all">
                 <div className="flex items-center justify-between text-xs">
                   <span className="font-bold text-brand-700 uppercase tracking-widest">{item.step}</span>
-                  <span className="px-2 py-0.5 rounded bg-slate-100 text-slate-700 text-[11px] font-semibold border border-slate-200">{item.time}</span>
+                  <span className="px-2 py-0.5 rounded bg-orange-50 text-orange-800 text-[11px] font-semibold border border-orange-100">{item.time}</span>
                 </div>
                 <h4 className="font-display font-bold text-base text-navy-950">{item.title}</h4>
                 <p className="text-xs text-slate-600 leading-relaxed">{item.desc}</p>
@@ -392,15 +391,15 @@ export default function ModuleDetail() {
               {connectedModuleObjs.map((cMod) => (
                 <GlassCard key={cMod.slug} className="p-6 space-y-3 flex flex-col justify-between" dark={true}>
                   <div className="space-y-2">
-                    <span className="text-[10px] font-bold uppercase tracking-widest text-brand-400">{cMod.domainName}</span>
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-orange-400">{cMod.domainName}</span>
                     <h4 className="font-display font-bold text-lg text-white">{cMod.name}</h4>
-                    <p className="text-xs text-slate-300 line-clamp-2 leading-relaxed">{cMod.tagline}</p>
+                    <p className="text-xs text-slate-400 line-clamp-2 leading-relaxed">{cMod.tagline}</p>
                   </div>
                   <Link
                     to={`/modules/${cMod.slug}`}
-                    className="inline-flex items-center gap-1.5 text-xs font-bold text-brand-400 hover:text-white pt-2 border-t border-white/10 transition-colors"
+                    className="inline-flex items-center gap-1.5 text-xs font-bold text-brand-500 hover:text-white pt-2 border-t border-white/10 transition-colors"
                   >
-                    Explore Connected Module <ArrowRight className="w-3.5 h-3.5" />
+                    Explore Connected Module <ArrowRight className="w-3.5 h-3.5 " />
                   </Link>
                 </GlassCard>
               ))}
@@ -423,22 +422,22 @@ export default function ModuleDetail() {
             {faqs.map((faq, idx) => (
               <div
                 key={idx}
-                className="rounded-2xl border border-slate-200 bg-slate-50 overflow-hidden transition-all shadow-sm"
+                className="rounded-xl border border-slate-200 bg-slate-50 overflow-hidden transition-all shadow-sm"
               >
                 <button
                   onClick={() => setOpenFaq(openFaq === idx ? -1 : idx)}
                   aria-expanded={openFaq === idx}
                   aria-controls={`module-faq-answer-${idx}`}
-                  className="w-full p-5 text-left flex items-center justify-between gap-4 font-display font-semibold text-sm text-navy-950 hover:text-brand-700 transition-colors"
+                  className="w-full p-4 text-left flex items-center justify-between gap-4 font-display font-semibold text-sm text-navy-950 hover:text-brand-700 transition-colors"
                 >
                   <span className="flex items-center gap-3">
                     <HelpCircle className="w-4 h-4 text-brand-600 shrink-0" />
                     {faq.q}
                   </span>
                   {openFaq === idx ? (
-                    <ChevronUp className="w-4 h-4 text-brand-600 shrink-0" />
+                    <ChevronUp className="w-4 h-4 text-orange-600 shrink-0" />
                   ) : (
-                    <ChevronDown className="w-4 h-4 text-slate-500 shrink-0" />
+                    <ChevronDown className="w-4 h-4 text-orange-500 shrink-0" />
                   )}
                 </button>
 

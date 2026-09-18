@@ -182,7 +182,7 @@ export default function Careers() {
 
           <div className="max-w-3xl space-y-6">
             <span className="inline-flex items-center gap-2 rounded-full border border-brand-500/30 bg-brand-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-brand-400">
-              <Sparkles className="w-3.5 h-3.5" /> Careers at Eimpora
+              <Sparkles className="w-3.5 h-3.5 text-orange-400" /> Careers at Eimpora
             </span>
 
             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight">
@@ -202,7 +202,7 @@ export default function Careers() {
               </a>
               <Link
                 to="/platform"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-xs font-bold text-white border border-white/15 bg-white/5 hover:bg-white/10 transition-all uppercase tracking-wider"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-sm font-medium text-orange-400 hover:text-orange-500 border border-white/20 bg-orange-500/5 hover:border-orange-500/40 transition-all"
               >
                 Explore Platform Architecture
               </Link>
@@ -279,7 +279,7 @@ export default function Careers() {
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="h-16 w-16 rounded-full object-cover border-2 border-brand-400/40 shadow-md"
+                    className="h-16 w-16 rounded-full object-cover border-2 border-orange-400/50 shadow-md shadow-orange-500/10"
                   />
                   <div>
                     <h3 className="font-display font-bold text-lg text-white">{member.name}</h3>
@@ -296,7 +296,7 @@ export default function Careers() {
       </section>
 
       {/* SECTION 4: Open Positions (LIGHT SECTION) */}
-      <section id="open-roles" className="relative py-24 bg-white text-navy-950 border-b border-slate-200">
+      <section id="open-roles" className="relative pt-24 pb-16 bg-white text-navy-950 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
           <SectionHeading
             eyebrow="Open Roles"
@@ -311,7 +311,7 @@ export default function Careers() {
               <button
                 key={dept}
                 onClick={() => setSelectedDept(dept)}
-                className={`px-4 py-2 rounded-xl text-xs font-bold transition-all duration-200 ${selectedDept === dept
+                className={`px-4 py-2 rounded-lg text-xs font-bold transition-all duration-200 ${selectedDept === dept
                   ? 'bg-navy-950 text-white shadow-md'
                   : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
                   }`}
@@ -343,11 +343,11 @@ export default function Careers() {
 
                       <div className="flex flex-wrap gap-4 text-xs font-semibold text-slate-500">
                         <span className="flex items-center gap-1.5">
-                          <MapPin className="w-3.5 h-3.5 text-brand-600" />
+                          <MapPin className="w-3.5 h-3.5 text-orange-500" />
                           {role.location}
                         </span>
                         <span className="flex items-center gap-1.5">
-                          <Clock className="w-3.5 h-3.5 text-brand-600" />
+                          <Clock className="w-3.5 h-3.5 text-orange-500" />
                           {role.type}
                         </span>
                       </div>
@@ -356,7 +356,7 @@ export default function Careers() {
 
                   <button
                     onClick={() => handleApplyClick(role.id)}
-                    className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-xs font-bold text-navy-950 bg-gradient-to-r from-brand-400 to-brand-300 hover:from-brand-300 hover:to-brand-glow transition-all shadow-cyan-glow uppercase tracking-wider shrink-0 hover:scale-[1.02]"
+                    className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg text-xs font-bold text-navy-950 bg-gradient-to-r from-brand-400 to-brand-300 hover:from-brand-300 hover:to-brand-glow transition-all shadow-cyan-glow uppercase tracking-wider shrink-0 hover:scale-[1.02]"
                   >
                     Apply Now <ArrowRight className="w-4 h-4" />
                   </button>
@@ -370,7 +370,7 @@ export default function Careers() {
                       key={idx}
                       className="px-3 py-1 rounded-full bg-slate-200/70 text-slate-700 text-xs font-medium"
                     >
-                      ✓ {req}
+                      <span className="text-emerald-500 font-bold">✓</span> {req}
                     </span>
                   ))}
                 </div>
@@ -382,18 +382,18 @@ export default function Careers() {
 
       {/* SECTION 5: Application Form Drawer (DARK SECTION) */}
       {showApplicationForm && (
-        <section id="application-form" className="relative py-24 bg-navy-950 text-white border-b border-white/10">
+        <section id="application-form" className="relative pt-16 pb-24 bg-white text-white border-b border-white/10">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="rounded-3xl border border-brand-500/30 bg-navy-800/30 p-8 sm:p-12 shadow-2xl backdrop-blur-2xl space-y-8 relative">
+            <div className="rounded-3xl border border-brand-500/30 bg-navy-800/95 p-8 sm:p-12 pt-0 sm:pt-6 shadow-2xl backdrop-blur-2xl space-y-8 relative">
               <div className="absolute inset-0 bg-radial-glow opacity-40" aria-hidden="true" />
               <div className="absolute inset-0 bg-grid-pattern opacity-20" aria-hidden="true" />
               <div className="flex items-center justify-between border-b border-white/10 pb-6 relative z-10">
-                <div>
-                  <span className="text-xs font-bold uppercase tracking-widest text-brand-400">Direct Application</span>
-                  <h2 className="font-display text-2xl sm:text-3xl font-bold text-white mt-1">
+                <div className='max-w-md'>
+                  <span className="text-xs font-bold uppercase tracking-widest text-cyan-400">Direct Application</span>
+                  <h2 className="font-display text-2xl sm:text-3xl font-bold  text-white mt-1">
                     Apply for {selectedRole?.title || "Enterprise Role"}
                   </h2>
-                  <p className="text-xs text-slate-400 mt-1">{selectedRole?.department} • {selectedRole?.location}</p>
+                  <p className="text-xs text-slate-400 mt-1">{selectedRole?.department} <span className='text-orange-400'>•</span> {selectedRole?.location}</p>
                 </div>
                 <button
                   onClick={() => setShowApplicationForm(false)}
@@ -406,33 +406,33 @@ export default function Careers() {
               <form onSubmit={handleSubmitApplication} className="space-y-6 relative z-10">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <label className="block text-xs font-bold uppercase tracking-wider text-slate-300">First Name *</label>
+                    <label className="block text-xs font-bold uppercase tracking-wider text-slate-300">First Name <span className='text-orange-400'>*</span></label>
                     <input
                       type="text"
                       required
                       placeholder="Jane"
-                      className="w-full border-b border-white/15 bg-transparent py-3 text-sm text-white placeholder-slate-500 focus:border-brand-400 focus:outline-none"
+                      className="w-full border-b border-white/15 bg-transparent py-3 text-sm text-white placeholder-slate-500 hover:border-brand-400 focus:border-brand-400 focus:outline-none"
                     />
                   </div>
                   <div className="space-y-2">
-                    <label className="block text-xs font-bold uppercase tracking-wider text-slate-300">Last Name *</label>
+                    <label className="block text-xs font-bold uppercase tracking-wider text-slate-300">Last Name <span className='text-orange-400'>*</span></label>
                     <input
                       type="text"
                       required
                       placeholder="Doe"
-                      className="w-full border-b border-white/15 bg-transparent py-3 text-sm text-white placeholder-slate-500 focus:border-brand-400 focus:outline-none"
+                      className="w-full border-b border-white/15 bg-transparent py-3 text-sm text-white placeholder-slate-500 hover:border-brand-400 focus:border-brand-400 focus:outline-none"
                     />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <label className="block text-xs font-bold uppercase tracking-wider text-slate-300">Email Address *</label>
+                    <label className="block text-xs font-bold uppercase tracking-wider text-slate-300">Email Address <span className='text-orange-400'>*</span></label>
                     <input
                       type="email"
                       required
                       placeholder="jane.doe@company.com"
-                      className="w-full border-b border-white/15 bg-transparent py-3 text-sm text-white placeholder-slate-500 focus:border-brand-400 focus:outline-none"
+                      className="w-full border-b border-white/15 bg-transparent py-3 text-sm text-white placeholder-slate-500 hover:border-brand-400 focus:border-brand-400 focus:outline-none"
                     />
                   </div>
                   <div className="space-y-2">
@@ -440,7 +440,7 @@ export default function Careers() {
                     <input
                       type="tel"
                       placeholder="+1 (555) 000-0000"
-                      className="w-full border-b border-white/15 bg-transparent py-3 text-sm text-white placeholder-slate-500 focus:border-brand-400 focus:outline-none"
+                      className="w-full border-b border-white/15 bg-transparent py-3 text-sm text-white placeholder-slate-500 hover:border-brand-400 focus:border-brand-400 focus:outline-none"
                     />
                   </div>
                 </div>
@@ -450,12 +450,12 @@ export default function Careers() {
                   <input
                     type="url"
                     placeholder="https://linkedin.com/in/janedoe"
-                    className="w-full border-b border-white/15 bg-transparent py-3 text-sm text-white placeholder-slate-500 focus:border-brand-400 focus:outline-none"
+                    className="w-full border-b border-white/15 bg-transparent py-3 text-sm text-white placeholder-slate-500 hover:border-brand-400 focus:border-brand-400 focus:outline-none"
                   />
                 </div>
 
                 <div className="space-y-2">
-                  <label className="block text-xs font-bold uppercase tracking-wider text-slate-300">Resume / CV (PDF or Word) *</label>
+                  <label className="block text-xs font-bold uppercase tracking-wider text-slate-300">Resume / CV (PDF or Word) <span className='text-orange-400'>*</span></label>
                   <div className="p-6 rounded-xl border border-dashed border-white/20 bg-transparent text-center hover:border-brand-400/50 transition-colors">
                     <Upload className="w-8 h-8 text-brand-400 mx-auto mb-2" />
                     <p className="text-xs text-slate-300 font-semibold mb-1">Click to upload your resume or drag file here</p>
@@ -464,7 +464,7 @@ export default function Careers() {
                       type="file"
                       required
                       accept=".pdf,.doc,.docx"
-                      className="mt-3 block mx-auto text-xs text-slate-400 file:mr-4 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-xs file:font-bold file:bg-brand-500/20 file:text-brand-300 hover:file:bg-brand-500/30"
+                      className="mt-3 block mx-auto text-xs text-slate-400 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-xs file:font-bold file:bg-brand-500/20 file:text-brand-300 hover:file:bg-brand-500/30"
                     />
                   </div>
                 </div>
@@ -474,7 +474,7 @@ export default function Careers() {
                   <textarea
                     rows={3}
                     placeholder="Tell us about your technical background and why you want to build at Eimpora..."
-                    className="w-full border-b border-white/15 bg-transparent py-3 text-sm text-white placeholder-slate-500 focus:border-brand-400 focus:outline-none"
+                    className="w-full border-b border-white/15 bg-transparent py-3 text-sm text-white placeholder-slate-500 hover:border-brand-400 focus:border-brand-400 focus:outline-none"
                   />
                 </div>
 
