@@ -268,11 +268,13 @@ export default function SolutionDetail() {
             {faqs.map((faq, idx) => (
               <div
                 key={idx}
-                className="rounded-2xl border border-white/10 bg-navy-900/70 overflow-hidden transition-all duration-300 hover:border-brand-500/30"
+                className="rounded-2xl border border-white/10 bg-navy-900/70 overflow-hidden transition-all duration-300 ease-out hover:border-brand-500/30"
               >
                 <button
+                  type="button"
+                  aria-expanded={openFaq === idx}
                   onClick={() => setOpenFaq(openFaq === idx ? -1 : idx)}
-                  className="w-full p-4 text-left flex items-center justify-between gap-4 font-display font-semibold  text-white hover:text-brand-300 transition-colors"
+                  className="w-full p-4 text-left flex items-center justify-between gap-4 font-display font-semibold text-white hover:text-brand-300 transition-colors duration-200"
                 >
                   <span className="flex items-center gap-3">
                     <HelpCircle className="w-4 h-4 text-brand-400 shrink-0" />
@@ -281,11 +283,17 @@ export default function SolutionDetail() {
                   <ChevronDown className={`w-4 h-4 text-orange-400 shrink-0 transition-transform duration-300 ${openFaq === idx ? 'rotate-180' : ''}`} />
                 </button>
 
-                {openFaq === idx && (
-                  <div className="p-5 pt-0 text-xs sm:text-sm text-slate-300  bg-navy-950/40 leading-relaxed space-y-2">
-                    <p>{faq.a}</p>
+                <div
+                  className={`grid transition-all duration-300 ease-out ${
+                    openFaq === idx ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
+                  }`}
+                >
+                  <div className="overflow-hidden">
+                    <div className="p-5 pt-0 text-xs sm:text-sm text-slate-300 bg-navy-950/40 leading-relaxed space-y-2">
+                      <p>{faq.a}</p>
+                    </div>
                   </div>
-                )}
+                </div>
               </div>
             ))}
           </div>

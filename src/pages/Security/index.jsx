@@ -10,6 +10,7 @@ import GlassCard from '../../components/common/GlassCard';
 import CTASection from '../../components/common/CTASection';
 import { SECURITY_LAYERS, RBAC_MATRIX } from '../../data/securityData';
 import Stars from '../../components/home/Stars';
+import SecuritySvgModule from '../../components/security/SecuritySvgModule';
 
 const CERTIFICATIONS = [
   {
@@ -88,8 +89,8 @@ export default function Security() {
   const getPermissionBadge = (val) => {
     if (!val || val === 'None') {
       return (
-        <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-slate-800/80 text-slate-400 text-[11px] font-medium border border-slate-700/50">
-          <Lock className="w-3 h-3 text-slate-500" /> Blocked
+        <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-orange-500/15 text-orange-500 text-[11px] font-medium border border-orange-700/50">
+          <Lock className="w-3 h-3 text-orange-500/80" /> Blocked
         </span>
       );
     }
@@ -102,14 +103,14 @@ export default function Security() {
     }
     if (val.includes('View') || val.includes('Own')) {
       return (
-        <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-brand-500/10 text-brand-300 text-[11px] font-medium border border-brand-500/30">
-          <Eye className="w-3 h-3 text-brand-400" /> {val}
+        <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-cyan-500/10 text-cyan-300 text-[11px] font-medium border border-cyan-500/30">
+          <Eye className="w-3 h-3 text-cyan-400" /> {val}
         </span>
       );
     }
     return (
-      <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-amber-500/10 text-amber-300 text-[11px] font-medium border border-amber-500/30">
-        <CheckCircle2 className="w-3 h-3 text-amber-400" /> {val}
+      <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-cyan-500/10 text-cyan-300 text-[11px] font-medium border border-cyan-500/30">
+        <CheckCircle2 className="w-3 h-3 text-cyan-400" /> {val}
       </span>
     );
   };
@@ -121,8 +122,8 @@ export default function Security() {
         <div className="absolute inset-0 bg-radial-glow opacity-80" aria-hidden="true" />
         <Stars />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-          <div className="inline-flex items-center gap-2 rounded-full border border-brand-500/30 bg-brand-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-brand-400 backdrop-blur-md">
-            <ShieldCheck className="w-3.5 h-3.5 text-brand-400 animate-pulse" />
+          <div className="inline-flex items-center gap-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-cyan-400 backdrop-blur-md">
+            <ShieldCheck className="w-3.5 h-3.5 text-cyan-400 animate-pulse" />
             Zero-Trust Enterprise Trust & Governance
           </div>
 
@@ -135,24 +136,33 @@ export default function Security() {
             Field-level AES-256 column encryption, fine-grained Role-Based Access Control (RBAC), SAML 2.0 / OIDC SSO federation, and cryptographically hashed immutable audit logging.
           </p>
 
-          {/* Trust Stat Pills */}
+          {/* Trust Stat Pills - Cyan & White Only */}
           <div className="pt-6 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-            <div className="p-4 rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm text-center">
-              <div className="text-2xl font-bold font-display text-orange-400">SOC 2 Type II</div>
+            <div className="p-4 rounded-xl border border-cyan-500/20 bg-white/5 backdrop-blur-sm text-center">
+              <div className="text-2xl font-bold font-display text-cyan-400">SOC 2 Type II</div>
               <div className="text-xs text-slate-300 mt-1 font-medium">Audited & Certified</div>
             </div>
-            <div className="p-4 rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm text-center">
-              <div className="text-2xl font-bold font-display text-orange-400">AES-256 GCM</div>
+            <div className="p-4 rounded-xl border border-cyan-500/20 bg-white/5 backdrop-blur-sm text-center">
+              <div className="text-2xl font-bold font-display text-cyan-400">AES-256 GCM</div>
               <div className="text-xs text-slate-300 mt-1 font-medium">Column-Level Encryption</div>
             </div>
-            <div className="p-4 rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm text-center">
-              <div className="text-2xl font-bold font-display text-orange-400">ISO 27001</div>
+            <div className="p-4 rounded-xl border border-cyan-500/20 bg-white/5 backdrop-blur-sm text-center">
+              <div className="text-2xl font-bold font-display text-cyan-400">ISO 27001</div>
               <div className="text-xs text-slate-300 mt-1 font-medium">ISMS Framework Compliance</div>
             </div>
-            <div className="p-4 rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm text-center">
-              <div className="text-2xl font-bold font-display text-orange-400">99.99%</div>
+            <div className="p-4 rounded-xl border border-cyan-500/20 bg-white/5 backdrop-blur-sm text-center">
+              <div className="text-2xl font-bold font-display text-cyan-400">99.99%</div>
               <div className="text-xs text-slate-300 mt-1 font-medium">Uptime SLA Guarantee</div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SVG MODULE SECTION: DEDICATED ZERO-TRUST ARCHITECTURE TOPOLOGY */}
+      <section className="relative py-24 bg-white  border-b border-white/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="">
+            <SecuritySvgModule />
           </div>
         </div>
       </section>
@@ -168,10 +178,10 @@ export default function Security() {
 
           <div className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {SECURITY_LAYERS.map((sec, idx) => (
-              <GlassCard key={idx} className="p-7 flex flex-col justify-between hover:border-brand-500/40 transition-all duration-300">
+              <GlassCard key={idx} className="p-7 flex flex-col justify-between hover:border-cyan-500/40 transition-all duration-300">
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <span className="text-xs font-bold text-brand-400 uppercase tracking-widest px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20">
+                    <span className="text-xs font-bold text-cyan-400 uppercase tracking-widest px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20">
                       {sec.layer}
                     </span>
                     <Lock className="w-4 h-4 text-orange-400" />
@@ -209,19 +219,19 @@ export default function Security() {
               return (
                 <div
                   key={idx}
-                  className="p-6 rounded-2xl border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] transition-all duration-300 space-y-4 relative group"
+                  className="p-6 rounded-2xl border border-cyan-500/20 bg-white/[0.03] hover:bg-white/[0.06] transition-all duration-300 space-y-4 relative group"
                 >
                   <div className="flex items-center justify-between">
-                    <div className="p-3 rounded-xl bg-brand-500/10 border border-brand-500/20 text-brand-400 group-hover:scale-110 transition-transform">
+                    <div className="p-3 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 group-hover:scale-110 transition-transform">
                       <IconComp className="w-5 h-5" />
                     </div>
-                    <span className="text-[11px] font-bold uppercase tracking-wider text-brand-400 px-2.5 py-0.5 rounded-md bg-brand-500/10 border border-brand-500/20">
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-cyan-400 px-2.5 py-0.5 rounded-md bg-cyan-500/10 border border-cyan-500/20">
                       {cert.tag}
                     </span>
                   </div>
 
                   <div>
-                    <h3 className="font-display font-bold text-lg text-white group-hover:text-brand-300 transition-colors">
+                    <h3 className="font-display font-bold text-lg text-white group-hover:text-cyan-300 transition-colors">
                       {cert.title}
                     </h3>
                     <span className="text-[11px] font-mono font-semibold text-orange-400 block mt-0.5">
@@ -249,13 +259,13 @@ export default function Security() {
           />
 
           {/* Interactive Role Selector Pills */}
-          <div className="flex flex-wrap items-center justify-center gap-3">
+          <div className="flex flex-wrap items-center justify-start gap-3">
             {RBAC_MATRIX.map((row, idx) => (
               <button
                 key={idx}
                 onClick={() => setSelectedRoleIndex(idx)}
                 className={`px-4 py-2 rounded-lg text-xs font-bold transition-all duration-200 border ${selectedRoleIndex === idx
-                  ? 'bg-gradient-to-r from-brand-500 to-brand-400 text-navy-950 border-brand-300 shadow-cyan-glow scale-105'
+                  ? 'bg-cyan-500 text-navy-950 border-cyan-300 shadow-cyan-glow scale-105'
                   : 'bg-white/5 text-slate-300 border-white/10 hover:bg-white/10 hover:text-white'
                   }`}
               >
@@ -265,13 +275,13 @@ export default function Security() {
           </div>
 
           {/* Role Active Highlight Card */}
-          <div className="p-6 rounded-2xl border border-brand-500/30 bg-brand-500/10 text-white flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+          <div className="p-6 rounded-2xl border border-cyan-500/30 bg-cyan-500/10 text-white flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
             <div className="flex items-center gap-3">
-              <div className="p-3 rounded-xl bg-brand-500/20 text-brand-300">
+              <div className="p-3 rounded-xl bg-cyan-500/20 text-cyan-300">
                 <Users className="w-5 h-5" />
               </div>
               <div>
-                <span className="text-xs text-brand-400 uppercase font-bold tracking-wider">Active Role Preview</span>
+                <span className="text-xs text-cyan-400 uppercase font-bold tracking-wider">Active Role Preview</span>
                 <h4 className="font-display font-bold text-xl text-white">{selectedRbacRow.role}</h4>
               </div>
             </div>
@@ -286,11 +296,11 @@ export default function Security() {
               <thead>
                 <tr className="border-b border-white/10 bg-navy-900/90 text-slate-300">
                   <th className="p-4 font-bold uppercase tracking-wider text-white">User Role</th>
-                  <th className="p-4 font-bold uppercase tracking-wider text-brand-400">Core HR</th>
-                  <th className="p-4 font-bold uppercase tracking-wider text-brand-400">Payroll Engine</th>
-                  <th className="p-4 font-bold uppercase tracking-wider text-brand-400">Attendance</th>
-                  <th className="p-4 font-bold uppercase tracking-wider text-brand-400">ATS Recruitment</th>
-                  <th className="p-4 font-bold uppercase tracking-wider text-brand-400">Executive Dashboards</th>
+                  <th className="p-4 font-bold uppercase tracking-wider text-cyan-400">Core HR</th>
+                  <th className="p-4 font-bold uppercase tracking-wider text-cyan-400">Payroll Engine</th>
+                  <th className="p-4 font-bold uppercase tracking-wider text-cyan-400">Attendance</th>
+                  <th className="p-4 font-bold uppercase tracking-wider text-cyan-400">ATS Recruitment</th>
+                  <th className="p-4 font-bold uppercase tracking-wider text-cyan-400">Executive Dashboards</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-white/5 text-slate-300">
@@ -300,11 +310,11 @@ export default function Security() {
                     <tr
                       key={idx}
                       onClick={() => setSelectedRoleIndex(idx)}
-                      className={`cursor-pointer transition-colors ${isSelected ? 'bg-brand-500/10 border-l-4 border-l-brand-400' : 'hover:bg-white/5'
+                      className={`cursor-pointer transition-colors ${isSelected ? 'bg-cyan-500/10 border-l-4 border-l-cyan-400' : 'hover:bg-white/5'
                         }`}
                     >
                       <td className="p-4 font-bold text-white flex items-center gap-2">
-                        {isSelected && <BadgeCheck className="w-4 h-4 text-brand-400 shrink-0" />}
+                        {isSelected && <BadgeCheck className="w-4 h-4 text-cyan-400 shrink-0" />}
                         {row.role}
                       </td>
                       <td className="p-4">{getPermissionBadge(row.coreHR)}</td>
@@ -337,15 +347,15 @@ export default function Security() {
                 <div
                   key={idx}
                   className={`rounded-xl border transition-all duration-300 overflow-hidden ${isOpen
-                    ? 'border-brand-500/40 bg-navy-900/90 shadow-lg shadow-brand-500/5'
+                    ? 'border-cyan-500/40 bg-navy-900/90 shadow-lg shadow-cyan-500/5'
                     : 'border-white/10 bg-navy-900/50 hover:border-white/20'
                     }`}
                 >
                   <button
                     onClick={() => setOpenFaq(isOpen ? null : idx)}
-                    className="w-full p-4 text-left flex items-center justify-between gap-4 font-display font-semibold text-base text-white hover:text-brand-300 transition-colors"
+                    className="w-full p-4 text-left flex items-center justify-between gap-4 font-display font-semibold text-base text-white hover:text-cyan-300 transition-colors"
                   >
-                    <span className={isOpen ? 'text-brand-300' : 'text-white'}>{faq.q}</span>
+                    <span className={isOpen ? 'text-cyan-300' : 'text-white'}>{faq.q}</span>
                     <ChevronDown
                       className={`w-5 h-5 shrink-0 transition-transform duration-300 ease-in-out ${isOpen ? 'rotate-180 text-orange-400' : 'text-orange-400'
                         }`}

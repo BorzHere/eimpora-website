@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { Network, Search, ArrowRight, CheckCircle2, Server, Database, KeyRound, Fingerprint, Code2 } from 'lucide-react';
 import SectionHeading from '../../components/common/SectionHeading';
 import GlassCard from '../../components/common/GlassCard';
@@ -10,6 +10,15 @@ import Stars from '../../components/home/Stars';
 export default function Integrations() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
+  const location = useLocation();
+
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const cat = params.get('cat');
+    if (cat) {
+      setSelectedCategory(cat);
+    }
+  }, [location.search]);
 
   const filteredIntegrations = INTEGRATIONS_DATA.filter((item) => {
     const matchesCat = selectedCategory === 'all' || item.category === selectedCategory;
@@ -52,6 +61,24 @@ export default function Integrations() {
               className="w-full pl-12 pr-4 py-3.5 rounded-xl border border-white/10 bg-navy-900/90 text-sm text-white placeholder-slate-400 focus:outline-none focus:border-brand-500 transition-all shadow-lg"
             />
           </div>
+
+          {/* Mega Menu Category Quick Links in Section Header */}
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-2 max-w-3xl mx-auto">
+            <span className="text-xs text-slate-400 font-medium mr-1">Ecosystem Domains:</span>
+            {INTEGRATION_CATEGORIES.map((cat) => (
+              <button
+                key={cat.id}
+                onClick={() => setSelectedCategory(cat.id)}
+                className={`px-3 py-1 rounded-full text-xs font-semibold transition-all border ${
+                  selectedCategory === cat.id
+                    ? 'border-brand-400 bg-brand-500/20 text-brand-300 shadow-sm'
+                    : 'border-white/10 bg-navy-900/60 text-slate-300 hover:border-brand-500/30 hover:text-white'
+                }`}
+              >
+                {cat.name}
+              </button>
+            ))}
+          </div>
         </div>
 
         <div className="mt-16 p-4 max-w-6xl mx-auto  rounded-3xl backdrop-blur-xl">
@@ -82,7 +109,7 @@ export default function Integrations() {
       <section className="relative py-24 bg-slate-50 text-navy-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Category Bar */}
-          <div className="flex flex-wrap items-center justify-center gap-2 p-1.5 rounded-xl border border-slate-200 bg-white mb-12 shadow-sm">
+          <div className="flex flex-wrap items-center justify-start gap-2 p-1.5 rounded-xl border border-slate-200 bg-white mb-12 shadow-sm">
             {INTEGRATION_CATEGORIES.map((cat) => (
               <button
                 key={cat.id}

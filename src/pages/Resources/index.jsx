@@ -58,7 +58,7 @@ export default function Resources() {
       {/* Resource Cards (LIGHT SECTION) */}
       <section className="relative py-24 bg-slate-50 text-navy-950 border-y border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap items-center justify-center gap-2 p-1.5 rounded-xl border border-slate-200 bg-white mb-12 shadow-sm">
+          <div className="flex flex-wrap items-center justify-start gap-2 p-1.5 rounded-xl border border-slate-200 bg-white mb-12 shadow-sm">
             {RESOURCE_CATEGORIES.map((cat) => (
               <button
                 key={cat.id}

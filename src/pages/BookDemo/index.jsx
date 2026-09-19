@@ -331,7 +331,7 @@ export default function BookDemo() {
                 <div className="pt-4">
                   <button
                     type="submit"
-                    className="w-full py-4 rounded-2xl text-xs sm:text-sm font-extrabold uppercase tracking-wider text-navy-950 bg-gradient-to-r from-brand-400 via-brand-300 to-brand-glow hover:from-brand-300 hover:to-brand-400 transition-all shadow-cyan-glow flex items-center justify-center gap-2 cursor-pointer transform hover:scale-[1.01]"
+                    className="w-full py-4 rounded-xl text-xs sm:text-sm font-extrabold uppercase tracking-wider text-navy-950 bg-gradient-to-r from-brand-400 via-brand-300 to-brand-glow hover:from-brand-300 hover:to-brand-400 transition-all shadow-cyan-glow flex items-center justify-center gap-2 cursor-pointer transform hover:scale-[1.01]"
                   >
                     <span>Schedule Private Eimpora Demonstration</span>
                     <ArrowRight className="w-4 h-4" />
@@ -430,7 +430,7 @@ export default function BookDemo() {
               <div className="pt-2">
                 <button
                   onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-xs font-extrabold uppercase tracking-wider text-white bg-navy-950 hover:bg-navy-900 transition-all shadow-md cursor-pointer"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg text-xs font-extrabold uppercase tracking-wider text-white bg-navy-950 hover:bg-navy-900 transition-all shadow-md cursor-pointer"
                 >
                   <span>Schedule Private Demo</span>
                   <ArrowRight className="w-4 h-4 text-brand-400" />

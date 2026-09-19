@@ -1,15 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Cpu, Users, Banknote, ShieldCheck, Sparkles, Building2, 
-  Clock, Target, FileText, ArrowRight, Layers, LayoutDashboard, Globe
+import {
+  Cpu, Users, Banknote, ShieldCheck, Sparkles, Building2,
+  Clock, Target, FileText, ArrowRight, Layers, LayoutDashboard, Globe,
+  Database, KeyRound, Fingerprint, MessageSquare, Code2
 } from 'lucide-react';
 
 export default function MegaMenu({ activeTab, onClose }) {
   if (!activeTab) return null;
 
   return (
-    <div 
+    <div
       className="absolute top-full left-0 w-full bg-navy-900/95 backdrop-blur-2xl border-b border-white/10 shadow-2xl transition-all duration-200 z-50 text-white"
       onMouseLeave={onClose}
     >
@@ -226,6 +227,81 @@ export default function MegaMenu({ activeTab, onClose }) {
                 <div className="font-semibold text-sm text-white mb-1">Workforce Intelligence & Modeling</div>
                 <p className="text-xs text-slate-400">Multi-scenario capacity modeling, AI flight risk alerts, and C-suite dashboards.</p>
               </Link>
+            </div>
+          </div>
+        )}
+
+        {activeTab === 'integrations' && (
+          <div>
+            <div className="flex items-center justify-between pb-4 border-b border-white/10 mb-6">
+              <span className="text-xs font-bold uppercase tracking-widest text-brand-400">
+                Enterprise Integration Gateway (5 Ecosystem Domains)
+              </span>
+              <Link to="/integrations" onClick={onClose} className="text-xs font-semibold text-slate-300 hover:text-white flex items-center gap-1">
+                View Integration Gateway <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
+
+            <div className="grid grid-cols-5 gap-6">
+              <div>
+                <div className="flex items-center gap-2 font-display font-semibold text-sm text-white mb-3">
+                  <Database className="w-4 h-4 text-orange-400" /> ERP & Finance
+                </div>
+                <div className="space-y-2">
+                  <Link to="/integrations?cat=erp-finance" onClick={onClose} className="block text-xs text-slate-300 hover:text-brand-400">SAP S/4HANA ERP</Link>
+                  <Link to="/integrations?cat=erp-finance" onClick={onClose} className="block text-xs text-slate-300 hover:text-brand-400">Oracle Fusion Cloud</Link>
+                  <Link to="/integrations?cat=erp-finance" onClick={onClose} className="block text-xs text-slate-300 hover:text-brand-400">GL Ledger Vouchers</Link>
+                  <Link to="/integrations?cat=erp-finance" onClick={onClose} className="block text-[11px] text-brand-400 hover:underline pt-1 font-semibold">Explore ERP Connectors →</Link>
+                </div>
+              </div>
+
+              <div>
+                <div className="flex items-center gap-2 font-display font-semibold text-sm text-white mb-3">
+                  <KeyRound className="w-4 h-4 text-orange-400" /> Identity & SSO
+                </div>
+                <div className="space-y-2">
+                  <Link to="/integrations?cat=identity-sso" onClick={onClose} className="block text-xs text-slate-300 hover:text-brand-400">Microsoft Entra ID</Link>
+                  <Link to="/integrations?cat=identity-sso" onClick={onClose} className="block text-xs text-slate-300 hover:text-brand-400">Okta Universal Directory</Link>
+                  <Link to="/integrations?cat=identity-sso" onClick={onClose} className="block text-xs text-slate-300 hover:text-brand-400">SAML 2.0 & SCIM 2.0</Link>
+                  <Link to="/integrations?cat=identity-sso" onClick={onClose} className="block text-[11px] text-brand-400 hover:underline pt-1 font-semibold">Explore Identity Integrations →</Link>
+                </div>
+              </div>
+
+              <div>
+                <div className="flex items-center gap-2 font-display font-semibold text-sm text-white mb-3">
+                  <Fingerprint className="w-4 h-4 text-orange-400" /> Biometrics & Devices
+                </div>
+                <div className="space-y-2">
+                  <Link to="/integrations?cat=biometrics-hardware" onClick={onClose} className="block text-xs text-slate-300 hover:text-brand-400">ZKTeco Hardware Clocks</Link>
+                  <Link to="/integrations?cat=biometrics-hardware" onClick={onClose} className="block text-xs text-slate-300 hover:text-brand-400">Suprema BioStar 2 Gates</Link>
+                  <Link to="/integrations?cat=biometrics-hardware" onClick={onClose} className="block text-xs text-slate-300 hover:text-brand-400">Real-time Push Gateway</Link>
+                  <Link to="/integrations?cat=biometrics-hardware" onClick={onClose} className="block text-[11px] text-brand-400 hover:underline pt-1 font-semibold">Explore Hardware Sync →</Link>
+                </div>
+              </div>
+
+              <div>
+                <div className="flex items-center gap-2 font-display font-semibold text-sm text-white mb-3">
+                  <MessageSquare className="w-4 h-4 text-orange-400" /> Productivity & Comm
+                </div>
+                <div className="space-y-2">
+                  <Link to="/integrations?cat=productivity-comm" onClick={onClose} className="block text-xs text-slate-300 hover:text-brand-400">Slack Enterprise Grid</Link>
+                  <Link to="/integrations?cat=productivity-comm" onClick={onClose} className="block text-xs text-slate-300 hover:text-brand-400">Microsoft Teams App</Link>
+                  <Link to="/integrations?cat=productivity-comm" onClick={onClose} className="block text-xs text-slate-300 hover:text-brand-400">In-App Leave Approvals</Link>
+                  <Link to="/integrations?cat=productivity-comm" onClick={onClose} className="block text-[11px] text-brand-400 hover:underline pt-1 font-semibold">Explore Chat Bots →</Link>
+                </div>
+              </div>
+
+              <div>
+                <div className="flex items-center gap-2 font-display font-semibold text-sm text-white mb-3">
+                  <Code2 className="w-4 h-4 text-orange-400" /> Developer APIs
+                </div>
+                <div className="space-y-2">
+                  <Link to="/integrations?cat=custom-api" onClick={onClose} className="block text-xs text-slate-300 hover:text-brand-400">OpenAPI 3.0 REST Suite</Link>
+                  <Link to="/integrations?cat=custom-api" onClick={onClose} className="block text-xs text-slate-300 hover:text-brand-400">Event-Driven Webhooks</Link>
+                  <Link to="/integrations?cat=custom-api" onClick={onClose} className="block text-xs text-slate-300 hover:text-brand-400">OAuth 2.0 Auth Stream</Link>
+                  <Link to="/integrations?cat=custom-api" onClick={onClose} className="block text-[11px] text-brand-400 hover:underline pt-1 font-semibold">Explore Developer API →</Link>
+                </div>
+              </div>
             </div>
           </div>
         )}

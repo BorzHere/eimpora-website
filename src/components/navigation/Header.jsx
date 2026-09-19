@@ -69,7 +69,7 @@ export default function Header() {
               to="/ai"
               onMouseEnter={() => setActiveMega(null)}
               onClick={() => setActiveMega(null)}
-              className="px-3.5 py-2 rounded-lg text-sm font-medium text-slate-300 hover:text-white hover:bg-white/5 transition-colors inline-flex items-center gap-1.5"
+              className="px-3.5 py-2 rounded-lg text-sm font-medium text-slate-300 hover:text-brand-300 hover:bg-white/5 transition-colors inline-flex items-center gap-1.5"
             >
               <Sparkles className="w-3.5 h-3.5 text-orange-400" />
               AI
@@ -109,20 +109,28 @@ export default function Header() {
               </Link>
             </div>
 
-            <Link
-              to="/integrations"
-              onMouseEnter={() => setActiveMega(null)}
-              onClick={() => setActiveMega(null)}
-              className="px-3.5 py-2 rounded-lg text-sm font-medium text-slate-300 hover:text-white hover:bg-white/5 transition-colors"
+            <div
+              className="relative"
+              onMouseEnter={() => setActiveMega('integrations')}
             >
-              Integrations
-            </Link>
+              <Link
+                to="/integrations"
+                onClick={() => setActiveMega(null)}
+                className={`px-3.5 py-2 rounded-lg text-sm font-medium transition-colors inline-flex items-center gap-1.5 ${activeMega === 'integrations'
+                  ? 'text-brand-300 bg-white/10'
+                  : 'text-slate-300 hover:text-white hover:bg-white/5'
+                  }`}
+              >
+                Integrations
+                <ChevronDown className={`w-3.5 h-3.5 transition-transform ${activeMega === 'integrations' ? 'rotate-180 text-brand-300' : 'text-slate-400'}`} />
+              </Link>
+            </div>
 
             <Link
               to="/resources"
               onMouseEnter={() => setActiveMega(null)}
               onClick={() => setActiveMega(null)}
-              className="px-3.5 py-2 rounded-lg text-sm font-medium text-slate-300 hover:text-white hover:bg-white/5 transition-colors"
+              className="px-3.5 py-2 rounded-lg text-sm font-medium text-slate-300 hover:text-brand-300 hover:bg-white/5 transition-colors"
             >
               Resources
             </Link>
@@ -136,11 +144,11 @@ export default function Header() {
                 onClick={() => setActiveMega(activeMega === 'more' ? null : 'more')}
                 className={`px-3.5 py-2 rounded-lg text-sm font-medium transition-colors inline-flex items-center gap-1.5 cursor-pointer ${activeMega === 'more'
                   ? 'text-brand-300 bg-white/10'
-                  : 'text-orange-400 hover:text-white hover:bg-white/5'
+                  : 'text-brand-400 hover:text-white hover:bg-white/5'
                   }`}
               >
                 More
-                <ChevronDown className={`w-3.5 h-3.5 transition-transform ${activeMega === 'more' ? 'rotate-180 text-brand-300' : 'text-orange-400'}`} />
+                <ChevronDown className={`w-3.5 h-3.5 transition-transform ${activeMega === 'more' ? 'rotate-180 text-brand-300' : 'text-brand-400'}`} />
               </button>
 
               {activeMega === 'more' && (
@@ -152,28 +160,28 @@ export default function Header() {
                     <Link
                       to="/security"
                       onClick={() => setActiveMega(null)}
-                      className="block rounded-lg px-3.5 py-2.5 text-sm font-medium text-slate-300 transition-colors hover:bg-white/5 hover:text-white"
+                      className="block rounded-lg px-3.5 py-2.5 text-sm font-medium text-slate-300 transition-colors hover:bg-white/5 hover:text-brand-300"
                     >
                       Security & Governance
                     </Link>
                     <Link
                       to="/industries"
                       onClick={() => setActiveMega(null)}
-                      className="block rounded-lg px-3.5 py-2.5 text-sm font-medium text-slate-300 transition-colors hover:bg-white/5 hover:text-white"
+                      className="block rounded-lg px-3.5 py-2.5 text-sm font-medium text-slate-300 transition-colors hover:bg-white/5 hover:text-brand-300"
                     >
                       Industries
                     </Link>
                     <Link
                       to="/pricing"
                       onClick={() => setActiveMega(null)}
-                      className="block rounded-lg px-3.5 py-2.5 text-sm font-medium text-slate-300 transition-colors hover:bg-white/5 hover:text-white"
+                      className="block rounded-lg px-3.5 py-2.5 text-sm font-medium text-slate-300 transition-colors hover:bg-white/5 hover:text-brand-300"
                     >
                       Price & Scope 
                     </Link>
                     <Link
                       to="/careers"
                       onClick={() => setActiveMega(null)}
-                      className="block rounded-lg px-3.5 py-2.5 text-sm font-medium text-slate-300 transition-colors hover:bg-white/5 hover:text-white"
+                      className="block rounded-lg px-3.5 py-2.5 text-sm font-medium text-slate-300 transition-colors hover:bg-white/5 hover:text-brand-300"
                     >
                       Careers & Culture
                     </Link>

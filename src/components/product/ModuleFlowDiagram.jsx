@@ -46,7 +46,7 @@ export default function ModuleFlowDiagram() {
       bgColor: '#ECFEFF',
       x: 1000,
       y: 120,
-      dotOffset: { x: -95, y: 3 },
+      dotOffset: { x: -94, y: 1 },
       pathStart: { x: 910, y: 134 },
       delay: '1.5s'
     },

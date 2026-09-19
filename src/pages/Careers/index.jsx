@@ -311,9 +311,9 @@ export default function Careers() {
               <button
                 key={dept}
                 onClick={() => setSelectedDept(dept)}
-                className={`px-4 py-2 rounded-lg text-xs font-bold transition-all duration-200 ${selectedDept === dept
-                  ? 'bg-navy-950 text-white shadow-md'
-                  : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+                className={`px-6 py-2 rounded-lg text-xs font-bold border-b-2 transition-all duration-200 ${selectedDept === dept
+                  ? 'bg-brand-500 text-white shadow-md border-brand-600'
+                  : 'bg-slate-200 text-slate-600 hover:bg-slate-200/80'
                   }`}
               >
                 {dept}
@@ -384,9 +384,9 @@ export default function Careers() {
       {showApplicationForm && (
         <section id="application-form" className="relative pt-16 pb-24 bg-white text-white border-b border-white/10">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="rounded-3xl border border-brand-500/30 bg-navy-800/95 p-8 sm:p-12 pt-0 sm:pt-6 shadow-2xl backdrop-blur-2xl space-y-8 relative">
+            <div className="rounded-3xl border border-brand-500/30 bg-navy-900/95 p-8 sm:p-12 pt-0 sm:pt-6 shadow-2xl backdrop-blur-2xl space-y-8 relative">
               <div className="absolute inset-0 bg-radial-glow opacity-40" aria-hidden="true" />
-              <div className="absolute inset-0 bg-grid-pattern opacity-20" aria-hidden="true" />
+              
               <div className="flex items-center justify-between border-b border-white/10 pb-6 relative z-10">
                 <div className='max-w-md'>
                   <span className="text-xs font-bold uppercase tracking-widest text-cyan-400">Direct Application</span>

@@ -183,7 +183,7 @@ export default function IndustryDetail() {
               <Activity className="w-5 h-5 text-emerald-400" /> Executive Analytics & KPI Focus
             </h3>
             <p className="text-sm text-slate-300 leading-relaxed sm:text-base">{industry.analyticsFocus}</p>
-            <div className="p-3.5 rounded-xl bg-white/5 border border-white/10 text-xs text-slate-300">
+            <div className="p-3.5 rounded-xl bg-orange-300/5 border border-orange-400/10 text-xs text-orange-300">
               Pre-built executive dashboard metrics updated in real-time with sub-second query speeds.
             </div>
           </div>
@@ -233,28 +233,36 @@ export default function IndustryDetail() {
           {faqs.map((faq, idx) => (
             <div
               key={idx}
-              className="rounded-2xl border border-white/10 bg-navy-900/70 overflow-hidden transition-all"
+              className="rounded-xl border border-white/10 bg-navy-900/70 overflow-hidden transition-all duration-300 ease-out"
             >
               <button
+                type="button"
+                aria-expanded={openFaq === idx}
                 onClick={() => setOpenFaq(openFaq === idx ? -1 : idx)}
-                className="w-full p-5 text-left flex items-center justify-between gap-4 font-display font-semibold text-sm text-white hover:text-brand-300 transition-colors"
+                className="w-full p-4 text-left flex items-center justify-between gap-4 font-display font-semibold text-sm text-white hover:text-brand-300 transition-colors duration-200"
               >
                 <span className="flex items-center gap-3">
                   <HelpCircle className="w-4 h-4 text-brand-400 shrink-0" />
                   {faq.q}
                 </span>
                 {openFaq === idx ? (
-                  <ChevronUp className="w-4 h-4 text-orange-500 shrink-0" />
+                  <ChevronUp className="w-4 h-4 text-orange-500 shrink-0 transition-transform duration-300" />
                 ) : (
-                  <ChevronDown className="w-4 h-4 text-orange-400 shrink-0" />
+                  <ChevronDown className="w-4 h-4 text-orange-400 shrink-0 transition-transform duration-300" />
                 )}
               </button>
 
-              {openFaq === idx && (
-                <div className="p-5 pt-0 text-xs sm:text-sm text-slate-300 border-t border-white/5 bg-navy-950/40 leading-relaxed space-y-2">
-                  <p>{faq.a}</p>
+              <div
+                className={`grid transition-all duration-300 ease-out ${
+                  openFaq === idx ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
+                }`}
+              >
+                <div className="overflow-hidden">
+                  <div className="p-5 pt-0 text-xs sm:text-sm text-slate-300 bg-navy-950/40 leading-relaxed space-y-2">
+                    <p>{faq.a}</p>
+                  </div>
                 </div>
-              )}
+              </div>
             </div>
           ))}
         </div>

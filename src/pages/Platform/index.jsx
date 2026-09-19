@@ -387,7 +387,7 @@ export default function Platform() {
               <Link
                 key={idx}
                 to={s.link}
-                className="p-4 rounded-xl border border-slate-200 bg-slate-50 hover:bg-navy-950 hover:text-white transition-all group shadow-sm"
+                className="p-3 rounded-lg border border-slate-200 bg-slate-50 hover:bg-navy-800 hover:text-white transition-all group shadow-sm"
               >
                 <div className="text-[10px] font-bold text-brand-700 group-hover:text-brand-400 uppercase tracking-widest mb-1">Stage 0{idx + 1}</div>
                 <div className="font-display font-bold text-sm">{s.stage}</div>
