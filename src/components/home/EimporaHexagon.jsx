@@ -2,11 +2,11 @@ import React from "react";
 
 const nodes = [
   { label: "People", x: 149.9, y: 55, color: "#22d3ee" },
-  { label: "Payroll", x: 268, y: 125, color: "#ff7a00" },
+  { label: "Payroll", x: 268, y: 125, color: "#22d3ee" },
   { label: "AI", x: 268, y: 260, color: "#22d3ee" },
-  { label: "Analytics", x: 149.9, y: 330, color: "#ff7a00" },
+  { label: "Analytics", x: 149.9, y: 330, color: "#22d3ee" },
   { label: "Talent", x: 32, y: 260, color: "#22d3ee" },
-  { label: "Operations", x: 32, y: 125, color: "#ff7a00" },
+  { label: "Operations", x: 32, y: 125, color: "#22d3ee" },
 ];
 
 function hexPoints(cx, cy, radius) {
@@ -38,7 +38,7 @@ export default function EimporaHexagon() {
           </linearGradient>
 
           <linearGradient id="orangeStroke" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stopColor="#ff7a00" />
+            <stop offset="0%" stopColor="#22d3ee" />
             <stop offset="50%" stopColor="#ff5500" />
             <stop offset="100%" stopColor="#ff9900" />
           </linearGradient>
@@ -72,7 +72,7 @@ export default function EimporaHexagon() {
           <polygon
             points={hexPoints(150, 192, 110)}
             fill="none"
-            stroke="#ff7a00"
+            stroke="#22d3ee"
             strokeOpacity="0.15"
             strokeWidth="1"
           />
@@ -86,7 +86,7 @@ export default function EimporaHexagon() {
             y1="192"
             x2={node.x}
             y2={node.y}
-            stroke={node.color === "#ff7a00" ? "url(#orangeStroke)" : "url(#cyanStroke)"}
+            stroke={node.color === "#22d3ee" ? "url(#orangeStroke)" : "url(#cyanStroke)"}
             strokeWidth="1"
             strokeOpacity="0.3"
             strokeDasharray="3 5"
@@ -110,7 +110,7 @@ export default function EimporaHexagon() {
             <polygon
               points={hexPoints(node.x, node.y, 37)}
               fill="rgba(8, 20, 27, 0.85)"
-              stroke={node.color === "#ff7a00" ? "url(#orangeStroke)" : "url(#cyanStroke)"}
+              stroke={node.color === "#22d3ee" ? "url(#orangeStroke)" : "url(#cyanStroke)"}
               strokeWidth="1.2"
               strokeOpacity="0.7"
             />
@@ -158,12 +158,12 @@ export default function EimporaHexagon() {
           <polygon
             points={hexPoints(150, 192, 57)}
             fill="none"
-            stroke="#ff7a00"
+            stroke="#22d3ee"
             strokeWidth="0.8"
             strokeOpacity="0.5"
           />
 
-          <circle cx="150" cy="167" r="4" fill="#ff7a00" filter="url(#glow)" />
+          <circle cx="150" cy="167" r="4" fill="#22d3ee" filter="url(#glow)" />
 
           <text
             x="150"
