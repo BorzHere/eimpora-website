@@ -14,6 +14,7 @@ import DashboardShell from '../../components/product/DashboardShell';
 import AIInsightPanel from '../../components/product/AIInsightPanel';
 import MobileAppPreview from '../../components/product/MobileAppPreview';
 import DesktopModuleSection from '../../components/product/DesktopModuleSection';
+import SideLogo from '../../assets/dashboard.png';
 
 import { MODULES_DATA } from '../../data/modulesData';
 import { INDUSTRIES_DATA } from '../../data/industriesData';
@@ -29,10 +30,12 @@ export default function Home() {
     <div className="space-y-0">
       {/* SECTION 1 — ENTERPRISE HERO (DARK SECTION WITH EIMPORA HEXAGON SVG) */}
       <section className="relative pt-32 pb-24 overflow-hidden bg-navy-950 text-white">
+        <img src={SideLogo} alt="Eimpora Hexagon Illustration" className="w-1/2 absolute bottom-0 right-0 opacity-80" />
         <div className="absolute inset-0 bg-radial-glow opacity-80" aria-hidden="true" />
         <div className="absolute inset-0 bg-grid-pattern opacity-30" aria-hidden="true" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-14 items-center justify-between">
 
             {/* Left Column: Hero Copy & CTA */}
@@ -84,11 +87,11 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div />
+            
 
             {/* Right Column: Interactive EimporaHexagon SVG */}
-            <div className="lg:col-span-5 flex justify-end items-end">
-              <EimporaHexagon />
+            <div className="lg:col-span-6 flex justify-end items-end">
+              
             </div>
 
           </div>

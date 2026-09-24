@@ -98,16 +98,19 @@
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-  
+  width: 8px;
+  height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #070b12;
+  background: rgba(7, 24, 39, 0.9);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #06b6d4;
-  border-radius: 1px;
+  background: linear-gradient(180deg, #ffb347 0%, #f97316 50%, #d9480f 100%);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #ffc266 0%, #fb923c 50%, #ea580c 100%);
 }

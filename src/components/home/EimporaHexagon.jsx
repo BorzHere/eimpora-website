@@ -1,18 +1,18 @@
 import React from "react";
 
 const nodes = [
-  { label: "People", x: 149.9, y: 55, color: "#22d3ee" },
-  { label: "Payroll", x: 268, y: 125, color: "#22d3ee" },
-  { label: "AI", x: 268, y: 260, color: "#22d3ee" },
-  { label: "Analytics", x: 149.9, y: 330, color: "#22d3ee" },
-  { label: "Talent", x: 32, y: 260, color: "#22d3ee" },
-  { label: "Operations", x: 32, y: 125, color: "#22d3ee" },
+  { label: "HR", x: 149.9, y: 55, color: "#f97316" },
+  { label: "Payroll", x: 268, y: 125, color: "#f97316" },
+  { label: "AI", x: 268, y: 260, color: "#f97316" },
+  { label: "Analytics", x: 149.9, y: 330, color: "#f97316" },
+  { label: "IT", x: 32, y: 260, color: "#f97316" },
+  { label: "Finance", x: 32, y: 125, color: "#f97316" },
 ];
 
 function hexPoints(cx, cy, radius) {
-  return Array.from({ length: 6 })
+  return Array.from({ length: 8 })
     .map((_, i) => {
-      const angle = (Math.PI / 3) * i - Math.PI / 6;
+      const angle = (Math.PI / 4) * i - Math.PI / 8;
       return `${cx + radius * Math.cos(angle)},${cy + radius * Math.sin(angle)
         }`;
     })
@@ -32,15 +32,15 @@ export default function EimporaHexagon() {
       >
         <defs>
           <linearGradient id="cyanStroke" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stopColor="#22d3ee" />
-            <stop offset="50%" stopColor="#06b6d4" />
-            <stop offset="100%" stopColor="#67e8f9" />
+            <stop offset="0%" stopColor="#f97316" />
+            <stop offset="50%" stopColor="#fb923c" />
+            <stop offset="100%" stopColor="#fdba74" />
           </linearGradient>
 
           <linearGradient id="orangeStroke" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stopColor="#22d3ee" />
-            <stop offset="50%" stopColor="#ff5500" />
-            <stop offset="100%" stopColor="#ff9900" />
+            <stop offset="0%" stopColor="#f97316" />
+            <stop offset="50%" stopColor="#ff7a00" />
+            <stop offset="100%" stopColor="#ffb347" />
           </linearGradient>
 
           <linearGradient id="centerFill" x1="0" y1="0" x2="1" y2="1">
@@ -63,7 +63,7 @@ export default function EimporaHexagon() {
           <polygon
             points={hexPoints(150, 192, 136)}
             fill="none"
-            stroke="#22d3ee"
+            stroke="#f97316"
             strokeOpacity="0.2"
             strokeWidth="1"
             strokeDasharray="4 7"
@@ -72,7 +72,7 @@ export default function EimporaHexagon() {
           <polygon
             points={hexPoints(150, 192, 110)}
             fill="none"
-            stroke="#22d3ee"
+            stroke="#f97316"
             strokeOpacity="0.15"
             strokeWidth="1"
           />
@@ -123,17 +123,9 @@ export default function EimporaHexagon() {
               strokeOpacity="0.3"
             />
 
-            <circle
-              cx={node.x}
-              cy={node.y - 9}
-              r="3"
-              fill={node.color}
-              filter="url(#glow)"
-            />
-
             <text
               x={node.x}
-              y={node.y + 10}
+              y={node.y + 4}
               textAnchor="middle"
               fill="#ffffff"
               fontSize="8.5"
@@ -163,8 +155,6 @@ export default function EimporaHexagon() {
             strokeOpacity="0.5"
           />
 
-          <circle cx="150" cy="167" r="4" fill="#22d3ee" filter="url(#glow)" />
-
           <text
             x="150"
             y="195"
@@ -191,34 +181,7 @@ export default function EimporaHexagon() {
 
         </g>
 
-        {/* Moving data particles */}
-        {nodes.map((node, index) => (
-          <circle
-            key={`particle-${index}`}
-            r="2.4"
-            fill={node.color}
-            filter="url(#glow)"
-          >
-            <animate
-              attributeName="cx"
-              values={`150;${node.x};150`}
-              dur={`${4 + index * 0.35}s`}
-              repeatCount="indefinite"
-            />
-            <animate
-              attributeName="cy"
-              values={`192;${node.y};192`}
-              dur={`${4 + index * 0.35}s`}
-              repeatCount="indefinite"
-            />
-            <animate
-              attributeName="opacity"
-              values="0.2;1;0.2"
-              dur={`${4 + index * 0.35}s`}
-              repeatCount="indefinite"
-            />
-          </circle>
-        ))}
+       
       </svg>
 
       <style>{`

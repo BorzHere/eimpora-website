@@ -1,5 +1,14 @@
 import React from "react";
 
+function octagonPoints(cx, cy, radius) {
+  return Array.from({ length: 8 })
+    .map((_, i) => {
+      const angle = (Math.PI / 4) * i - Math.PI / 8;
+      return `${cx + radius * Math.cos(angle)},${cy + radius * Math.sin(angle)}`;
+    })
+    .join(" ");
+}
+
 export default function EimporaIntelligenceSVG({ className = "relative w-full h-[520px]  sm:h-[620px] pointer-events-none" }) {
   return (
     <div className={className}>
@@ -123,7 +132,7 @@ export default function EimporaIntelligenceSVG({ className = "relative w-full h-
         </g>
 
         <polygon
-          points="720,265 820,322 820,438 720,495 620,438 620,322"
+          points={octagonPoints(720, 380, 150)}
           fill="none"
           stroke="#4DEAFF"
           strokeWidth="1"
@@ -183,8 +192,9 @@ export default function EimporaIntelligenceSVG({ className = "relative w-full h-
         {/* LEFT SIGNAL INGRESS NODE */}
         {/* ============================= */}
         <g className="ei-node-float">
+          
           <polygon
-            points="185,360 220,340 255,360 255,400 220,420 185,400"
+            points={octagonPoints(220, 380, 38)}
             fill="url(#ei-node)"
             stroke="#00D9F5"
             strokeOpacity="0.5"
@@ -230,9 +240,9 @@ export default function EimporaIntelligenceSVG({ className = "relative w-full h-
 
 
 
-          {/* Inner Hexagon Frame */}
+          {/* Inner Octagon Frame */}
           <polygon
-            points="720,320 772,350 772,410 720,440 668,410 668,350"
+            points={octagonPoints(720, 380, 88)}
             fill="#041B22"
             stroke="#39E8FF"
             strokeOpacity="0.7"
@@ -265,8 +275,9 @@ export default function EimporaIntelligenceSVG({ className = "relative w-full h-
         {/* POLICY & GOVERNANCE NODE */}
         {/* ============================= */}
         <g className="ei-node-float delay-node">
+          
           <polygon
-            points="985,280 1020,260 1055,280 1055,320 1020,340 985,320"
+            points={octagonPoints(1020, 300, 38)}
             fill="url(#ei-node)"
             stroke="#00D9F5"
             strokeOpacity="0.7"

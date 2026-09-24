@@ -107,7 +107,7 @@ export default function SecuritySvgModule() {
           <button
             onClick={() => setIsLiveStream(!isLiveStream)}
             className={`inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold transition-all border ${isLiveStream
-              ? 'bg-cyan-500/20 border-cyan-400 text-cyan-300 shadow-cyan-glow'
+              ? 'bg-orange-500/20 border-orange-400 text-orange-300 shadow-orange-500/30'
               : 'bg-white/5 border-white/10 text-slate-400 hover:text-white'
               }`}
           >
@@ -127,21 +127,21 @@ export default function SecuritySvgModule() {
           <defs>
             {/* Cyan Stroke & Glow Gradients */}
             <linearGradient id="secCyanGlow" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#22d3ee" stopOpacity="1" />
-              <stop offset="50%" stopColor="#06b6d4" stopOpacity="0.8" />
-              <stop offset="100%" stopColor="#67e8f9" stopOpacity="0.9" />
+              <stop offset="0%" stopColor="#f97316" stopOpacity="1" />
+              <stop offset="50%" stopColor="#fb923c" stopOpacity="0.8" />
+              <stop offset="100%" stopColor="#fdba74" stopOpacity="0.9" />
             </linearGradient>
 
             <linearGradient id="secLineGlow" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="#083344" stopOpacity="0.3" />
-              <stop offset="50%" stopColor="#22d3ee" stopOpacity="0.9" />
-              <stop offset="100%" stopColor="#083344" stopOpacity="0.3" />
+              <stop offset="0%" stopColor="#3b1f10" stopOpacity="0.3" />
+              <stop offset="50%" stopColor="#f97316" stopOpacity="0.9" />
+              <stop offset="100%" stopColor="#3b1f10" stopOpacity="0.3" />
             </linearGradient>
 
             <linearGradient id="centerCoreBg" x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" stopColor="#0f172a" />
-              <stop offset="50%" stopColor="#083344" />
-              <stop offset="100%" stopColor="#06b6d4" />
+              <stop offset="50%" stopColor="#1f2937" />
+              <stop offset="100%" stopColor="#f97316" />
             </linearGradient>
 
             <filter id="cyanGlowFilter" x="-20%" y="-20%" width="140%" height="140%">

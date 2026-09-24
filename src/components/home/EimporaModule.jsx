@@ -38,7 +38,7 @@ const modules = [
     category: "People Ops",
     x: 1030,
     y: 120,
-    color: "#00D9F5",
+    color: "#fb923c",
     side: "right",
     delay: ".3s",
   },
@@ -48,7 +48,7 @@ const modules = [
     category: "Intelligence",
     x: 1070,
     y: 280,
-    color: "#00E6FF",
+    color: "#f97316",
     side: "right",
     delay: ".8s",
   },
@@ -58,7 +58,7 @@ const modules = [
     category: "Security",
     x: 1020,
     y: 440,
-    color: "#06B6D4",
+    color: "#ea580c",
     side: "right",
     delay: "1.3s",
   },
@@ -68,11 +68,11 @@ export default function EimporaArchitectureSVG() {
   return (
     <>
       {/* Premium Modular Architecture Diagram */}
-      <div className="relative overflow-hidden rounded-[28px] border border-slate-200/80 bg-gradient-to-br from-white via-slate-50 to-cyan-50/30 p-4 shadow-[0_24px_70px_rgba(15,23,42,0.06)] sm:p-7 lg:p-9">
+      <div className="relative overflow-hidden rounded-[28px] border border-slate-200/80 bg-gradient-to-br from-white via-slate-50 to-orange-50/30 p-4 shadow-[0_24px_70px_rgba(15,23,42,0.06)] sm:p-7 lg:p-9">
   {/* Ambient background */}
   <div className="pointer-events-none absolute inset-0">
-    <div className="absolute left-1/2 top-1/2 h-[430px] w-[430px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-400/[0.045] blur-[70px]" />
-    <div className="absolute left-[35%] top-1/2 h-[300px] w-[300px] -translate-y-1/2 rounded-full bg-orange-400/[0.035] blur-[80px]" />
+    <div className="absolute left-1/2 top-1/2 h-[430px] w-[430px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-orange-400/[0.06] blur-[70px]" />
+    <div className="absolute left-[35%] top-1/2 h-[300px] w-[300px] -translate-y-1/2 rounded-full bg-orange-500/[0.04] blur-[80px]" />
   </div>
 
   <svg
@@ -94,7 +94,7 @@ export default function EimporaArchitectureSVG() {
       >
         <stop offset="0%" stopColor="#FF7A00" stopOpacity="0.95" />
         <stop offset="55%" stopColor="#F59E0B" stopOpacity="0.7" />
-        <stop offset="100%" stopColor="#00CFE8" stopOpacity="0.65" />
+        <stop offset="100%" stopColor="#F97316" stopOpacity="0.65" />
       </linearGradient>
 
       <linearGradient
@@ -104,8 +104,8 @@ export default function EimporaArchitectureSVG() {
         x2="100%"
         y2="0%"
       >
-        <stop offset="0%" stopColor="#00D9F5" stopOpacity="0.9" />
-        <stop offset="100%" stopColor="#22D3EE" stopOpacity="0.4" />
+        <stop offset="0%" stopColor="#FB923C" stopOpacity="0.9" />
+        <stop offset="100%" stopColor="#F97316" stopOpacity="0.4" />
       </linearGradient>
 
       <linearGradient
@@ -115,9 +115,9 @@ export default function EimporaArchitectureSVG() {
         x2="100%"
         y2="100%"
       >
-        <stop offset="0%" stopColor="#00E5FF" />
-        <stop offset="55%" stopColor="#00BFD8" />
-        <stop offset="100%" stopColor="#FF8A00" />
+        <stop offset="0%" stopColor="#FDBA74" />
+        <stop offset="55%" stopColor="#F97316" />
+        <stop offset="100%" stopColor="#EA580C" />
       </linearGradient>
 
       <linearGradient
@@ -133,9 +133,9 @@ export default function EimporaArchitectureSVG() {
       </linearGradient>
 
       <radialGradient id="coreHalo">
-        <stop offset="0%" stopColor="#00D9F5" stopOpacity="0.12" />
-        <stop offset="38%" stopColor="#00D9F5" stopOpacity="0.06" />
-        <stop offset="68%" stopColor="#FF7A00" stopOpacity="0.035" />
+        <stop offset="0%" stopColor="#FDBA74" stopOpacity="0.12" />
+        <stop offset="38%" stopColor="#FB923C" stopOpacity="0.07" />
+        <stop offset="68%" stopColor="#F97316" stopOpacity="0.04" />
         <stop offset="100%" stopColor="#FFFFFF" stopOpacity="0" />
       </radialGradient>
 
@@ -147,7 +147,7 @@ export default function EimporaArchitectureSVG() {
         y2="1"
       >
         <stop offset="0%" stopColor="#FFFFFF" />
-        <stop offset="100%" stopColor="#FFF9F3" />
+        <stop offset="100%" stopColor="#FFF7ED" />
       </linearGradient>
 
       <linearGradient
@@ -158,7 +158,7 @@ export default function EimporaArchitectureSVG() {
         y2="1"
       >
         <stop offset="0%" stopColor="#FFFFFF" />
-        <stop offset="100%" stopColor="#F0FDFF" />
+        <stop offset="100%" stopColor="#FFF7ED" />
       </linearGradient>
 
       {/* ------------------------------------------------ */}
