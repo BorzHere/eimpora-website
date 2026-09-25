@@ -30,8 +30,8 @@ export default function Header() {
   return (
     <header
       className={`fixed top-0 inset-x-0 z-50 border-b transition-all duration-300 ${scrolled
-        ? 'bg-navy-950/90 backdrop-blur-xl  border-white/10 shadow-2xl py-3'
-        : 'bg-navy-950/10 backdrop-blur-md py-4 border-navy-950/5'
+        ? 'bg-navy-950/95 backdrop-blur-xl  border-white/10 shadow-2xl py-3'
+        : 'bg-navy-950/5 backdrop-blur-md py-4 border-navy-950/5'
         }`}
       onMouseLeave={() => setActiveMega(null)}
     >
@@ -156,7 +156,7 @@ export default function Header() {
                   className="absolute right-0 top-full w-52 pt-2 z-50"
                   onMouseEnter={() => setActiveMega('more')}
                 >
-                  <div className="rounded-xl bg-navy-950/90 border border-white/10 bg-navy-900/98 p-2 shadow-2xl backdrop-blur-2xl">
+                  <div className="rounded-xl bg-navy-950 border border-white/10 bg-navy-900/98 p-2 shadow-2xl backdrop-blur-2xl">
                     <Link
                       to="/security"
                       onClick={() => setActiveMega(null)}

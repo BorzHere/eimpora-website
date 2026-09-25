@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function EimporaIntelligenceSVG({ className = "absolute inset-0 w-full h-full pointer-events-none overflow-hidden" }) {
+export default function EimporaIntelligenceSVG({ className = "absolute inset-0 w-full h-full pointer-events-none opacity-20 overflow-hidden" }) {
   return (
     <div className={className}>
       <svg
@@ -91,61 +91,61 @@ export default function EimporaIntelligenceSVG({ className = "absolute inset-0 w
         <g className="ei-star-field" aria-hidden="true">
           {[
             // x, y, radius, opacity, delay
-            [72, 92, 1.4, 0.15, 0],
-            [116, 106, 1.8, 0.25, 0.8],
-            [194, 174, 1.0, 0.18, 1.4],
-            [286, 88, 1.5, 0.55, 2.1],
-            [350, 86, 2.0, 0.15, 0.4],
-            [418, 156, 0.9, 0.3, 1.8],
-            [492, 72, 1.1, 0.14, 2.8],
-            [548, 132, 0.8, 0.25, 0.9],
-            [612, 94, 1.0, 0.15, 2.3],
-            [658, 112, 1.2, 0.45, 1.1],
-            [720, 82, 0.8, 0.13, 3.0],
-            [774, 166, 1.4, 0.5, 0.6],
-            [846, 126, 0.9, 0.15, 2.0],
-            [908, 104, 1.6, 0.5, 1.2],
-            [982, 152, 0.8, 0.13, 2.6],
-            [1050, 92, 1.0, 0.4, 0.5],
-            [1128, 138, 1.2, 0.15, 1.7],
-            [1212, 78, 0.9, 0.3, 2.5],
-            [1276, 126, 1.4, 0.15, 0.7],
-            [1340, 92, 1.8, 0.35, 1.9],
-            [54, 248, 0.8, 0.15, 2.2],
-            [142, 298, 1.0, 0.3, 0.9],
-            [238, 252, 1.6, 0.15, 1.5],
-            [318, 326, 0.7, 0.25, 2.8],
-            [404, 286, 1.0, 0.15, 0.3],
-            [520, 238, 0.8, 0.25, 1.6],
-            [610, 316, 1.2, 0.15, 2.4],
-            [812, 268, 0.9, 0.3, 0.8],
-            [902, 322, 1.0, 0.15, 2.1],
-            [1020, 278, 1.3, 0.4, 1.0],
-            [1136, 312, 0.8, 0.13, 2.7],
-            [1238, 254, 1.1, 0.35, 1.4],
-            [1354, 308, 1.4, 0.14, 2.3],
+            [72, 92, 1.5, 0.3, 0],
+            [116, 106, 1.5, 0.3, 0.8],
+            [194, 174, 1.5, 0.3, 1.4],
+            [286, 88, 1.5, 0.3, 2.1],
+            [350, 86, 1.5, 0.3, 0.4],
+            [418, 156, 1.5, 0.3, 1.8],
+            [492, 72, 1.5, 0.3, 2.8],
+            [548, 132, 1.5, 0.3, 0.9],
+            [612, 94, 1.5, 0.3, 2.3],
+            [658, 112, 1.5, 0.3, 1.1],
+            [720, 82, 1.5, 0.3, 3.0],
+            [774, 166, 1.5, 0.3, 0.6],
+            [846, 126, 1.5, 0.3, 2.0],
+            [908, 104, 1.5, 0.3, 1.2],
+            [982, 152, 1.5, 0.3, 2.6],
+            [1050, 92, 1.5, 0.3, 0.5],
+            [1128, 138, 1.5, 0.3, 1.7],
+            [1212, 78, 1.5, 0.3, 2.5],
+            [1276, 126, 1.5, 0.3, 0.7],
+            [1340, 92, 1.5, 0.3, 1.9],
+            [54, 248, 1.5, 0.3, 2.2],
+            [142, 298, 1.5, 0.3, 0.9],
+            [238, 252, 1.5, 0.3, 1.5],
+            [318, 326, 1.5, 0.3, 2.8],
+            [404, 286, 1.5, 0.3, 0.3],
+            [520, 238, 1.5, 0.3, 1.6],
+            [610, 316, 1.5, 0.3, 2.4],
+            [812, 268, 1.5, 0.3, 0.8],
+            [902, 322, 1.5, 0.3, 2.1],
+            [1020, 278, 1.5, 0.3, 1.0],
+            [1136, 312, 1.5, 0.3, 2.7],
+            [1238, 254, 1.5, 0.3, 1.4],
+            [1354, 308, 1.5, 0.3, 2.3],
 
-            [78, 470, 1.0, 0.3, 1.2],
-            [166, 536, 0.8, 0.15, 2.5],
-            [252, 448, 1.3, 0.35, 0.4],
-            [348, 512, 0.9, 0.13, 1.8],
-            [454, 584, 1.1, 0.35, 2.9],
-            [548, 526, 0.8, 0.15, 0.7],
-            [638, 624, 1.2, 0.4, 2.0],
-            [734, 548, 0.8, 0.15, 1.3],
-            [828, 632, 1.5, 0.45, 2.6],
-            [934, 586, 1.0, 0.15, 0.5],
-            [1042, 626, 0.8, 0.3, 1.9],
-            [1108, 674, 1.4, 0.15, 2.8],
-            [1184, 556, 0.9, 0.3, 0.9],
-            [1272, 628, 1.1, 0.15, 2.2],
-            [1360, 548, 0.8, 0.25, 1.1],
+            [78, 470, 1.5, 0.3, 1.2],
+            [166, 536, 1.5, 0.3, 2.5],
+            [252, 448, 1.5, 0.3, 0.4],
+            [348, 512, 1.5, 0.3, 1.8],
+            [454, 584, 1.5, 0.3, 2.9],
+            [548, 526, 1.5, 0.3, 0.7],
+            [638, 624, 1.5, 0.3, 2.0],
+            [734, 548, 1.5, 0.3, 1.3],
+            [828, 632, 1.5, 0.3, 2.6],
+            [934, 586, 1.5, 0.3, 0.5],
+            [1042, 626, 1.5, 0.3, 1.9],
+            [1108, 674, 1.5, 0.3, 2.8],
+            [1184, 556, 1.5, 0.3, 0.9],
+            [1272, 628, 1.5, 0.3, 2.2],
+            [1360, 548, 1.5, 0.3, 1.1],
 
-            [1326, 366, 1.3, 0.15, 0.6],
-            [1142, 394, 0.8, 0.3, 2.4],
-            [1048, 408, 1.0, 0.15, 1.5],
-            [404, 374, 1.1, 0.4, 2.7],
-            [286, 406, 0.7, 0.15, 0.8],
+            [1326, 366, 1.5, 0.3, 0.6],
+            [1142, 394, 1.5, 0.3, 2.4],
+            [1048, 408, 1.5, 0.3, 1.5],
+            [404, 374, 1.5, 0.3, 2.7],
+            [286, 406, 1.5, 0.3, 0.8],
           ].map(([cx, cy, r, opacity, delay], index) => (
             <circle
               key={`star-${index}`}
@@ -163,57 +163,26 @@ export default function EimporaIntelligenceSVG({ className = "absolute inset-0 w
 
           {/* A few brighter distant stars */}
           <g className="ei-bright-stars">
-            <circle cx="350" cy="86" r="2.1" fill="#B8F8FF" />
-            <circle cx="908" cy="104" r="1.8" fill="#D7FCFF" />
-            <circle cx="1128" cy="138" r="1.4" fill="#B8F8FF" />
-            <circle cx="78" cy="248" r="1.6" fill="#55E9FF" />
+            <circle cx="350" cy="86" r="1.5" fill="#B8F8FF" />
+            <circle cx="908" cy="104" r="1.5" fill="#D7FCFF" />
+            <circle cx="1128" cy="138" r="1.5" fill="#B8F8FF" />
+            <circle cx="78" cy="248" r="1.5" fill="#55E9FF" />
             <circle cx="1128" cy="220" r="1.5" fill="#55E9FF" />
-            <circle cx="72" cy="574" r="1.4" fill="#D7FCFF" />
+            <circle cx="72" cy="574" r="1.5" fill="#D7FCFF" />
           </g>
         </g>
 
         {/* Decorative ambient polygons */}
         <g opacity="0.25" className="ei-float-slow">
-          <circle cx="126" cy="135" r="3" fill="#55E9FF" />
+          <circle cx="126" cy="135" r="2" fill="#55E9FF" />
         </g>
 
         <g opacity="0.22" className="ei-float-reverse">
-          <circle cx="1333" cy="133" r="3" fill="#55E9FF" />
+          <circle cx="1333" cy="133" r="2" fill="#55E9FF" />
         </g>
 
 
-        {/* Connection Paths */}
-        <g>
-          {/* Signal Ingress -> AI Core */}
-          <path
-            id="signalPath"
-            d="M 220 380 C 380 380, 480 380, 648 380"
-            fill="none"
-            stroke="url(#ei-line)"
-            strokeWidth="0.3"
-            className="ei-path"
-          />
-
-          {/* Policy Node -> Human Authorization Node */}
-          <path
-            id="humanPath"
-            d="M 1020 300 C 1120 290, 1180 260, 1280 250"
-            fill="none"
-            stroke="url(#ei-line)"
-            strokeWidth="0.3"
-            className="ei-path delay-two"
-          />
-
-          {/* AI Core -> Audit Trail Node */}
-          <path
-            id="auditPath"
-            d="M 720 452 C 720 520, 840 520, 980 520"
-            fill="none"
-            stroke="url(#ei-line)"
-            strokeWidth="0.3"
-            className="ei-path delay-three"
-          />
-        </g>
+        
 
         {/* Small Micro Signal Sources */}
         {[
@@ -226,14 +195,14 @@ export default function EimporaIntelligenceSVG({ className = "absolute inset-0 w
             <circle
               cx={cx}
               cy={cy}
-              r="3"
+              r="2"
               fill="#42E7FF"
-              opacity="0.75"
+              opacity="0.55"
               filter="url(#ei-glow)"
               className="ei-dot"
               style={{ animationDelay: `${index * 0.3}s` }}
             />
-            <line x1={cx} y1={cy} x2="220" y2="380" stroke="#00D9F5" strokeOpacity="0.12" />
+            
           </g>
         ))}
 
@@ -241,14 +210,6 @@ export default function EimporaIntelligenceSVG({ className = "absolute inset-0 w
         {/* MOVING DATA PARTICLES */}
         {/* ============================= */}
        
-
-       
-
-        <circle r="3" fill="#61EEFF" filter="url(#ei-glow)">
-          <animateMotion dur="4.0s" begin="0.6s" repeatCount="indefinite" path="M 720 452 C 720 520, 840 520, 980 520" />
-          <animate attributeName="opacity" values="0;1;1;0" dur="4.0s" begin="0.6s" repeatCount="indefinite" />
-        </circle>
-
         {/* Micro floating particles */}
         {[
           [100, 480],

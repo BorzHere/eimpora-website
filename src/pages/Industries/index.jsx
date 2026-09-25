@@ -41,11 +41,11 @@ export default function Industries() {
               <div key={ind.slug} className="p-6 rounded-2xl border border-slate-200 bg-white shadow-md hover:shadow-xl transition-all flex flex-col justify-between">
                 <div>
                   <span className="text-xs font-bold uppercase tracking-wider text-brand-700 block mb-1">Industry</span>
-                  <h3 className="font-display font-bold text-xl text-navy-950 mb-2">{ind.title}</h3>
+                  <h3 className="font-display font-bold text-2xl text-navy-950 mb-2">{ind.title}</h3>
                   <p className="text-xs text-brand-800 font-medium mb-3">{ind.tagline}</p>
-                  <p className="text-xs text-slate-600 leading-relaxed mb-4">{ind.workforceProfile}</p>
+                  <p className="text-xs text-slate-600 leading-relaxed ">{ind.workforceProfile}</p>
 
-                  <div className="space-y-1.5 pt-3 border-t border-slate-100">
+                  {/* <div className="space-y-1.5 pt-3 border-t border-slate-100">
                     <span className="text-[11px] font-semibold text-navy-950 block mb-1">Key Challenges Solved:</span>
                     {ind.challenges.slice(0, 2).map((ch, idx) => (
                       <div key={idx} className="flex items-center gap-2 text-xs text-slate-700">
@@ -53,7 +53,7 @@ export default function Industries() {
                         <span className="truncate">{ch}</span>
                       </div>
                     ))}
-                  </div>
+                  </div> */}
                 </div>
 
                 <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">

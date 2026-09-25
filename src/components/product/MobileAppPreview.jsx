@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import { MapPin, Clock, Calendar, Check, User, Sparkles, Network, UserCheck, ShieldCheck } from 'lucide-react';
+import { MapPin, Clock, Calendar, Check, User, Sparkles, Network, UserCheck, ShieldCheck, ArrowRight } from 'lucide-react';
 
 export default function MobileAppPreview() {
   const [clockedIn, setClockedIn] = useState(false);
 
   return (
-    <div className="mx-auto w-full max-w-[340px] sm:max-w-[360px] rounded-[48px] border-[10px] border-slate-900 bg-[#070b14] p-3.5 shadow-2xl text-white relative select-none">
+    <div className="mx-auto w-full max-w-[320px] sm:max-w-[340px] rounded-[42px] border-[8px] border-slate-800 bg-[#070b14]  shadow-2xl text-white relative select-none">
       {/* Top Phone Frame Status Header */}
-      <div className="flex items-center justify-between px-5 pt-1.5 pb-2 text-xs font-semibold text-white">
+      <div className="flex items-center justify-between px-5 pt-1.5 pb-2 text-[11px] font-semibold text-white">
         <span>9:41</span>
 
         {/* Dynamic Island / Notch */}
@@ -16,10 +16,10 @@ export default function MobileAppPreview() {
         <div className="flex items-center gap-1.5 text-xs text-slate-300">
           {/* Signal indicator bars */}
           <div className="flex items-end gap-0.5 h-3">
-            <span className="w-0.5 h-1 bg-white rounded-xs" />
-            <span className="w-0.5 h-1.5 bg-white rounded-xs" />
-            <span className="w-0.5 h-2 bg-white rounded-xs" />
-            <span className="w-0.5 h-3 bg-white rounded-xs" />
+            <span className="w-0.5 h-1 bg-slate-300 rounded-xs" />
+            <span className="w-0.5 h-1.5 bg-slate-300 rounded-xs" />
+            <span className="w-0.5 h-2 bg-slate-300 rounded-xs" />
+            <span className="w-0.5 h-2.5 bg-slate-300 rounded-xs" />
           </div>
           {/* Wifi */}
           <span className="text-[10px] font-bold">5G</span>
@@ -31,44 +31,52 @@ export default function MobileAppPreview() {
       </div>
 
       {/* Screen Body */}
-      <div className="rounded-[36px] bg-[#070b14] space-y-3 p-1 overflow-hidden">
-        
-        {/* 1. TOP CYAN PROFILE CARD */}
-        <div className="rounded-[28px] bg-gradient-to-br from-[#00c3f8] to-[#00a8e8] p-4 text-navy-950 shadow-md">
-          {/* Top row: Avatar + Name + Profile Button */}
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <div className="w-11 h-11 rounded-full bg-navy-950 text-white font-extrabold flex items-center justify-center text-sm shadow-inner font-display">
-                AW
+      <div className="rounded-b-[36px]  bg-navy-900/40 space-y-3 p-2 overflow-hidden">
+
+        {/* 1. TOP PREMIUM USER PROFILE CARD */}
+        <div className="rounded-2xl bg-gradient-to-br from-[#0c1e38] via-[#09182d] to-[#040d1a] border border-[#00d4f5]/30 p-3.5 shadow-lg relative overflow-hidden">
+          {/* Subtle Cyan Glow Accent inside card */}
+          <div className="absolute top-0 right-0 w-24 h-24 bg-[#00d4f5]/10 rounded-full blur-xl pointer-events-none" />
+
+          <div className="flex items-center justify-between relative z-10">
+            <div className="flex items-center gap-2.5">
+              {/* User Avatar with Gradient Ring */}
+              <div className="relative">
+                <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-orange-600 to-orange-400 p-0.5 shadow-sm">
+                  <div className="w-full h-full rounded-full bg-[#050c18] flex items-center justify-center font-display font-black text-xs text-white">
+                    AJ
+                  </div>
+                </div>
+                <span className="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-emerald-400 border-2 border-[#050c18]" />
+
               </div>
               <div>
-                <div className="text-[10px] font-black uppercase tracking-wider text-navy-950/70">
+                <div className="text-[9px] font-black uppercase tracking-widest text-[#00d4f5]">
                   GOOD MORNING
                 </div>
-                <div className="text-lg font-extrabold text-navy-950 font-display leading-snug">
+                <div className="text-sm font-extrabold text-white font-display leading-tight">
                   Alex Johnson
                 </div>
               </div>
             </div>
 
-            {/* Profile icon with online indicator */}
-            <div className="w-9 h-9 rounded-full bg-white/30 backdrop-blur-md flex items-center justify-center text-navy-950 relative border border-white/40 cursor-pointer hover:bg-white/40 transition-colors">
-              <User className="w-4 h-4 text-navy-950" />
-              <span className="absolute top-0 right-0 w-2.5 h-2.5 rounded-full bg-emerald-400 border-2 border-[#00c3f8]" />
+            {/* Profile Action Button */}
+            <div className="w-8 h-8 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-slate-300 hover:text-white cursor-pointer transition-colors">
+              <User className="w-4 h-4" />
             </div>
           </div>
 
-          {/* Sub-card inside cyan header */}
-          <div className="mt-3.5 rounded-2xl bg-navy-950/15 backdrop-blur-sm p-3 flex items-center justify-between border border-navy-950/10">
+          {/* Sub-Card: Today's Shift Status */}
+          <div className="mt-3 rounded-xl bg-navy-950/70 border border-white/10 p-2.5 flex items-center justify-between backdrop-blur-md">
             <div>
-              <div className="text-[9px] font-black uppercase tracking-widest text-navy-950/70">
+              <div className="text-[8px] font-black uppercase tracking-widest text-slate-400">
                 TODAY'S SHIFT
               </div>
-              <div className="text-xs sm:text-sm font-extrabold text-navy-950 font-display mt-0.5">
+              <div className="text-xs font-bold text-white font-display mt-0.5">
                 Operations Team
               </div>
             </div>
-            <div className="bg-navy-950/20 px-2.5 py-1 rounded-full text-[11px] font-extrabold text-navy-950 border border-navy-950/10">
+            <div className="bg-orange-500/15 border border-orange-500/30 px-2.5 py-0.5 rounded-full text-[10px] font-extrabold text-orange-400">
               09:00 — 17:00
             </div>
           </div>
@@ -77,7 +85,7 @@ export default function MobileAppPreview() {
         {/* 2. TWO STATUS CARDS */}
         <div className="grid grid-cols-2 gap-2.5">
           {/* Card 1: Status */}
-          <div className="rounded-2xl bg-[#0c1427] border border-slate-800/80 p-3 flex flex-col justify-between space-y-1">
+          <div className="rounded-xl bg-navy-950 border border-slate-800/80 p-2 flex flex-col justify-between space-y-1">
             <span className="text-[11px] font-medium text-slate-400">Status</span>
             <div className="flex items-center gap-1.5 font-bold text-xs text-white">
               <span className={`w-2 h-2 rounded-full ${clockedIn ? 'bg-emerald-400 animate-pulse' : 'bg-emerald-400'}`} />
@@ -86,7 +94,7 @@ export default function MobileAppPreview() {
           </div>
 
           {/* Card 2: Hours this week */}
-          <div className="rounded-2xl bg-[#0c1427] border border-slate-800/80 p-3 flex flex-col justify-between space-y-1">
+          <div className="rounded-xl bg-navy-950 border border-slate-800/80 p-2 flex flex-col justify-between space-y-1">
             <span className="text-[11px] font-medium text-slate-400">Hours this week</span>
             <div className="font-display text-base font-bold text-white">
               {clockedIn ? '32.6h' : '32.5h'}
@@ -95,7 +103,7 @@ export default function MobileAppPreview() {
         </div>
 
         {/* 3. SHIFT CHECK-IN CARD */}
-        <div className="rounded-2xl bg-[#0c1427] border border-slate-800/80 p-3.5 space-y-3 shadow-lg">
+        <div className="rounded-2xl bg-navy-950 border border-slate-800/80 p-3.5 space-y-3 shadow-lg">
           <div className="flex items-center justify-between">
             <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#00c3f8]">
               SHIFT CHECK-IN
@@ -105,12 +113,12 @@ export default function MobileAppPreview() {
             </span>
           </div>
 
-          <h3 className="font-display text-base font-extrabold text-white">
+          <h3 className="font-display text-base font-extrabold text-white !mt-1">
             Morning Shift
           </h3>
 
           {/* Location details */}
-          <div className="rounded-xl bg-[#050913] p-2.5 flex items-center gap-3 border border-white/5">
+          <div className="rounded-xl bg-[#050913]/50 p-2.5 flex items-center gap-3">
             <div className="w-8 h-8 rounded-lg bg-[#00c3f8]/15 border border-[#00c3f8]/30 flex items-center justify-center text-[#00c3f8] shrink-0">
               <Network className="w-4 h-4" />
             </div>
@@ -123,11 +131,10 @@ export default function MobileAppPreview() {
           {/* Cyan Glow Confirm Clock-in Button */}
           <button
             onClick={() => setClockedIn(!clockedIn)}
-            className={`w-full py-2.5 rounded-xl text-xs font-black flex items-center justify-center gap-2 transition-all duration-200 cursor-pointer ${
-              clockedIn
-                ? 'bg-emerald-400 text-navy-950 shadow-md'
-                : 'bg-gradient-to-r from-[#00c3f8] to-[#0091ea] text-navy-950 hover:from-[#00b0e4] hover:to-[#0081d6] shadow-cyan-glow'
-            }`}
+            className={`w-full py-2.5 rounded-xl text-xs font-black flex items-center justify-center gap-2 transition-all duration-200 cursor-pointer ${clockedIn
+              ? 'bg-emerald-400 text-navy-950 shadow-md'
+              : 'bg-gradient-to-r from-[#00c3f8] to-[#0091ea] text-navy-950 hover:from-[#00b0e4] hover:to-[#0081d6] shadow-cyan-glow'
+              }`}
           >
             <Check className="w-4 h-4 stroke-[3]" />
             <span>{clockedIn ? 'Clocked In (Active)' : 'Confirm Clock-In'}</span>
@@ -145,9 +152,9 @@ export default function MobileAppPreview() {
             </button>
           </div>
 
-          <div className="rounded-2xl bg-[#0c1427] border border-slate-800/80 p-3 flex items-center justify-between">
+          <div className="rounded-xl bg-navy-950 border border-slate-800/80 p-2 flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="rounded-xl bg-[#050913] px-2.5 py-1.5 text-center border border-white/5 shrink-0">
+              <div className="rounded-lg bg-[#050913]/50 px-2.5 py-1.5 text-center  shrink-0">
                 <div className="text-xs font-bold text-white font-mono">09:00</div>
                 <div className="text-[8px] font-black text-slate-400 uppercase tracking-wider">TODAY</div>
               </div>

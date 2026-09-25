@@ -67,9 +67,9 @@ const SECURITY_NODES = [
   }
 ];
 function hexPoints(cx, cy, radius) {
-  return Array.from({ length: 6 })
+  return Array.from({ length: 8 })
     .map((_, i) => {
-      const angle = (Math.PI / 3) * i - Math.PI / 6;
+      const angle = (Math.PI / 4) * i - Math.PI / 8;
       return `${cx + radius * Math.cos(angle)},${cy + radius * Math.sin(angle)
         }`;
     })
@@ -139,9 +139,9 @@ export default function SecuritySvgModule() {
             </linearGradient>
 
             <linearGradient id="centerCoreBg" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#0f172a" />
-              <stop offset="50%" stopColor="#1f2937" />
-              <stop offset="100%" stopColor="#f97316" />
+              <stop offset="0%" stopColor="#0a1f3d" />
+              <stop offset="50%" stopColor="#083344" />
+              <stop offset="100%" stopColor="#06b6d4" />
             </linearGradient>
 
             <filter id="cyanGlowFilter" x="-20%" y="-20%" width="140%" height="140%">
@@ -174,9 +174,9 @@ export default function SecuritySvgModule() {
                   y1={node.y}
                   x2={600}
                   y2={280}
-                  stroke={isSelected ? '#22d3ee' : '#083344'}
-                  strokeWidth={isSelected ? '2.5' : '2.5'}        
-                  opacity={isSelected ? 1 : 0.9}
+                  stroke={isSelected ? '#22d3ee' : '#22d3ee'}
+                  strokeWidth={isSelected ? '2.5' : '0.4'}
+                  opacity={isSelected ? 0.9 : 0.5}
                   filter={isSelected ? 'url(#cyanGlowFilter)' : 'none'}
                 />
 
@@ -211,37 +211,38 @@ export default function SecuritySvgModule() {
           <g className="origin-center" style={{ transformOrigin: '690px 290px' }}>
             {/* Outer rotating dashed ring */}
             <polygon
-            points={hexPoints(599, 282, 175)}
-            fill="none"
-            stroke="#22d3ee"
-            strokeOpacity="0.4"
-            strokeWidth="1"
-            strokeDasharray="4 7"
-            className="animate-[spin_40s_linear_infinite]"
+              points={hexPoints(599, 282, 175)}
+              fill="none"
+              stroke="#22d3ee"
+              strokeOpacity="0.4"
+              strokeWidth="1"
+              strokeDasharray="4 7"
+              className="animate-[spin_40s_linear_infinite]"
               style={{ transformOrigin: '600px 280px' }}
-          />
+            />
 
-          
-          {/* Outer rotating dashed ring */}
+
+            {/* Outer rotating dashed ring */}
             <polygon
-            points={hexPoints(599, 282, 175)}
-            fill="none"
-            stroke="#22d3ee"
-            strokeWidth="1"
-            strokeOpacity="0.4"
-            strokeDasharray="4 7"aa
-            className="animate-[spin_20s_linear_infinite]"
+              points={hexPoints(599, 282, 175)}
+              fill="none"
+              stroke="#22d3ee"
+              strokeWidth="1"
+              strokeOpacity="0.4"
+              strokeDasharray="4 7" aa
+              className="animate-[spin_20s_linear_infinite]"
               style={{ transformOrigin: '600px 280px' }}
-          />
-            
+            />
+
           </g>
 
           {/* CENTRAL CORE: ZERO-TRUST SECURITY KERNEL */}
           <g className="cursor-pointer" onClick={() => setActiveNodeId('encryption')}>
             {/* Glowing Core Hexagon Base */}
+
             <polygon
-              points="600,149 715,215 714,351 600,415 483,350 483,215"
-              fill="url(#centerCoreBg)"
+              points={hexPoints(599, 282, 135)}
+               fill="url(#centerCoreBg)"
               stroke="#22d3ee"
               strokeWidth="1.5"
               filter="url(#cyanGlowFilter)"
@@ -249,7 +250,7 @@ export default function SecuritySvgModule() {
 
             {/* Inner Shield Overlay Polygon */}
             <polygon
-              points="600,170 694,229 693,337 600,392 504,339 504,229"
+              points={hexPoints(599, 282, 110)}
               fill="none"
               stroke="#ffffff"
               strokeWidth="1"
@@ -261,7 +262,7 @@ export default function SecuritySvgModule() {
             <rect x="592" y="254" width="16" height="12" rx="2.5" fill="none" stroke="#22d3ee" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             <path d="M596 254V250.5C596 247.9 597.9 246 600.5 246C603.1 246 605 247.9 605 250.5V254" fill="none" stroke="#22d3ee" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             <circle cx="600" cy="260" r="2.2" fill="#22d3ee" />
-            
+
 
             {/* Label in Core */}
             <text x="600" y="295" textAnchor="middle" fill="#ffffff" fontSize="15" fontWeight="600" letterSpacing="1.2">
@@ -270,7 +271,7 @@ export default function SecuritySvgModule() {
             <text x="600" y="311" textAnchor="middle" fill="#22d3ee" fontSize="10" fontWeight="600" letterSpacing="1">
               AES-256 & SOX GOVERNANCE
             </text>
-            
+
           </g>
 
           {/* 4 CORNER PERIMETER SECURITY NODES */}
@@ -304,13 +305,13 @@ export default function SecuritySvgModule() {
                   width="280"
                   height="86"
                   rx="10"
-                  fill={isSelected ? '#083344' : '#030712'}
+                  fill={isSelected ? '#0a1f3d' : '#0a1f3d'}
                   fillOpacity={isSelected ? '0.95' : '0.85'}
                   stroke={isSelected ? '#22d3ee' : '#22d3ee'}
                   strokeWidth={isSelected ? '1.8' : '1'}
                 />
 
-               
+
 
                 {/* Node Status Dot */}
                 <circle

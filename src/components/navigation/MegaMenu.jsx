@@ -11,7 +11,7 @@ export default function MegaMenu({ activeTab, onClose }) {
 
   return (
     <div
-      className="absolute top-full left-0 w-full bg-navy-900/95 backdrop-blur-2xl border-b border-white/10 shadow-2xl transition-all duration-200 z-50 text-white"
+      className="absolute top-full left-0 w-full bg-navy-950 backdrop-blur-2xl border-b border-white/10 shadow-2xl transition-all duration-200 z-50 text-white"
       onMouseLeave={onClose}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -38,7 +38,7 @@ export default function MegaMenu({ activeTab, onClose }) {
               <Link
                 to="/platform#layers"
                 onClick={onClose}
-                className="group p-3 rounded-xl border border-white/5 bg-navy-950/40 hover:border-brand-500/30 hover:bg-navy-800/50 transition-all"
+                className="group p-3 rounded-xl border border-white/5 bg-navy-900/40 hover:border-brand-500/30 hover:bg-navy-800/50 transition-all"
               >
                 <div className="font-semibold text-sm text-white group-hover:text-brand-400 flex items-center justify-between">
                   Architecture Layers
@@ -50,7 +50,7 @@ export default function MegaMenu({ activeTab, onClose }) {
               <Link
                 to="/platform#roles"
                 onClick={onClose}
-                className="group p-3 rounded-xl border border-white/5 bg-navy-950/40 hover:border-brand-500/30 hover:bg-navy-800/50 transition-all"
+                className="group p-3 rounded-xl border border-white/5 bg-navy-900/40 hover:border-brand-500/30 hover:bg-navy-800/50 transition-all"
               >
                 <div className="font-semibold text-sm text-white group-hover:text-brand-400 flex items-center justify-between">
                   Role-Based Surfaces
@@ -62,7 +62,7 @@ export default function MegaMenu({ activeTab, onClose }) {
               <Link
                 to="/platform#lifecycle"
                 onClick={onClose}
-                className="group p-3 rounded-xl border border-white/5 bg-navy-950/40 hover:border-brand-500/30 hover:bg-navy-800/50 transition-all"
+                className="group p-3 rounded-xl border border-white/5 bg-navy-900/40 hover:border-brand-500/30 hover:bg-navy-800/50 transition-all"
               >
                 <div className="font-semibold text-sm text-white group-hover:text-brand-400 flex items-center justify-between">
                   Lifecycle Workflow Flow
@@ -74,7 +74,7 @@ export default function MegaMenu({ activeTab, onClose }) {
               <Link
                 to="/platform#multi-entity"
                 onClick={onClose}
-                className="group p-3 rounded-xl border border-white/5 bg-navy-950/40 hover:border-brand-500/30 hover:bg-navy-800/50 transition-all"
+                className="group p-3 rounded-xl border border-white/5 bg-navy-900/40 hover:border-brand-500/30 hover:bg-navy-800/50 transition-all"
               >
                 <div className="font-semibold text-sm text-white group-hover:text-brand-400 flex items-center justify-between">
                   Multi-Entity Engine
@@ -177,7 +177,7 @@ export default function MegaMenu({ activeTab, onClose }) {
               <Link
                 to="/solutions/unified-workforce-records"
                 onClick={onClose}
-                className="p-4 rounded-xl border border-white/5 bg-navy-950/40 hover:border-brand-500/30 transition-all"
+                className="p-4 rounded-xl border border-white/5 bg-navy-900/40 hover:border-brand-500/30 transition-all"
               >
                 <div className="font-semibold text-sm text-white mb-1">Unified Workforce Records</div>
                 <p className="text-xs text-slate-400">Eliminate fragmented spreadsheets into one multi-entity global system.</p>
@@ -186,7 +186,7 @@ export default function MegaMenu({ activeTab, onClose }) {
               <Link
                 to="/solutions/time-payroll-operations"
                 onClick={onClose}
-                className="p-4 rounded-xl border border-white/5 bg-navy-950/40 hover:border-brand-500/30 transition-all"
+                className="p-4 rounded-xl border border-white/5 bg-navy-900/40 hover:border-brand-500/30 transition-all"
               >
                 <div className="font-semibold text-sm text-white mb-1">Time, Attendance & Payroll</div>
                 <p className="text-xs text-slate-400">Direct biometric shift clocking to multi-currency payroll payout.</p>
@@ -195,7 +195,7 @@ export default function MegaMenu({ activeTab, onClose }) {
               <Link
                 to="/solutions/distributed-workforce"
                 onClick={onClose}
-                className="p-4 rounded-xl border border-white/5 bg-navy-950/40 hover:border-brand-500/30 transition-all"
+                className="p-4 rounded-xl border border-white/5 bg-navy-900/40 hover:border-brand-500/30 transition-all"
               >
                 <div className="font-semibold text-sm text-white mb-1">Distributed & Field Teams</div>
                 <p className="text-xs text-slate-400">Geofenced mobile clock-in, task verification, and field expense scan.</p>
@@ -204,7 +204,7 @@ export default function MegaMenu({ activeTab, onClose }) {
               <Link
                 to="/solutions/talent-acquisition-onboarding"
                 onClick={onClose}
-                className="p-4 rounded-xl border border-white/5 bg-navy-950/40 hover:border-brand-500/30 transition-all"
+                className="p-4 rounded-xl border border-white/5 bg-navy-900/40 hover:border-brand-500/30 transition-all"
               >
                 <div className="font-semibold text-sm text-white mb-1">Hiring & Day-One Readiness</div>
                 <p className="text-xs text-slate-400">AI candidate screening, e-signature offers, and automated IT hardware triggers.</p>
@@ -213,7 +213,7 @@ export default function MegaMenu({ activeTab, onClose }) {
               <Link
                 to="/solutions/employee-self-service"
                 onClick={onClose}
-                className="p-4 rounded-xl border border-white/5 bg-navy-950/40 hover:border-brand-500/30 transition-all"
+                className="p-4 rounded-xl border border-white/5 bg-navy-900/40 hover:border-brand-500/30 transition-all"
               >
                 <div className="font-semibold text-sm text-white mb-1">Employee & Manager Self-Service</div>
                 <p className="text-xs text-slate-400">Reduce HR tickets with instant mobile payslips, leave filing, and AI policy search.</p>
@@ -222,7 +222,7 @@ export default function MegaMenu({ activeTab, onClose }) {
               <Link
                 to="/solutions/workforce-planning-analytics"
                 onClick={onClose}
-                className="p-4 rounded-xl border border-white/5 bg-navy-950/40 hover:border-brand-500/30 transition-all"
+                className="p-4 rounded-xl border border-white/5 bg-navy-900/40 hover:border-brand-500/30 transition-all"
               >
                 <div className="font-semibold text-sm text-white mb-1">Workforce Intelligence & Modeling</div>
                 <p className="text-xs text-slate-400">Multi-scenario capacity modeling, AI flight risk alerts, and C-suite dashboards.</p>

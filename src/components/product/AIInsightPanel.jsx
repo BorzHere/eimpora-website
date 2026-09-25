@@ -40,7 +40,7 @@ export default function AIInsightPanel() {
   const current = signals[selectedSignal];
 
   return (
-    <div className="rounded-3xl border border-brand-500/30 bg-navy-900 p-6 backdrop-blur-xl shadow-cyan-glow-lg text-white">
+    <div className="rounded-3xl border border-brand-500/30 bg-navy-900 p-6 backdrop-blur-xl shadow-cyan-glow text-white">
       <div className="flex items-center justify-between border-b border-white/10 pb-4 mb-6">
         <div className="flex items-center gap-2">
           <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-brand-500/20 text-brand-400">

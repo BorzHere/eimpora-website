@@ -6,6 +6,7 @@ import GlassCard from '../../components/common/GlassCard';
 import CTASection from '../../components/common/CTASection';
 import AIInsightPanel from '../../components/product/AIInsightPanel';
 import EimporaHexagon from '../../components/home/EimporaHexagon1';
+import Stars from '../../components/home/Stars';
 
 export default function AI() {
   const [activeFilter, setActiveFilter] = useState('All');
@@ -74,6 +75,8 @@ export default function AI() {
       {/* AI Hero (DARK SECTION) */}
       <section className="relative pt-32 lg:pt-40 pb-20 bg-navy-950 text-white overflow-hidden text-center">
         <div className="absolute inset-0 bg-radial-glow opacity-80" aria-hidden="true" />
+        <div className="absolute inset-0 bg-grid-pattern opacity-35" aria-hidden="true" />
+        <Stars />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="inline-flex items-center gap-2 rounded-full border border-brand-500/30 bg-brand-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-brand-400 backdrop-blur-md mb-6">
             <Sparkles className="w-4 h-4 animate-pulse" />
@@ -103,9 +106,7 @@ export default function AI() {
               100% Immutable Audit Trail
             </Link>
           </div>
-          <div>
-            <EimporaHexagon />
-          </div>
+          
 
         </div>
       </section>

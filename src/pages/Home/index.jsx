@@ -21,6 +21,7 @@ import { INDUSTRIES_DATA } from '../../data/industriesData';
 import { SOLUTIONS_DATA } from '../../data/solutionsData';
 
 import EimporaHexagon from '../../components/home/EimporaHexagon';
+import WhatsNewSlider from '../../components/home/WhatsNewSlider';
 
 export default function Home() {
   const [activeWorkspaceTab, setActiveWorkspaceTab] = useState('workforce');
@@ -35,7 +36,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-grid-pattern opacity-30" aria-hidden="true" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-14 items-center justify-between">
 
             {/* Left Column: Hero Copy & CTA */}
@@ -87,11 +88,11 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            
+
 
             {/* Right Column: Interactive EimporaHexagon SVG */}
             <div className="lg:col-span-6 flex justify-end items-end">
-              
+
             </div>
 
           </div>
@@ -297,14 +298,14 @@ export default function Home() {
                     <h3 className="font-display font-bold text-lg text-white mb-2">{mod.name}</h3>
                     <p className="text-xs text-slate-300 leading-relaxed">{mod.summary}</p>
 
-                    <div className="mt-4 pt-4 border-t border-white/10 space-y-1.5">
+                    {/* <div className="mt-4 pt-4 border-t border-white/10 space-y-1.5">
                       {mod.capabilities.slice(0, 3).map((cap, cIdx) => (
                         <div key={cIdx} className="flex items-center gap-2 text-xs text-slate-300">
                           <CheckCircle2 className={`w-3.5 h-3.5 ${cIdx % 2 === 0 ? 'text-orange-400' : 'text-cyan-400'} shrink-0`} />
                           <span className="truncate">{cap}</span>
                         </div>
                       ))}
-                    </div>
+                    </div> */}
                   </div>
 
                   <div className="mt-6 pt-4 border-t border-white/10 flex items-center justify-between">
@@ -316,6 +317,79 @@ export default function Home() {
                 </GlassCard>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 8 — MOBILE APP & FIELD EXPERIENCE (PREMIUM SECTION) */}
+      <section className="relative py-24 bg-white text-navy-950 border-y border-slate-200/80 overflow-hidden">
+        {/* Background Ambient Glows */}
+        <div className="absolute top-1/2 right-10 -translate-y-1/2 w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-0 left-10 w-96 h-96 bg-orange-500/5 rounded-full blur-3xl pointer-events-none" />
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+
+            {/* Left Column: Copy & Feature Highlights */}
+            <div className="lg:col-span-6 space-y-6">
+              <div className="inline-flex items-center gap-2 rounded-full border border-orange-500/30 bg-orange-50/80 backdrop-blur-md px-3.5 py-1.5 text-xs font-extrabold uppercase tracking-widest text-orange-600 shadow-xs">
+                <Sparkles className="w-3.5 h-3.5" />
+                Field & Remote Control
+              </div>
+
+              <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-navy-950 leading-tight tracking-tight">
+                Biometric mobile check-in for {" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-amber-600 to-orange-500">
+                  distributed & field workforce.
+                </span>
+              </h2>
+
+              <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-light">
+                Empower non-desk employees, field technicians, and remote workers to log time with GPS geo-fencing, submit OCR expense receipts, and manage leaves offline with zero connectivity lag.
+              </p>
+
+              {/* Feature Checklist */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                {[
+                  { text: 'Offline mobile punch buffering with auto cloud sync', highlight: 'Zero Data Loss' },
+                  { text: 'GPS location verification & anti-spoofing controls', highlight: 'Anti-Spoofing' },
+                  { text: 'Mobile receipt scanning with currency conversion', highlight: 'OCR AI Engine' },
+                  { text: 'Emergency SOS broadcast & lone-worker check', highlight: '24/7 Safety' }
+                ].map((feat, idx) => (
+                  <div
+                    key={idx}
+                    className="p-3 rounded-xl border border-slate-200/80 bg-white/80 backdrop-blur-sm shadow-xs hover:border-orange-500/30 hover:shadow-md transition-all flex items-start gap-3 group"
+                  >
+                    <CheckCircle2 className="w-4 h-4 text-orange-500 shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
+                    <div>
+                      <span className="text-xs text-slate-800 font-semibold leading-snug block">
+                        {feat.text}
+                      </span>
+                      <span className="text-[10px] font-bold text-orange-600 uppercase tracking-wider mt-0.5 inline-block">
+                        {feat.highlight}
+                      </span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Action CTA Link */}
+              <div className="pt-3">
+                <Link
+                  to="/solutions/distributed-workforce"
+                  className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl text-xs font-extrabold uppercase tracking-wider text-white bg-navy-900 hover:bg-navy-950 shadow-md hover:shadow-lg transition-all group"
+                >
+                  <span>Explore Distributed Workforce Solution</span>
+                  <ArrowRight className="w-4 h-4 text-orange-400 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
+            </div>
+
+            {/* Right Column: Polished Mobile Phone Preview */}
+            <div className="lg:col-span-6 flex justify-center items-center">
+              <MobileAppPreview />
+            </div>
+
           </div>
         </div>
       </section>
@@ -337,51 +411,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SECTION 8 — MOBILE APP & FIELD EXPERIENCE (LIGHT SECTION) */}
-      <section className="relative py-24 bg-slate-50 text-navy-950">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div className="lg:col-span-6 space-y-6">
-              <div className="inline-flex items-center gap-2 rounded-full border border-brand-600/30 bg-brand-50 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-widest text-brand-700">
-                Field & Remote Control
-              </div>
-              <h2 className="font-display text-3xl sm:text-4xl font-bold text-navy-950 leading-tight">
-                Biometric mobile check-in for distributed & field workforce.
-              </h2>
-              <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-                Empower non-desk employees, field technicians, and remote workers to log time with GPS geo-fencing, submit OCR expense receipts, and manage leaves offline.
-              </p>
 
-              <div className="space-y-3 pt-2">
-                {[
-                  'Offline mobile punch buffering with auto cloud sync',
-                  'GPS location verification & anti-spoofing controls',
-                  'Mobile receipt scanning with automatic currency conversion',
-                  'Emergency SOS broadcast and lone-worker safety check'
-                ].map((feat, idx) => (
-                  <div key={idx} className="flex items-center gap-3 text-xs text-slate-700 font-medium">
-                    <CheckCircle2 className="w-4 h-4 text-orange-600 shrink-0" />
-                    <span>{feat}</span>
-                  </div>
-                ))}
-              </div>
 
-              <div className="pt-2">
-                <Link
-                  to="/solutions/distributed-workforce"
-                  className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brand-700 hover:text-navy-950 transition-colors"
-                >
-                  Explore Distributed Workforce Solution <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
-            </div>
-
-            <div className="lg:col-span-6 flex justify-center">
-              <MobileAppPreview />
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* SECTION 9 — WHAT'S NEW AT EIMPORA (SWIPER SLIDER) */}
+      <WhatsNewSlider />
 
       {/* SECTION 9 — ENTERPRISE TRUST PILLARS (DARK SECTION) */}
       <section className="relative py-24 bg-navy-950 text-white">

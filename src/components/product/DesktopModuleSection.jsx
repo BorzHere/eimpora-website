@@ -161,58 +161,23 @@ const DESKTOP_MODULES = [
 ];
 
 export default function DesktopModuleSection() {
-  // Stages: 'loading' -> 'reveal-name' -> 'ready'
-  const [bootStage, setBootStage] = useState('loading');
-  const [loadingProgress, setLoadingProgress] = useState(0);
-  const [activeLogIndex, setActiveLogIndex] = useState(0);
+  // Stages: 'reveal-name' -> 'ready'
+  const [bootStage, setBootStage] = useState('reveal-name');
   const [selectedModuleId, setSelectedModuleId] = useState('core-hr');
-
-  const bootLogs = [
-    'Initializing Eimpora Secure Kernel...',
-    'Establishing AES-256 Hashed Substrate...',
-    'Loading Canonical Desktop Modules...',
-    'Mounting Interactive Workstation Layout...',
-    'Eimpora Desktop Environment Ready.'
-  ];
 
   // Function to run the boot sequence
   const startBootSequence = () => {
-    setBootStage('loading');
-    setLoadingProgress(0);
-    setActiveLogIndex(0);
+    setBootStage('reveal-name');
   };
 
   useEffect(() => {
-    if (bootStage !== 'loading') return;
+    if (bootStage !== 'reveal-name') return;
 
-    let progressVal = 0;
-    const interval = setInterval(() => {
-      progressVal += Math.floor(Math.random() * 12) + 8;
-      if (progressVal >= 100) {
-        progressVal = 100;
-        setLoadingProgress(100);
-        clearInterval(interval);
+    const timer = setTimeout(() => {
+      setBootStage('ready');
+    }, 1400);
 
-        // Step 2: Transition to reveal name after 300ms
-        setTimeout(() => {
-          setBootStage('reveal-name');
-
-          // Step 3: Transition to ready module layout after 1.4s
-          setTimeout(() => {
-            setBootStage('ready');
-          }, 1400);
-        }, 300);
-      } else {
-        setLoadingProgress(progressVal);
-        const logStep = Math.min(
-          Math.floor((progressVal / 100) * bootLogs.length),
-          bootLogs.length - 1
-        );
-        setActiveLogIndex(logStep);
-      }
-    }, 120);
-
-    return () => clearInterval(interval);
+    return () => clearTimeout(timer);
   }, [bootStage]);
 
   const activeModule = DESKTOP_MODULES.find(m => m.id === selectedModuleId) || DESKTOP_MODULES[0];
@@ -270,52 +235,10 @@ export default function DesktopModuleSection() {
         {/* WINDOW BODY AREA */}
         <div className="min-h-[600px] flex flex-col justify-center relative bg-gradient-to-b from-navy-950 via-navy-900 to-navy-950 p-4 sm:p-6 lg:p-8">
 
-          {/* STAGE 1: BOOT INITIALIZATION ANIMATION */}
-          {bootStage === 'loading' && (
-            <div className="flex flex-col items-center justify-center py-16 space-y-6 animate-fade-in text-center max-w-lg mx-auto">
-              <div className="relative">
-                <div className="w-20 h-20 rounded-2xl bg-gradient-to-tr from-brand-500 via-orange-400 to-brand-300 p-0.5 shadow-cyan-glow-lg animate-pulse">
-                  <div className="w-full h-full bg-navy-950 rounded-2xl flex items-center justify-center">
-                    <Cpu className="w-10 h-10 text-brand-400 animate-bounce" />
-                  </div>
-                </div>
-                <div className="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-brand-500 text-navy-950 flex items-center justify-center font-bold text-[11px] shadow-md">
-                  4.2
-                </div>
-              </div>
-
-              <div className="space-y-2 w-full">
-                <div className="flex items-center justify-between text-xs font-semibold text-slate-300">
-                  <span className="flex items-center gap-1.5 text-brand-300">
-                    <Terminal className="w-3.5 h-3.5" />
-                    Initializing Desktop Kernel
-                  </span>
-                  <span className="font-mono text-orange-400">{loadingProgress}%</span>
-                </div>
-
-                {/* Progress Bar */}
-                <div className="w-full bg-navy-900 rounded-full h-2.5 overflow-hidden border border-white/10 p-0.5">
-                  <div
-                    className="bg-gradient-to-r from-brand-500 via-cyan-400 to-brand-glow h-full rounded-full transition-all duration-150 ease-out shadow-cyan-glow"
-                    style={{ width: `${loadingProgress}%` }}
-                  />
-                </div>
-              </div>
-
-              {/* Console log status text */}
-              <div className="p-3 rounded-lg border border-white/5 bg-black/40 w-full text-left font-mono text-xs text-slate-400 flex items-center justify-between">
-                <span className="text-emerald-400 truncate">
-                  &gt; {bootLogs[activeLogIndex]}
-                </span>
-                <span className="h-2 w-2 rounded-full bg-brand-400 animate-ping shrink-0" />
-              </div>
-            </div>
-          )}
-
           {/* STAGE 2: NAME APPEARS ON DESKTOP */}
           {bootStage === 'reveal-name' && (
             <div className="flex flex-col items-center justify-center py-16 space-y-6 text-center animate-fade-in">
-              <div className="inline-flex items-center gap-2 rounded-full border border-brand-400/40 bg-brand-500/10 px-4 py-1.5 text-xs font-semibold text-brand-300 shadow-cyan-glow uppercase tracking-widest animate-pulse">
+              <div className="inline-flex items-center gap-2  text-xs font-semibold text-brand-300 shadow-cyan-glow uppercase tracking-widest animate-pulse">
                 <Sparkles className="w-4 h-4 text-orange-400" />
                 Boot Authorization Passed
               </div>
@@ -328,7 +251,9 @@ export default function DesktopModuleSection() {
                 <p className="text-slate-300 text-sm sm:text-base max-w-md mx-auto font-medium">
                   Welcome, Executive Administrator. Launching module workstation layout...
                 </p>
+                
               </div>
+              
 
               <div className="flex items-center gap-2 text-xs text-slate-400 font-mono">
                 <RefreshCw className="w-3.5 h-3.5 animate-spin text-orange-400" />

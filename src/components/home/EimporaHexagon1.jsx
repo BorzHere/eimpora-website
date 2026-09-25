@@ -1,9 +1,9 @@
 import React from "react";
 
-function octagonPoints(cx, cy, radius) {
-  return Array.from({ length: 8 })
+function decagonPoints(cx, cy, radius) {
+  return Array.from({ length: 10 })
     .map((_, i) => {
-      const angle = (Math.PI / 4) * i - Math.PI / 8;
+      const angle = (Math.PI / 5) * i - Math.PI / 10;
       return `${cx + radius * Math.cos(angle)},${cy + radius * Math.sin(angle)}`;
     })
     .join(" ");
@@ -122,17 +122,17 @@ export default function EimporaIntelligenceSVG({ className = "relative w-full h-
 
         {/* Decorative ambient polygons */}
         <g opacity="0.25" className="ei-float-slow">
-          <polygon points="100,120 126,105 152,120 152,150 126,165 100,150" fill="none" stroke="#00D9F5" strokeOpacity="0.35" />
+          <polygon points={decagonPoints(126, 135, 28)} fill="none" stroke="#00D9F5" strokeOpacity="0.35" />
           <circle cx="126" cy="135" r="3" fill="#55E9FF" />
         </g>
 
         <g opacity="0.22" className="ei-float-reverse">
-          <polygon points="1310,120 1333,107 1356,120 1356,146 1333,159 1310,146" fill="none" stroke="#00D9F5" strokeOpacity="0.4" />
+          <polygon points={decagonPoints(1333, 133, 26)} fill="none" stroke="#00D9F5" strokeOpacity="0.4" />
           <circle cx="1333" cy="133" r="3" fill="#55E9FF" />
         </g>
 
         <polygon
-          points={octagonPoints(720, 380, 150)}
+          points={decagonPoints(720, 380, 150)}
           fill="none"
           stroke="#4DEAFF"
           strokeWidth="1"
@@ -194,7 +194,7 @@ export default function EimporaIntelligenceSVG({ className = "relative w-full h-
         <g className="ei-node-float">
           
           <polygon
-            points={octagonPoints(220, 380, 38)}
+            points={decagonPoints(220, 380, 38)}
             fill="url(#ei-node)"
             stroke="#00D9F5"
             strokeOpacity="0.5"
@@ -237,12 +237,9 @@ export default function EimporaIntelligenceSVG({ className = "relative w-full h-
           {/* Outer glow aura */}
           <circle cx="720" cy="380" r="125" fill="url(#ei-core)" className="ei-core-glow" />
 
-
-
-
-          {/* Inner Octagon Frame */}
+          {/* Inner Decagon Frame */}
           <polygon
-            points={octagonPoints(720, 380, 88)}
+            points={decagonPoints(720, 380, 88)}
             fill="#041B22"
             stroke="#39E8FF"
             strokeOpacity="0.7"
@@ -265,8 +262,6 @@ export default function EimporaIntelligenceSVG({ className = "relative w-full h-
             <path d="M10 72L26 61L50 75L73 61L90 72L50 95L10 72Z" fill="url(#eiLogoBottomOuter)" />
           </g>
 
-
-
           {/* Orbit particle */}
           <circle cx="720" cy="285" r="4" fill="#61ECFF" filter="url(#ei-glow)" className="ei-orbit-dot" />
         </g>
@@ -277,7 +272,7 @@ export default function EimporaIntelligenceSVG({ className = "relative w-full h-
         <g className="ei-node-float delay-node">
           
           <polygon
-            points={octagonPoints(1020, 300, 38)}
+            points={decagonPoints(1020, 300, 38)}
             fill="url(#ei-node)"
             stroke="#00D9F5"
             strokeOpacity="0.7"
@@ -314,7 +309,7 @@ export default function EimporaIntelligenceSVG({ className = "relative w-full h-
         {/* ============================= */}
         <g className="ei-node-float delay-node-two">
           <polygon
-            points="1245,230 1280,210 1315,230 1315,270 1280,290 1245,270"
+            points={decagonPoints(1280, 250, 38)}
             fill="url(#ei-node)"
             stroke="#00D9F5"
             strokeOpacity="0.7"
@@ -343,7 +338,7 @@ export default function EimporaIntelligenceSVG({ className = "relative w-full h-
         {/* ============================= */}
         <g className="ei-node-float delay-node-three">
           <polygon
-            points="945,500 980,480 1015,500 1015,540 980,560 945,540"
+            points={decagonPoints(980, 520, 38)}
             fill="url(#ei-node)"
             stroke="#00D9F5"
             strokeOpacity="0.7"

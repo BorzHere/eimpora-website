@@ -8,6 +8,7 @@ import SectionHeading from '../../components/common/SectionHeading';
 import GlassCard from '../../components/common/GlassCard';
 import CTASection from '../../components/common/CTASection';
 import Stars from '../../components/home/Stars';
+import EimporaHexagon from '../../components/home/EimporaHexagon';
 
 export default function Platform() {
   const [activeRole, setActiveRole] = useState('Employee');
@@ -76,6 +77,7 @@ export default function Platform() {
       {/* Platform Hero (DARK SECTION) */}
       <section className="relative pt-32 lg:pt-40 pb-24 bg-navy-950 text-white overflow-hidden">
         <div className="absolute inset-0 bg-radial-glow opacity-80" aria-hidden="true" />
+        <div className="absolute inset-0 bg-grid-pattern opacity-35" aria-hidden="true" />
         <Stars />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
@@ -86,24 +88,25 @@ export default function Platform() {
             dark={true}
           />
 
-          <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
-            <div className="p-6 rounded-2xl border border-white/10 bg-navy-900/60 shadow-lg hover:border-brand-500/40 transition-all">
+          <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center max-w-5xl mx-auto">
+            <div className="p-6 rounded-2xl border border-white/5 bg-navy-900/80 shadow">
               <div className="font-display text-3xl font-bold text-brand-400">100%</div>
               <div className="text-xs text-slate-300 mt-1">Unified Data Model</div>
             </div>
-            <div className="p-6 rounded-2xl border border-white/10 bg-navy-900/60 shadow-lg hover:border-brand-500/40 transition-all">
+            <div className="p-6 rounded-2xl border border-white/5 bg-navy-900/80 shadow">
               <div className="font-display text-3xl font-bold text-brand-400">&lt; 100ms</div>
               <div className="text-xs text-slate-300 mt-1">Global Data Latency</div>
             </div>
-            <div className="p-6 rounded-2xl border border-white/10 bg-navy-900/60 shadow-lg hover:border-brand-500/40 transition-all">
+            <div className="p-6 rounded-2xl border border-white/5 bg-navy-900/80 shadow">
               <div className="font-display text-3xl font-bold text-brand-400">AES-256</div>
               <div className="text-xs text-slate-300 mt-1">Field-Level Encryption</div>
             </div>
-            <div className="p-6 rounded-2xl border border-white/10 bg-navy-900/60 shadow-lg hover:border-brand-500/40 transition-all">
+            <div className="p-6 rounded-2xl border border-white/5 bg-navy-900/80 shadow">
               <div className="font-display text-3xl font-bold text-brand-400">99.99%</div>
               <div className="text-xs text-slate-300 mt-1">Uptime SLA Guaranteed</div>
             </div>
           </div>
+ 
         </div>
       </section>
 

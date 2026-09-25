@@ -26,6 +26,7 @@ export default function Modules() {
       {/* Modules Catalog Hero (DARK SECTION) */}
       <section className="relative pt-32 lg:pt-40 pb-24 bg-navy-950 text-white overflow-hidden text-center">
         <div className="absolute inset-0 bg-radial-glow opacity-80" aria-hidden="true" />
+        <div className="absolute inset-0 bg-grid-pattern opacity-35" aria-hidden="true" />
         <Stars />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="inline-flex items-center gap-2 rounded-full border border-brand-500/30 bg-brand-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-brand-400 backdrop-blur-md mb-6">
@@ -97,14 +98,14 @@ export default function Modules() {
                   <h3 className="font-display font-bold text-xl text-navy-950 mb-2">{mod.name}</h3>
                   <p className="text-xs text-slate-600 leading-relaxed mb-4">{mod.summary}</p>
 
-                  <div className="space-y-1.5 pt-3 border-t border-slate-100">
+                  {/* <div className="space-y-1.5 pt-3 border-t border-slate-100">
                     {mod.capabilities.slice(0, 3).map((cap, idx) => (
                       <div key={idx} className="flex items-center gap-2 text-xs text-slate-700 font-medium">
                         <CheckCircle2 className="w-3.5 h-3.5 text-brand-600 shrink-0" />
                         <span className="truncate">{cap}</span>
                       </div>
                     ))}
-                  </div>
+                  </div> */}
 
                   <div className="mt-4 p-3 rounded-lg border border-orange-200 bg-orange-50 text-[11px] text-slate-800">
                     <span className="font-semibold text-orange-800 block mb-0.5">Embedded AI Capability:</span>

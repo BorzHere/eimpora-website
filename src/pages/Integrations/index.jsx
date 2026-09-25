@@ -140,7 +140,7 @@ export default function Integrations() {
                   <p className="text-xs text-orange-800 font-medium mb-3">{item.tagline}</p>
                   <p className="text-xs text-slate-600 leading-relaxed mb-4">{item.description}</p>
 
-                  <div className="space-y-1.5 pt-3 border-t border-slate-100">
+                  {/* <div className="space-y-1.5 pt-3 border-t border-slate-100">
                     <span className="text-[11px] font-semibold text-navy-950 block mb-1">Key Technical Features:</span>
                     {item.features.slice(0, 3).map((feat, idx) => (
                       <div key={idx} className="flex items-center gap-2 text-xs text-slate-700 font-medium">
@@ -148,10 +148,10 @@ export default function Integrations() {
                         <span className="truncate">{feat}</span>
                       </div>
                     ))}
-                  </div>
+                  </div> */}
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+                <div className=" pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
                   <span>Sync Direction: <strong className="text-navy-950">{item.syncDirection}</strong></span>
                   <Link to="/book-demo" className="text-orange-700 font-bold hover:underline">
                     Integration Ready →

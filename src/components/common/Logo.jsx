@@ -27,14 +27,14 @@ export function LogoMark({ className = "h-8 w-8" }) {
         </radialGradient>
       </defs>
 
-      <circle cx="110" cy="110" r="105" fill="none" stroke="url(#ringOrange)" strokeWidth="26" strokeLinecap="round" strokeDasharray="455 120" />
+      <circle cx="110" cy="110" r="106" fill="none" stroke="url(#ringOrange)" strokeWidth="30" strokeLinecap="round" strokeDasharray="455 120" />
       <circle cx="110" cy="110" r="74" fill="url(#innerBlue)" />
       <circle cx="110" cy="110" r="60" fill="none" stroke="#0B1C33" strokeWidth="2" opacity="0.9" />
 
       <path
         d="M72 58V162M72 58H146M72 110H132M72 162H146"
         stroke="#F6F8FF"
-        strokeWidth="14"
+        strokeWidth="18"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
@@ -55,17 +55,17 @@ export function Logo({ className = "", variant = "light", showWordmark = true, s
   const titleClass = isXl ? "text-[28px] sm:text-[42px]" : isLg ? "text-[24px] sm:text-[34px]" : "text-[19px] sm:text-[26px]";
 
   return (
-    <span className={`inline-flex items-center gap-3 ${className}`}>
+    <span className={`inline-flex items-center gap-1 ${className}`}>
       <LogoMark className={iconClass} />
       {showWordmark && (
         <span className="flex items-center leading-none">
-          <span className={`font-display font-semibold tracking-[-0.08em] ${titleClass} text-white`}>
-            EIMPORA
+          <span className={`font-display font-medium ${titleClass} text-white`}>
+            IMPORA
           </span>
         </span>
       )}
       {showWordmark && (
-        <span className={`ml-[-4px] mt-2 hidden text-[10px] font-semibold uppercase  text-[#f97316] sm:inline-block ${isXl ? "text-[12px]" : isLg ? "text-[11px]" : ""}`}>
+        <span className={` mt-2 hidden text-[10px] font-semibold uppercase  text-[#f97316] sm:inline-block ${isXl ? "text-[12px]" : isLg ? "text-[11px]" : ""}`}>
           AI
         </span>
       )}

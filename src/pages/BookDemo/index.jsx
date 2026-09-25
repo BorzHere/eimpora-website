@@ -129,7 +129,7 @@ export default function BookDemo() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
 
             {/* LEFT COLUMN: DARK GLASS FORM CARD (MATCHING USER SCREENSHOT) */}
-            <div className="lg:col-span-7 rounded-3xl border border-slate-800 bg-[#090d16] text-white p-6 sm:p-9 shadow-2xl backdrop-blur-xl space-y-6 relative">
+            <div className="lg:col-span-7 rounded-3xl border border-slate-800 bg-navy-950 text-white p-6 sm:p-9 shadow-2xl backdrop-blur-xl space-y-6 relative">
               <div className="absolute inset-0 bg-radial-glow opacity-60" aria-hidden="true" />
               <div className="absolute inset-0 bg-grid-pattern opacity-30" aria-hidden="true" />
               {/* Form Header with Divider */}

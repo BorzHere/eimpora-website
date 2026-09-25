@@ -211,20 +211,20 @@ export default function Careers() {
 
           {/* Stats Bar */}
           <div className="pt-10 grid grid-cols-2 md:grid-cols-4 gap-4 border-t border-white/10">
-            <div className="p-4 rounded-xl border border-white/10 bg-navy-900/60 backdrop-blur-md">
-              <div className="text-2xl sm:text-3xl font-bold font-display text-brand-300">50+</div>
+            <div className="p-4 rounded-xl border border-white/10 bg-navy-900/30 backdrop-blur-md">
+              <div className="text-2xl sm:text-3xl font-bold font-display text-brand-400">50+</div>
               <div className="text-xs text-slate-400 font-medium mt-1">Global Team Members</div>
             </div>
-            <div className="p-4 rounded-xl border border-white/10 bg-navy-900/60 backdrop-blur-md">
+            <div className="p-4 rounded-xl border border-white/10 bg-navy-900/30 backdrop-blur-md">
               <div className="text-2xl sm:text-3xl font-bold font-display text-emerald-400">100%</div>
               <div className="text-xs text-slate-400 font-medium mt-1">Remote Work Culture</div>
             </div>
-            <div className="p-4 rounded-xl border border-white/10 bg-navy-900/60 backdrop-blur-md">
-              <div className="text-2xl sm:text-3xl font-bold font-display text-cyan-400">20+</div>
+            <div className="p-4 rounded-xl border border-white/10 bg-navy-900/30 backdrop-blur-md">
+              <div className="text-2xl sm:text-3xl font-bold font-display text-brand-400">20+</div>
               <div className="text-xs text-slate-400 font-medium mt-1">Countries Represented</div>
             </div>
-            <div className="p-4 rounded-xl border border-white/10 bg-navy-900/60 backdrop-blur-md">
-              <div className="text-2xl sm:text-3xl font-bold font-display text-amber-400">Flexible</div>
+            <div className="p-4 rounded-xl border border-white/10 bg-navy-900/30 backdrop-blur-md">
+              <div className="text-2xl sm:text-3xl font-bold font-display text-brand-500">Flexible</div>
               <div className="text-xs text-slate-400 font-medium mt-1">Unlimited PTO & Stipends</div>
             </div>
           </div>
@@ -384,12 +384,12 @@ export default function Careers() {
       {showApplicationForm && (
         <section id="application-form" className="relative pt-16 pb-24 bg-white text-white border-b border-white/10">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="rounded-3xl border border-brand-500/30 bg-navy-900/95 p-8 sm:p-12 pt-0 sm:pt-6 shadow-2xl backdrop-blur-2xl space-y-8 relative">
+            <div className="rounded-3xl border border-brand-500/30 bg-navy-900 p-8 sm:p-12 pt-0 sm:pt-6 shadow-2xl backdrop-blur-2xl space-y-8 relative">
               <div className="absolute inset-0 bg-radial-glow opacity-40" aria-hidden="true" />
               
               <div className="flex items-center justify-between border-b border-white/10 pb-6 relative z-10">
                 <div className='max-w-md'>
-                  <span className="text-xs font-bold uppercase tracking-widest text-cyan-400">Direct Application</span>
+                  <span className="text-xs font-bold uppercase tracking-widest text-brand-400">Direct Application</span>
                   <h2 className="font-display text-2xl sm:text-3xl font-bold  text-white mt-1">
                     Apply for {selectedRole?.title || "Enterprise Role"}
                   </h2>

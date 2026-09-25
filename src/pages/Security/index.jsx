@@ -159,10 +159,47 @@ export default function Security() {
       </section>
 
       {/* SVG MODULE SECTION: DEDICATED ZERO-TRUST ARCHITECTURE TOPOLOGY */}
-      <section className="relative py-24 bg-white  border-b border-white/10">
+      <section className="relative py-24 bg-white border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="">
-            <SecuritySvgModule />
+          <SectionHeading
+          dark={false}
+            eyebrow="Compliance & Governance"
+            title="Certified Enterprise Compliance Standards"
+            description="Rigorous independent audits and global statutory frameworks governing every Eimpora operational tier."
+          />
+
+          <div className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {CERTIFICATIONS.map((cert, idx) => {
+              const IconComp = cert.icon;
+              return (
+                <div
+                  key={idx}
+                  className="p-6 rounded-2xl border border-slate-200 bg-slate-50 hover:bg-white transition-all duration-300 space-y-4 relative group shadow-sm"
+                >
+                  <div className="flex items-center justify-between">
+                    <div className="p-3 rounded-xl bg-cyan-100 border border-cyan-200 text-cyan-700 group-hover:scale-110 transition-transform">
+                      <IconComp className="w-5 h-5" />
+                    </div>
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-cyan-700 px-2.5 py-0.5 rounded-md bg-cyan-50 border border-cyan-200">
+                      {cert.tag}
+                    </span>
+                  </div>
+
+                  <div>
+                    <h3 className="font-display font-bold text-lg text-slate-900 group-hover:text-cyan-700 transition-colors">
+                      {cert.title}
+                    </h3>
+                    <span className="text-[11px] font-mono font-semibold text-orange-600 block mt-0.5">
+                      Standard: {cert.code}
+                    </span>
+                  </div>
+
+                  <p className="text-xs text-slate-600 leading-relaxed font-light">
+                    {cert.desc}
+                  </p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -187,67 +224,24 @@ export default function Security() {
                     <Lock className="w-4 h-4 text-orange-400" />
                   </div>
                   <h3 className="font-display font-bold text-xl text-white mb-2">{sec.title}</h3>
-                  <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mb-6">{sec.description}</p>
+                  <p className="text-xs sm:text-sm text-slate-300 leading-relaxed ">{sec.description}</p>
                 </div>
 
-                <div className="space-y-2.5 pt-4 border-t border-white/10">
+                {/* <div className="space-y-2.5 pt-4 border-t border-white/10">
                   {sec.capabilities.map((cap, cIdx) => (
                     <div key={cIdx} className="flex items-start gap-2 text-xs text-slate-400">
                       <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />
                       <span className="leading-snug">{cap}</span>
                     </div>
                   ))}
-                </div>
+                </div> */}
               </GlassCard>
             ))}
           </div>
         </div>
       </section>
 
-      {/* SECTION 3: COMPLIANCE & CERTIFICATIONS GRID */}
-      <section className="relative py-24 bg-navy-950 text-white border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading
-            eyebrow="Compliance & Governance"
-            title="Certified Enterprise Compliance Standards"
-            description="Rigorous independent audits and global statutory frameworks governing every Eimpora operational tier."
-          />
-
-          <div className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {CERTIFICATIONS.map((cert, idx) => {
-              const IconComp = cert.icon;
-              return (
-                <div
-                  key={idx}
-                  className="p-6 rounded-2xl border border-cyan-500/20 bg-white/[0.03] hover:bg-white/[0.06] transition-all duration-300 space-y-4 relative group"
-                >
-                  <div className="flex items-center justify-between">
-                    <div className="p-3 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 group-hover:scale-110 transition-transform">
-                      <IconComp className="w-5 h-5" />
-                    </div>
-                    <span className="text-[11px] font-bold uppercase tracking-wider text-cyan-400 px-2.5 py-0.5 rounded-md bg-cyan-500/10 border border-cyan-500/20">
-                      {cert.tag}
-                    </span>
-                  </div>
-
-                  <div>
-                    <h3 className="font-display font-bold text-lg text-white group-hover:text-cyan-300 transition-colors">
-                      {cert.title}
-                    </h3>
-                    <span className="text-[11px] font-mono font-semibold text-orange-400 block mt-0.5">
-                      Standard: {cert.code}
-                    </span>
-                  </div>
-
-                  <p className="text-xs text-slate-400 leading-relaxed font-light">
-                    {cert.desc}
-                  </p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+      
 
       {/* SECTION 4: INTERACTIVE RBAC MATRIX & ROLE SCOPER */}
       <section className="relative py-24 bg-navy-900/60 text-white border-b border-white/10">
