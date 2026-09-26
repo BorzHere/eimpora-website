@@ -177,6 +177,7 @@ export default function Careers() {
       {/* SECTION 1: Careers Hero (DARK SECTION) */}
       <section className="relative pt-36 pb-24 bg-navy-950 text-white overflow-hidden border-b border-white/10">
         <div className="absolute inset-0 bg-radial-glow opacity-80" aria-hidden="true" />
+        
         <Stars />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
 

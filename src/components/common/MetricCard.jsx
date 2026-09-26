@@ -32,7 +32,7 @@ export default function MetricCard({ title, value, change, changeType = 'positiv
     <div
       className={`rounded-xl border px-5 py-6 backdrop-blur-md transition-all ${
         dark
-          ? 'border-white/10 bg-navy-900/60 text-white hover:border-brand-500/40'
+          ? 'border-white/10 bg-navy-900/50 text-white hover:border-brand-500/40'
           : 'border-slate-200 bg-white text-navy-950 hover:border-brand-500/50 hover:shadow-lg'
       }`}
     >

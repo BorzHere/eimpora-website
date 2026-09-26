@@ -58,7 +58,7 @@ export default function Integrations() {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search integrations (e.g. SAP, Azure AD, Biometrics)..."
-              className="w-full pl-12 pr-4 py-3.5 rounded-xl border border-white/10 bg-navy-900/90 text-sm text-white placeholder-slate-400 focus:outline-none focus:border-brand-500 transition-all shadow-lg"
+              className="w-full pl-12 pr-4 py-3.5 rounded-xl border border-white/10 bg-navy-900/40 text-sm text-white placeholder-slate-400 focus:outline-none focus:border-brand-500 transition-all shadow-lg"
             />
           </div>
 
@@ -72,7 +72,7 @@ export default function Integrations() {
                 className={`px-3 py-1 rounded-full text-xs font-semibold transition-all border ${
                   selectedCategory === cat.id
                     ? 'border-brand-400 bg-brand-500/20 text-brand-300 shadow-sm'
-                    : 'border-white/10 bg-navy-900/60 text-slate-300 hover:border-brand-500/30 hover:text-white'
+                    : 'border-white/10 bg-navy-900 text-slate-300 hover:border-brand-500/30 hover:text-white'
                 }`}
               >
                 {cat.name}
@@ -83,7 +83,7 @@ export default function Integrations() {
 
         <div className="mt-16 p-4 max-w-6xl mx-auto  rounded-3xl backdrop-blur-xl">
             <div className="grid grid-cols-1 md:grid-cols-5 gap-3 items-center text-center text-xs font-semibold">
-              <div className="p-4 rounded-xl border border-white/10 bg-navy-900/80 text-slate-200">
+              <div className="p-4 rounded-xl border border-white/10 bg-navy-900/40 text-slate-200">
                 <span className="text-brand-400 block mb-1">01. Source Systems</span>
                 <span>ERP, Directory, Biometric Hardware</span>
               </div>
@@ -97,7 +97,7 @@ export default function Integrations() {
 
               <div className="hidden md:flex justify-center text-brand-400 font-bold">→</div>
 
-              <div className="p-4 rounded-xl border border-white/10 bg-navy-900/80 text-slate-200">
+              <div className="p-4 rounded-xl border border-white/10 bg-navy-900/40 text-slate-200">
                 <span className="text-brand-400 block mb-1">03. Outbound Ledger</span>
                 <span>Banking Files, GL Vouchers, SSO Logs</span>
               </div>

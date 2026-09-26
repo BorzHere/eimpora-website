@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Target, ArrowRight, CheckCircle2, ChevronRight, Sparkles } from 'lucide-react';
+import { Target, ArrowRight, CheckCircle2, ChevronRight, Sparkles, HelpCircle, ChevronDown } from 'lucide-react';
 import SectionHeading from '../../components/common/SectionHeading';
 import GlassCard from '../../components/common/GlassCard';
 import CTASection from '../../components/common/CTASection';
@@ -9,13 +9,36 @@ import Stars from '../../components/home/Stars';
 
 export default function Solutions() {
   const [selectedSolution, setSelectedSolution] = useState(0);
+  const [openFaq, setOpenFaq] = useState(0);
+
+  const currentSolution = SOLUTIONS_DATA[selectedSolution] || SOLUTIONS_DATA[0];
+
+  const faqs = [
+    {
+      q: `How quickly can our organization implement the ${currentSolution.title} solution?`,
+      a: `Most enterprise customers roll out ${currentSolution.title} within 3 to 5 weeks. Our phased implementation approach enables zero operational downtime while migrating legacy data into governed Eimpora workflows.`
+    },
+    {
+      q: `Can this solution operate alongside our existing ERP infrastructure?`,
+      a: `Yes. Eimpora is designed to work either as a full replacement or as an intelligent orchestration layer on top of legacy ERP systems (SAP, Workday, Oracle) using bi-directional API synchronization.`
+    },
+    {
+      q: `How are cross-border compliance and data privacy handled?`,
+      a: `Eimpora automatically applies jurisdiction-specific labor laws, tax rules, and data residency restrictions based on worker location, ensuring complete statutory compliance.`
+    },
+    {
+      q: `What ROI can executive sponsors expect?`,
+      a: `Organizations implementing this solution typically achieve a 100% reduction in data discrepancy, 60-80% reduction in manual processing overhead, and complete elimination of statutory compliance penalties.`
+    }
+  ];
+
+  
 
   return (
     <div className="space-y-0">
       {/* Hero (DARK SECTION) */}
       <section className="relative pt-32 lg:pt-48 pb-36 bg-navy-950 text-white overflow-hidden text-center">
         <div className="absolute inset-0 bg-radial-glow opacity-80" aria-hidden="true" />
-        <div className="absolute inset-0 bg-grid-pattern opacity-35" aria-hidden="true" />
         <Stars />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="inline-flex items-center gap-2 rounded-full border border-brand-500/30 bg-brand-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-brand-400 backdrop-blur-md mb-6">
@@ -122,6 +145,52 @@ export default function Solutions() {
                 );
               })()}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Solution FAQs Accordion (DARK SECTION) */}
+      <section className="relative py-24 bg-navy-950 text-white border-b border-white/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionHeading
+            eyebrow="Solution FAQs"
+            title="Frequently Asked Questions"
+            description="Addressing key considerations for solution deployment and ROI."
+            dark={true}
+          />
+
+          <div className="mt-10 max-w-4xl mx-auto space-y-4">
+            {faqs.map((faq, idx) => (
+              <div
+                key={idx}
+                className="rounded-2xl border border-white/10 bg-navy-900/70 overflow-hidden transition-all duration-300 ease-out hover:border-brand-500/30"
+              >
+                <button
+                  type="button"
+                  aria-expanded={openFaq === idx}
+                  onClick={() => setOpenFaq(openFaq === idx ? -1 : idx)}
+                  className="w-full p-4 text-left flex items-center justify-between gap-4 font-display font-semibold text-white hover:text-brand-300 transition-colors duration-200"
+                >
+                  <span className="flex items-center gap-3">
+                    <HelpCircle className="w-4 h-4 text-brand-400 shrink-0" />
+                    {faq.q}
+                  </span>
+                  <ChevronDown className={`w-4 h-4 text-orange-400 shrink-0 transition-transform duration-300 ${openFaq === idx ? 'rotate-180' : ''}`} />
+                </button>
+
+                <div
+                  className={`grid transition-all duration-300 ease-out ${
+                    openFaq === idx ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
+                  }`}
+                >
+                  <div className="overflow-hidden">
+                    <div className="p-5 pt-0 text-xs sm:text-sm text-slate-300 bg-navy-950/40 leading-relaxed space-y-2">
+                      <p>{faq.a}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

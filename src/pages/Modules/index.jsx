@@ -26,7 +26,6 @@ export default function Modules() {
       {/* Modules Catalog Hero (DARK SECTION) */}
       <section className="relative pt-32 lg:pt-40 pb-24 bg-navy-950 text-white overflow-hidden text-center">
         <div className="absolute inset-0 bg-radial-glow opacity-80" aria-hidden="true" />
-        <div className="absolute inset-0 bg-grid-pattern opacity-35" aria-hidden="true" />
         <Stars />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="inline-flex items-center gap-2 rounded-full border border-brand-500/30 bg-brand-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-brand-400 backdrop-blur-md mb-6">
@@ -44,14 +43,14 @@ export default function Modules() {
           </p>
 
           {/* Search Bar */}
-          <div className="mt-8 max-w-md mx-auto relative">
+          <div className="mt-8 max-w-md mx-auto relative ">
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
             <input
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search capabilities (e.g. payroll, attendance, ATS, OKRs)..."
-              className="w-full pl-12 pr-4 py-3.5 rounded-xl border border-white/10 bg-navy-900/90 text-sm text-white placeholder-slate-400 focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all shadow-lg"
+              className="w-full pl-12 pr-4 py-3.5 rounded-xl border border-white/10 bg-navy-900/50 text-sm text-white placeholder-slate-400 focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all shadow-lg"
             />
           </div>
         </div>

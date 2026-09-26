@@ -90,7 +90,7 @@ export default function ModuleDetail() {
               </div>
             </div>
 
-            <div className="lg:col-span-4 rounded-2xl border border-white/10 bg-navy-900/80 p-6 space-y-4 shadow-xl backdrop-blur-xl">
+            <div className="lg:col-span-4 rounded-2xl border border-white/10 bg-navy-900/40 p-6 space-y-4 shadow-xl backdrop-blur-xl">
               <h3 className="font-display font-bold text-base text-white border-b border-white/10 pb-3 flex items-center gap-2">
                 <Activity className="w-4 h-4 text-brand-400" /> Module Telemetry
               </h3>

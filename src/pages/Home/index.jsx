@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
-  Sparkles, ArrowRight, ShieldCheck, CheckCircle2, Users, Banknote, Clock,
+  Sparkles, ArrowRight, ShieldCheck, CheckCircle2, Users, Banknote, Clock, Laptop,
   Layers, Building2, Network, Cpu, ArrowUpRight, ChevronRight, Activity, Globe, Lock, Search, Target
 } from 'lucide-react';
 
@@ -14,7 +14,7 @@ import DashboardShell from '../../components/product/DashboardShell';
 import AIInsightPanel from '../../components/product/AIInsightPanel';
 import MobileAppPreview from '../../components/product/MobileAppPreview';
 import DesktopModuleSection from '../../components/product/DesktopModuleSection';
-import SideLogo from '../../assets/dashboard.png';
+import SideLogo from '../../assets/dashboard1.png';
 
 import { MODULES_DATA } from '../../data/modulesData';
 import { INDUSTRIES_DATA } from '../../data/industriesData';
@@ -22,16 +22,17 @@ import { SOLUTIONS_DATA } from '../../data/solutionsData';
 
 import EimporaHexagon from '../../components/home/EimporaHexagon';
 import WhatsNewSlider from '../../components/home/WhatsNewSlider';
+import WorkforceOSSection from '../../components/home/WorkforceOSSection';
 
 export default function Home() {
   const [activeWorkspaceTab, setActiveWorkspaceTab] = useState('workforce');
-  const [selectedIndustry, setSelectedIndustry] = useState(0);
+  
 
   return (
     <div className="space-y-0">
       {/* SECTION 1 — ENTERPRISE HERO (DARK SECTION WITH EIMPORA HEXAGON SVG) */}
       <section className="relative pt-32 pb-24 overflow-hidden bg-navy-950 text-white">
-        <img src={SideLogo} alt="Eimpora Hexagon Illustration" className="w-1/2 absolute bottom-0 right-0 opacity-80" />
+        {/* <img src={SideLogo} alt="Eimpora Hexagon Illustration" className="w-1/3 absolute bottom-16 right-20 animate-float" /> */}
         <div className="absolute inset-0 bg-radial-glow opacity-80" aria-hidden="true" />
         <div className="absolute inset-0 bg-grid-pattern opacity-30" aria-hidden="true" />
 
@@ -92,7 +93,6 @@ export default function Home() {
 
             {/* Right Column: Interactive EimporaHexagon SVG */}
             <div className="lg:col-span-6 flex justify-end items-end">
-
             </div>
 
           </div>
@@ -411,12 +411,10 @@ export default function Home() {
         </div>
       </section>
 
-
-
       {/* SECTION 9 — WHAT'S NEW AT EIMPORA (SWIPER SLIDER) */}
       <WhatsNewSlider />
 
-      {/* SECTION 9 — ENTERPRISE TRUST PILLARS (DARK SECTION) */}
+      {/* SECTION 10 — ENTERPRISE TRUST PILLARS (DARK SECTION) */}
       <section className="relative py-24 bg-navy-950 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
@@ -455,70 +453,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SECTION 10 — INDUSTRY SOLUTIONS MATRIX (LIGHT SECTION) */}
-      <section className="relative py-24 bg-white text-navy-950 border-y border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading
-            eyebrow="Industry Adaptability"
-            title="Tailored to your operational environment."
-            description="Select your industry to see tailored workforce modules, compliance rules, and automated workflows."
-            dark={false}
-          />
+      <WorkforceOSSection />
 
-          <div className="mt-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            {/* Left Industry Selector List */}
-            <div className="lg:col-span-5 space-y-2">
-              {INDUSTRIES_DATA.slice(0, 6).map((ind, idx) => (
-                <button
-                  key={ind.slug}
-                  onClick={() => setSelectedIndustry(idx)}
-                  className={`w-full text-left p-4 rounded-xl border transition-all flex items-center justify-between ${selectedIndustry === idx
-                    ? 'border-navy-900 bg-navy-800 text-white shadow-md'
-                    : 'border-slate-200 bg-slate-50 text-slate-800 hover:bg-slate-100'
-                    }`}
-                >
-                  <span className="font-display text-sm font-semibold">{ind.title}</span>
-                  <ChevronRight className={`w-4 h-4 ${selectedIndustry === idx ? 'text-brand-400' : 'text-slate-400'}`} />
-                </button>
-              ))}
-            </div>
+      
 
-            {/* Right Selected Industry Preview */}
-            <div className="lg:col-span-7 rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-md text-navy-950">
-              {(() => {
-                const currentInd = INDUSTRIES_DATA[selectedIndustry];
-                return (
-                  <div className="space-y-4">
-                    <div className="flex items-center justify-between border-b border-slate-200 pb-3">
-                      <span className="text-xs font-bold uppercase tracking-wider text-brand-600">{currentInd.title}</span>
-                      <Link to={`/industries/${currentInd.slug}`} className="text-xs font-semibold text-navy-800 hover:text-brand-500 flex items-center gap-1">
-                        Full Industry Profile <ArrowRight className="w-3.5 h-3.5" />
-                      </Link>
-                    </div>
-                    <p className="text-xs text-slate-700 leading-relaxed font-medium">{currentInd.workforceProfile}</p>
-
-                    <div className="p-4 rounded-xl border border-slate-200 bg-white space-y-2">
-                      <span className="text-xs font-semibold text-navy-950 block">Key Operational Challenges Solved:</span>
-                      {currentInd.challenges.slice(0, 3).map((ch, idx) => (
-                        <div key={idx} className="flex items-center gap-1.5 text-xs text-slate-700">
-                          <CheckCircle2 className="w-3 h-3 text-emerald-600 shrink-0" />
-                          <span>{ch}</span>
-                        </div>
-                      ))}
-                    </div>
-
-                    <div className="pt-2 flex items-center justify-between text-xs text-navy-900">
-                      <span>Governance Focus: <strong className="text-orange-0">{currentInd.governance.slice(0, 45)}...</strong></span>
-                    </div>
-                  </div>
-                );
-              })()}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 11 — UNIFIED VS FRAGMENTED POSITIONING (DARK SECTION) */}
+      {/* SECTION 13 — UNIFIED VS FRAGMENTED POSITIONING (DARK SECTION) */}
       <section className="relative py-24 bg-navy-950 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
@@ -528,10 +467,10 @@ export default function Home() {
             dark={true}
           />
 
-          <div className="mt-12 overflow-x-auto rounded-2xl border border-white/10 bg-navy-900/90 shadow-2xl backdrop-blur-xl">
+          <div className="mt-12 overflow-x-auto rounded-2xl border border-white/10 bg-navy-900/40 shadow-2xl backdrop-blur-xl">
             <table className="w-full text-left text-xs border-collapse">
               <thead>
-                <tr className="border-b border-white/10 bg-navy-950/80">
+                <tr className="border-b border-white/10 bg-navy-900/50">
                   <th className="p-4 font-bold text-white uppercase tracking-wider">Evaluation Dimension</th>
                   <th className="p-4 font-bold text-rose-400 uppercase tracking-wider">Fragmented Point Suites</th>
                   <th className="p-4 font-bold text-brand-500 uppercase tracking-wider">Eimpora Enterprise Unified</th>
@@ -541,7 +480,7 @@ export default function Home() {
                 <tr>
                   <td className="p-4 font-semibold text-white">Data Consistency</td>
                   <td className="p-4 text-rose-300">Nightly batch syncs with frequent discrepancy gaps</td>
-                  <td className="p-4 text-cyan-300 font-semibold">1 Real-time authoritative global substrate</td>
+                  <td className="p-4 text-orange-300 font-semibold">1 Real-time authoritative global substrate</td>
                 </tr>
                 <tr>
                   <td className="p-4 font-semibold text-white">Biometric Shift Sync</td>
@@ -556,7 +495,7 @@ export default function Home() {
                 <tr>
                   <td className="p-4 font-semibold text-white">Audit Readiness</td>
                   <td className="p-4 text-rose-300">Scattered log files across 5 vendor platforms</td>
-                  <td className="p-4 text-cyan-300 font-semibold">Immutable cryptographically hashed central log</td>
+                  <td className="p-4 text-orange-300 font-semibold">Immutable cryptographically hashed central log</td>
                 </tr>
               </tbody>
             </table>
@@ -564,7 +503,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SECTION 12 — FINAL DEMO CTA */}
+      {/* SECTION 14 — FINAL DEMO CTA */}
       <CTASection />
     </div>
   );

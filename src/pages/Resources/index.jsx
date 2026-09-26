@@ -49,7 +49,7 @@ export default function Resources() {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search guides & whitepapers..."
-              className="w-full pl-12 pr-4 py-3.5 rounded-xl border border-white/10 bg-navy-900/90 text-sm text-white placeholder-slate-400 focus:outline-none focus:border-brand-500 transition-all shadow-lg"
+              className="w-full pl-12 pr-4 py-3.5 rounded-xl border border-white/10 bg-navy-900/40 text-sm text-white placeholder-slate-400 focus:outline-none focus:border-brand-500 transition-all shadow-lg"
             />
           </div>
         </div>

@@ -138,20 +138,20 @@ export default function Security() {
 
           {/* Trust Stat Pills - Cyan & White Only */}
           <div className="pt-6 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-            <div className="p-4 rounded-xl border border-cyan-500/20 bg-white/5 backdrop-blur-sm text-center">
-              <div className="text-2xl font-bold font-display text-cyan-400">SOC 2 Type II</div>
+            <div className="p-4 rounded-xl border border-white/10 bg-navy-900/30 backdrop-blur-md">
+              <div className="text-2xl font-bold font-display text-brand-400">SOC 2 Type II</div>
               <div className="text-xs text-slate-300 mt-1 font-medium">Audited & Certified</div>
             </div>
-            <div className="p-4 rounded-xl border border-cyan-500/20 bg-white/5 backdrop-blur-sm text-center">
-              <div className="text-2xl font-bold font-display text-cyan-400">AES-256 GCM</div>
+            <div className="p-4 rounded-xl border border-white/10 bg-navy-900/30 backdrop-blur-md">
+              <div className="text-2xl font-bold font-display text-brand-400">AES-256 GCM</div>
               <div className="text-xs text-slate-300 mt-1 font-medium">Column-Level Encryption</div>
             </div>
-            <div className="p-4 rounded-xl border border-cyan-500/20 bg-white/5 backdrop-blur-sm text-center">
-              <div className="text-2xl font-bold font-display text-cyan-400">ISO 27001</div>
+            <div className="p-4 rounded-xl border border-white/10 bg-navy-900/30 backdrop-blur-md">
+              <div className="text-2xl font-bold font-display text-brand-400">ISO 27001</div>
               <div className="text-xs text-slate-300 mt-1 font-medium">ISMS Framework Compliance</div>
             </div>
-            <div className="p-4 rounded-xl border border-cyan-500/20 bg-white/5 backdrop-blur-sm text-center">
-              <div className="text-2xl font-bold font-display text-cyan-400">99.99%</div>
+            <div className="p-4 rounded-xl border border-white/10 bg-navy-900/30 backdrop-blur-md">
+              <div className="text-2xl font-bold font-display text-brand-400">99.99%</div>
               <div className="text-xs text-slate-300 mt-1 font-medium">Uptime SLA Guarantee</div>
             </div>
           </div>

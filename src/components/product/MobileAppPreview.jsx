@@ -5,7 +5,7 @@ export default function MobileAppPreview() {
   const [clockedIn, setClockedIn] = useState(false);
 
   return (
-    <div className="mx-auto w-full max-w-[320px] sm:max-w-[340px] rounded-[42px] border-[8px] border-slate-800 bg-[#070b14]  shadow-2xl text-white relative select-none">
+    <div className="mx-auto w-full max-w-[310px] sm:max-w-[320px] rounded-[42px] border-[8px] border-slate-800 bg-[#070b14]  shadow-2xl text-white relative select-none">
       {/* Top Phone Frame Status Header */}
       <div className="flex items-center justify-between px-5 pt-1.5 pb-2 text-[11px] font-semibold text-white">
         <span>9:41</span>
@@ -171,27 +171,27 @@ export default function MobileAppPreview() {
         </div>
 
         {/* 5. BOTTOM NAVIGATION BAR */}
-        <div className="rounded-2xl bg-[#050913] border border-slate-800/80 px-4 py-2.5 flex items-center justify-between mt-2">
+        <div className="rounded-xl bg-orange-500 border border-slate-800/80 px-3 py-2 flex items-center justify-between mt-2">
           {/* Home Active */}
-          <div className="flex flex-col items-center gap-0.5 text-[#00c3f8] cursor-pointer">
+          <div className="flex flex-col items-center gap-0.5 text-slate-950 cursor-pointer">
             <UserCheck className="w-4 h-4" />
             <span className="text-[9px] font-extrabold">Home</span>
           </div>
 
           {/* Shifts */}
-          <div className="flex flex-col items-center gap-0.5 text-slate-400 hover:text-white cursor-pointer transition-colors">
+          <div className="flex flex-col items-center gap-0.5 text-slate-900 hover:text-white cursor-pointer transition-colors">
             <Calendar className="w-4 h-4" />
             <span className="text-[9px] font-medium">Shifts</span>
           </div>
 
           {/* Tasks */}
-          <div className="flex flex-col items-center gap-0.5 text-slate-400 hover:text-white cursor-pointer transition-colors">
+          <div className="flex flex-col items-center gap-0.5 text-slate-900 hover:text-white cursor-pointer transition-colors">
             <Sparkles className="w-4 h-4" />
             <span className="text-[9px] font-medium">Tasks</span>
           </div>
 
           {/* Profile */}
-          <div className="flex flex-col items-center gap-0.5 text-slate-400 hover:text-white cursor-pointer transition-colors">
+          <div className="flex flex-col items-center gap-0.5 text-slate-900 hover:text-white cursor-pointer transition-colors">
             <User className="w-4 h-4" />
             <span className="text-[9px] font-medium">Profile</span>
           </div>
