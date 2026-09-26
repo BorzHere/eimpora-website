@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MapPin, Clock, Calendar, Check, User, Sparkles, Network, UserCheck, ShieldCheck, ArrowRight } from 'lucide-react';
+import { MapPin, Clock, Calendar, Check, User, Sparkles, Network, House, ShieldCheck, ArrowRight } from 'lucide-react';
 
 export default function MobileAppPreview() {
   const [clockedIn, setClockedIn] = useState(false);
@@ -34,7 +34,7 @@ export default function MobileAppPreview() {
       <div className="rounded-b-[36px]  bg-navy-900/40 space-y-3 p-2 overflow-hidden">
 
         {/* 1. TOP PREMIUM USER PROFILE CARD */}
-        <div className="rounded-2xl bg-gradient-to-br from-[#0c1e38] via-[#09182d] to-[#040d1a] border border-[#00d4f5]/30 p-3.5 shadow-lg relative overflow-hidden">
+        <div className="rounded-2xl bg-gradient-to-br from-[#0c1e38] via-[#09182d] to-[#040d1a] border border-[#00d4f5]/30 p-3 shadow-lg relative overflow-hidden">
           {/* Subtle Cyan Glow Accent inside card */}
           <div className="absolute top-0 right-0 w-24 h-24 bg-[#00d4f5]/10 rounded-full blur-xl pointer-events-none" />
 
@@ -67,7 +67,7 @@ export default function MobileAppPreview() {
           </div>
 
           {/* Sub-Card: Today's Shift Status */}
-          <div className="mt-3 rounded-xl bg-navy-950/70 border border-white/10 p-2.5 flex items-center justify-between backdrop-blur-md">
+          <div className="mt-3 rounded-lg    flex items-center justify-between backdrop-blur-md">
             <div>
               <div className="text-[8px] font-black uppercase tracking-widest text-slate-400">
                 TODAY'S SHIFT
@@ -76,7 +76,7 @@ export default function MobileAppPreview() {
                 Operations Team
               </div>
             </div>
-            <div className="bg-orange-500/15 border border-orange-500/30 px-2.5 py-0.5 rounded-full text-[10px] font-extrabold text-orange-400">
+            <div className="bg-orange-500/15 border border-orange-500/30 px-2.5 py-0.5 rounded-full text-[10px] font-semibold text-orange-400">
               09:00 — 17:00
             </div>
           </div>
@@ -103,12 +103,12 @@ export default function MobileAppPreview() {
         </div>
 
         {/* 3. SHIFT CHECK-IN CARD */}
-        <div className="rounded-2xl bg-navy-950 border border-slate-800/80 p-3.5 space-y-3 shadow-lg">
+        <div className="rounded-2xl bg-navy-950 border border-slate-800/80 p-3 space-y-3 shadow-lg">
           <div className="flex items-center justify-between">
             <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#00c3f8]">
               SHIFT CHECK-IN
             </span>
-            <span className="bg-[#00c3f8]/15 border border-[#00c3f8]/30 text-[#00c3f8] font-bold text-[11px] px-2.5 py-0.5 rounded-full">
+            <span className="bg-[#00c3f8]/15 border border-[#00c3f8]/30 text-[#00c3f8] font-semibold text-[11px] px-2.5 py-0.5 rounded-full">
               08:58 AM
             </span>
           </div>
@@ -171,34 +171,35 @@ export default function MobileAppPreview() {
         </div>
 
         {/* 5. BOTTOM NAVIGATION BAR */}
-        <div className="rounded-xl bg-orange-500 border border-slate-800/80 px-3 py-2 flex items-center justify-between mt-2">
-          {/* Home Active */}
-          <div className="flex flex-col items-center gap-0.5 text-slate-950 cursor-pointer">
-            <UserCheck className="w-4 h-4" />
-            <span className="text-[9px] font-extrabold">Home</span>
-          </div>
+        <div>
+          <div className=" rounded-xl  bg-orange-500 border border-slate-800/80 px-3 py-1.5 flex items-center justify-between my-2">
+            {/* Home Active */}
+            <div className="flex flex-col items-center gap-0.5 text-slate-950 cursor-pointer">
+              <House className="w-4 h-4" />
+              <span className="text-[10px] font-extrabold">Home</span>
+            </div>
 
-          {/* Shifts */}
-          <div className="flex flex-col items-center gap-0.5 text-slate-900 hover:text-white cursor-pointer transition-colors">
-            <Calendar className="w-4 h-4" />
-            <span className="text-[9px] font-medium">Shifts</span>
-          </div>
+            {/* Shifts */}
+            <div className="flex flex-col items-center gap-0.5 text-slate-900 hover:text-white cursor-pointer transition-colors">
+              <Calendar className="w-4 h-4" />
+              <span className="text-[10px] font-medium">Shifts</span>
+            </div>
 
-          {/* Tasks */}
-          <div className="flex flex-col items-center gap-0.5 text-slate-900 hover:text-white cursor-pointer transition-colors">
-            <Sparkles className="w-4 h-4" />
-            <span className="text-[9px] font-medium">Tasks</span>
-          </div>
+            {/* Tasks */}
+            <div className="flex flex-col items-center gap-0.5 text-slate-900 hover:text-white cursor-pointer transition-colors">
+              <Sparkles className="w-4 h-4" />
+              <span className="text-[10px] font-medium">Tasks</span>
+            </div>
 
-          {/* Profile */}
-          <div className="flex flex-col items-center gap-0.5 text-slate-900 hover:text-white cursor-pointer transition-colors">
-            <User className="w-4 h-4" />
-            <span className="text-[9px] font-medium">Profile</span>
+            {/* Profile */}
+            <div className="flex flex-col items-center gap-0.5 text-slate-900 hover:text-white cursor-pointer transition-colors">
+              <User className="w-4 h-4" />
+              <span className="text-[10px] font-medium">Profile</span>
+            </div>
           </div>
         </div>
 
-        {/* iPhone Home Indicator Bar */}
-        <div className="w-24 h-1 bg-slate-600/80 rounded-full mx-auto mt-2 mb-1" />
+        
       </div>
     </div>
   );

@@ -50,9 +50,9 @@ export default function WorkforceOSSection({ data = WORKFORCE_OS_DATA }) {
                 {isPermissionsRow ? (
                   <>
                     <div className="lg:col-span-7 order-2 lg:order-1">
-                      <div className="bg-[#EFEAE2] rounded-3xl p-6 sm:p-10 relative overflow-hidden min-h-[480px] flex flex-col justify-center items-center group shadow-inner border border-stone-200/50">
+                      <div className="bg-[#EFEAE2] rounded-3xl p-6 sm:p-10 relative overflow-hidden  min-h-[480px] flex flex-col justify-center items-center group shadow-inner border border-stone-200/50">
                         <div className="w-full max-w-md space-y-4">
-                          <div className="bg-white/95 backdrop-blur-sm text-slate-800 px-4 py-2.5 rounded-2xl rounded-tr-xs text-xs sm:text-sm font-medium shadow-md border border-stone-200/80 max-w-xs ml-auto flex items-center gap-2 transition-transform duration-300 group-hover:-translate-y-0.5">
+                          <div className="bg-white/95 backdrop-blur-sm text-slate-800 animate-float px-4 py-2.5 rounded-xl rounded-tr-xs text-xs sm:text-sm font-medium shadow-md border border-stone-200/80 max-w-xs ml-auto flex items-center gap-2 transition-transform duration-300 group-hover:-translate-y-0.5">
                             <span>
                               {row.prompt.prefix}{' '}
                               <span className="underline decoration-brand-400 underline-offset-2 font-semibold text-brand-600 bg-brand-100/70 px-1 py-0.5 rounded">
@@ -62,7 +62,7 @@ export default function WorkforceOSSection({ data = WORKFORCE_OS_DATA }) {
                             </span>
                           </div>
 
-                          <div className="bg-white rounded-2xl shadow-xl border border-slate-200/80 p-6 w-full space-y-4 relative z-10 transition-all duration-300 hover:shadow-2xl">
+                          <div className="bg-white rounded-2xl shadow-xl border border-slate-200/80 p-6 w-full space-y-4 relative z-10 transition-all duration-300 hover:shadow-xl animate-float">
                             <div className="flex gap-3.5 items-start">
                               <div className="w-6 h-6  text-white flex items-center justify-center flex-shrink-0 mt-0.5 ">
                                 <Sparkles className="w-4 h-4 text-brand-600" />
@@ -216,7 +216,7 @@ export default function WorkforceOSSection({ data = WORKFORCE_OS_DATA }) {
                           </div>
                         </div>
 
-                        <div className="relative z-10 bg-white rounded-2xl shadow-xl border border-slate-200/80 p-6 sm:p-7 w-full max-w-sm transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 font-sans">
+                        <div className="relative z-10 bg-white rounded-2xl shadow-xl border border-slate-200/80 p-6 sm:p-7 w-full max-w-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1 font-sans animate-float">
                           <div className="flex items-center gap-4 border-b border-slate-100 pb-5">
                             <img
                               src={row.profile.image}

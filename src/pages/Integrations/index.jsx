@@ -6,6 +6,7 @@ import GlassCard from '../../components/common/GlassCard';
 import CTASection from '../../components/common/CTASection';
 import { INTEGRATIONS_DATA, INTEGRATION_CATEGORIES } from '../../data/integrationsData';
 import Stars from '../../components/home/Stars';
+import UnifiedDataMarquee from '../../components/home/UnifiedDataMarquee';
 
 export default function Integrations() {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -106,7 +107,7 @@ export default function Integrations() {
       </section>
 
       {/* Connectors Catalog (LIGHT SECTION) */}
-      <section className="relative py-24 bg-slate-50 text-navy-950">
+      <section className="relative py-24 bg-slate-50 text-navy-950 border-y border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Category Bar */}
           <div className="flex flex-wrap items-center justify-start gap-2 p-1.5 rounded-xl border border-slate-200 bg-white mb-12 shadow-sm">
@@ -162,6 +163,9 @@ export default function Integrations() {
           </div>
         </div>
       </section>
+
+      {/* INFINITE OPPOSITE-DIRECTION MARQUEE UNIFIED DATAPOINTS SECTION */}
+      <UnifiedDataMarquee />
 
       <CTASection />
     </div>

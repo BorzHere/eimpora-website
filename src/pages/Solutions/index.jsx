@@ -6,6 +6,7 @@ import GlassCard from '../../components/common/GlassCard';
 import CTASection from '../../components/common/CTASection';
 import { SOLUTIONS_DATA } from '../../data/solutionsData';
 import Stars from '../../components/home/Stars';
+import UnifiedDataMarquee from '../../components/home/UnifiedDataMarquee';
 
 export default function Solutions() {
   const [selectedSolution, setSelectedSolution] = useState(0);
@@ -149,6 +150,9 @@ export default function Solutions() {
         </div>
       </section>
 
+      {/* INFINITE OPPOSITE-DIRECTION MARQUEE UNIFIED DATAPOINTS SECTION */}
+      <UnifiedDataMarquee />
+
       {/* Solution FAQs Accordion (DARK SECTION) */}
       <section className="relative py-24 bg-navy-950 text-white border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -194,6 +198,8 @@ export default function Solutions() {
           </div>
         </div>
       </section>
+
+      
 
       <CTASection />
     </div>

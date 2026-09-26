@@ -69,7 +69,7 @@ export default function Footer() {
           <div className="flex items-center gap-6 text-white/85">
             <Link to="/privacy" className="hover:text-brand-400 transition-colors">Privacy</Link>
             <Link to="/terms" className="hover:text-brand-400 transition-colors">Terms</Link>
-            <Link to="/security" className="hover:text-brand-400 transition-colors">Security</Link>
+            {/* <Link to="/security" className="hover:text-brand-400 transition-colors">Security</Link> */}
             <Link to="/cookies" className="hover:text-brand-400 transition-colors">Cookies</Link>
           </div>
         </div>

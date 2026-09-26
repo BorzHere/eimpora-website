@@ -27,7 +27,7 @@ export function LogoMark({ className = "h-8 w-8" }) {
         </radialGradient>
       </defs>
 
-      <circle cx="110" cy="110" r="106" fill="none" stroke="url(#ringOrange)" strokeWidth="30" strokeLinecap="round" strokeDasharray="455 120" />
+      <circle cx="110" cy="110" r="107" fill="none" stroke="url(#ringOrange)" strokeWidth="31" strokeLinecap="round" strokeDasharray="455 120" />
       <circle cx="110" cy="110" r="74" fill="url(#innerBlue)" />
       <circle cx="110" cy="110" r="60" fill="none" stroke="#0B1C33" strokeWidth="2" opacity="0.9" />
 

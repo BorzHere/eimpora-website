@@ -19,6 +19,13 @@ export default function ResourceDetail() {
   // Other related resources (exclude current)
   const relatedResources = RESOURCES_DATA.filter((r) => r.slug !== res.slug).slice(0, 3);
 
+  const executiveTakeaways = [
+    'Unified enterprise architectures eliminate up to 3.2% annual payroll calculation leakage.',
+    'Governed AI ensures human authorization for all workforce operational recommendations.',
+    'Cryptographically hashed audit trails ensure immediate statutory compliance verification.',
+    'Zero-downtime cutover scripts enable migration of 20,000+ records in 48 hours.'
+  ];
+
   return (
     <div className=" space-y-16 ">
      
@@ -107,51 +114,56 @@ export default function ResourceDetail() {
       </div>
 
       {/* Executive Summary Takeaways Box */}
-      <section className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mt-10 p-6 sm:p-8 rounded-2xl border border-brand-500/30 bg-navy-900/90 shadow-cyan-glow space-y-4">
-          <h3 className="font-display font-bold text-lg text-brand-300 flex items-center gap-2">
-            <Sparkles className="w-5 h-5 text-brand-400" /> Key Executive Takeaways
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs sm:text-sm text-slate-200">
-            <div className="flex items-start gap-2.5 p-3 rounded-xl bg-white/5 border border-white/5">
-              <CheckCircle2 className="w-4 h-4 text-orange-400 shrink-0 mt-0.5" />
-              <span>Unified enterprise architectures eliminate up to 3.2% annual payroll calculation leakage.</span>
+      <section className="relative bg-slate-50 py-16">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+            <div className="mb-6 flex items-center justify-between gap-3 border-b border-slate-200 pb-4">
+              <h3 className="font-display font-bold text-lg sm:text-xl md:text-2xl text-slate-900 flex items-center gap-2">
+                <Sparkles className="w-5 h-5 text-brand-400" /> Key Executive Takeaways
+              </h3>
+              <span className="rounded-full border border-brand-200 bg-brand-50 px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-brand-700">
+                Executive Brief
+              </span>
             </div>
-            <div className="flex items-start gap-2.5 p-3 rounded-xl bg-white/5 border border-white/5">
-              <CheckCircle2 className="w-4 h-4 text-orange-400 shrink-0 mt-0.5" />
-              <span>Governed AI ensures human authorization for all workforce operational recommendations.</span>
-            </div>
-            <div className="flex items-start gap-2.5 p-3 rounded-xl bg-white/5 border border-white/5">
-              <CheckCircle2 className="w-4 h-4 text-orange-400 shrink-0 mt-0.5" />
-              <span>Cryptographically hashed audit trails ensure immediate statutory compliance verification.</span>
-            </div>
-            <div className="flex items-start gap-2.5 p-3 rounded-xl bg-white/5 border border-white/5">
-              <CheckCircle2 className="w-4 h-4 text-orange-400 shrink-0 mt-0.5" />
-              <span>Zero-downtime cutover scripts enable migration of 20,000+ records in 48 hours.</span>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-slate-700">
+              {executiveTakeaways.map((item) => (
+                <div key={item} className="group rounded-xl border border-slate-200 bg-slate-50 p-4 transition-all duration-200 hover:border-brand-200 hover:bg-brand-50/40">
+                  <div className="flex items-start gap-3">
+                    <div className="mt-0.5 flex h-8 w-8 items-center justify-center rounded-lg  text-orange-500">
+                      <CheckCircle2 className="w-4 h-4" />
+                    </div>
+                    <p className="leading-relaxed text-slate-700">{item}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
       {/* Article Content Sections */}
-      <section className="mt-12 space-y-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {res.sections.map((sec, idx) => (
-          <div
-            key={idx}
-            className="p-6 sm:p-8 rounded-2xl border border-white/10 bg-navy-900/60 space-y-3 hover:border-brand-500/30 transition-all shadow-lg"
-          >
-            <div className="flex items-center gap-2 text-xs font-bold text-brand-400 uppercase tracking-widest">
-              <span>Section 0{idx + 1}</span>
+      
+      <section className="relative bg-gradient-to-t from-navy-900/40 to-navy-950 py-20">
+        <div className=" space-y-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {res.sections.map((sec, idx) => (
+            <div
+              key={idx}
+              className="p-6 sm:p-8 rounded-2xl border border-white/10 bg-navy-900/60 space-y-3 hover:border-brand-500/30 transition-all shadow-lg"
+            >
+              <div className="flex items-center gap-2 text-xs font-bold text-brand-400 uppercase tracking-widest">
+                <span>Section 0{idx + 1}</span>
+              </div>
+              <h2 className="font-display font-bold text-xl sm:text-2xl text-white">{sec.title}</h2>
+              <p className="text-sm sm:text-base text-slate-300 leading-relaxed">{sec.content}</p>
+              
+              <div className="pt-3 border-t border-white/5 flex items-center justify-between text-xs text-slate-400">
+                <span>Eimpora Architectural Standard</span>
+                <span className="text-orange-300 font-semibold">Verified Spec</span>
+              </div>
             </div>
-            <h2 className="font-display font-bold text-xl sm:text-2xl text-white">{sec.title}</h2>
-            <p className="text-sm sm:text-base text-slate-300 leading-relaxed">{sec.content}</p>
-            
-            <div className="pt-3 border-t border-white/5 flex items-center justify-between text-xs text-slate-400">
-              <span>Eimpora Architectural Standard</span>
-              <span className="text-orange-300 font-semibold">Verified Spec</span>
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </section>
 
       {/* Related Resources Grid */}

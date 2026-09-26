@@ -94,7 +94,7 @@ export default function Pricing() {
                         onClick={() => toggleDomain(dom.id)}
                         className={`w-full text-left p-3 rounded-xl border text-xs font-semibold transition-all flex items-center justify-between ${
                           isChecked
-                            ? 'border-brand-500 bg-brand-500/10 text-navy-600 shadow-sm shadow-brand-500/10'
+                            ? 'border-brand-500 bg-brand-500/10 text-navy-800 shadow-sm shadow-brand-500/10'
                             : 'border-slate-200 bg-slate-50 text-slate-700 hover:border-brand-400/60 hover:bg-brand-50'
                         }`}
                       >

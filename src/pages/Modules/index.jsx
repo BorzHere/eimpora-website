@@ -6,7 +6,8 @@ import GlassCard from '../../components/common/GlassCard';
 import CTASection from '../../components/common/CTASection';
 import { MODULES_DATA, MODULE_DOMAINS } from '../../data/modulesData';
 import Stars from '../../components/home/Stars';
-import ModuleFlowDiagram from '../../components/product/ModuleFlowDiagram';
+// import ModuleFlowDiagram from '../../components/product/ModuleFlowDiagram';
+import UnifiedDataMarquee from '../../components/home/UnifiedDataMarquee';
 
 export default function Modules() {
   const [selectedDomain, setSelectedDomain] = useState('all');
@@ -64,11 +65,10 @@ export default function Modules() {
               <button
                 key={dom.id}
                 onClick={() => setSelectedDomain(dom.id)}
-                className={`px-4 py-2 rounded-lg text-xs font-bold transition-all ${
-                  selectedDomain === dom.id
-                    ? 'bg-brand-600 text-white shadow-md'
-                    : 'text-slate-600 hover:text-navy-950'
-                }`}
+                className={`px-4 py-2 rounded-lg text-xs font-bold transition-all ${selectedDomain === dom.id
+                  ? 'bg-brand-600 text-white shadow-md'
+                  : 'text-slate-600 hover:text-navy-950'
+                  }`}
               >
                 {dom.name}
               </button>
@@ -127,8 +127,8 @@ export default function Modules() {
         </div>
       </section>
 
-      {/* Animated Cyan & Orange Module Flow SVG Section (White Background) */}
-      <ModuleFlowDiagram />
+      {/* INFINITE OPPOSITE-DIRECTION MARQUEE UNIFIED DATAPOINTS SECTION */}
+      <UnifiedDataMarquee />
 
       <CTASection />
     </div>

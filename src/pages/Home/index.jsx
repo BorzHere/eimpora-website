@@ -32,7 +32,7 @@ export default function Home() {
     <div className="space-y-0">
       {/* SECTION 1 — ENTERPRISE HERO (DARK SECTION WITH EIMPORA HEXAGON SVG) */}
       <section className="relative pt-32 pb-24 overflow-hidden bg-navy-950 text-white">
-        {/* <img src={SideLogo} alt="Eimpora Hexagon Illustration" className="w-1/3 absolute bottom-16 right-20 animate-float" /> */}
+        <img src={SideLogo} alt="Eimpora Hexagon Illustration" className="w-1/3 absolute bottom-16 right-20 animate-float" />
         <div className="absolute inset-0 bg-radial-glow opacity-80" aria-hidden="true" />
         <div className="absolute inset-0 bg-grid-pattern opacity-30" aria-hidden="true" />
 
@@ -321,7 +321,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SECTION 8 — MOBILE APP & FIELD EXPERIENCE (PREMIUM SECTION) */}
+      {/* SECTION 7 — MOBILE APP & FIELD EXPERIENCE (PREMIUM SECTION) */}
       <section className="relative py-24 bg-white text-navy-950 border-y border-slate-200/80 overflow-hidden">
         {/* Background Ambient Glows */}
         <div className="absolute top-1/2 right-10 -translate-y-1/2 w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-3xl pointer-events-none" />
@@ -394,7 +394,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SECTION 7 — AI INTELLIGENCE (DARK ACCENT SECTION) */}
+      {/* SECTION 8 — AI INTELLIGENCE (DARK ACCENT SECTION) */}
       <section className="relative py-24 bg-navy-900 text-white border-y border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
@@ -453,11 +453,10 @@ export default function Home() {
         </div>
       </section>
 
+      {/* SECTION 11 — Workforce OS Section */}
       <WorkforceOSSection />
 
-      
-
-      {/* SECTION 13 — UNIFIED VS FRAGMENTED POSITIONING (DARK SECTION) */}
+      {/* SECTION 12 — UNIFIED VS FRAGMENTED POSITIONING (DARK SECTION) */}
       <section className="relative py-24 bg-navy-950 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
@@ -503,7 +502,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SECTION 14 — FINAL DEMO CTA */}
+      {/* SECTION 13 — FINAL DEMO CTA */}
       <CTASection />
     </div>
   );

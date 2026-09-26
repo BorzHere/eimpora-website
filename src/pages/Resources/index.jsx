@@ -6,6 +6,7 @@ import GlassCard from '../../components/common/GlassCard';
 import CTASection from '../../components/common/CTASection';
 import { RESOURCES_DATA, RESOURCE_CATEGORIES } from '../../data/resourcesData';
 import Stars from '../../components/home/Stars';
+import UnifiedDataMarquee from '../../components/home/UnifiedDataMarquee';
 
 export default function Resources() {
   const [selectedCat, setSelectedCat] = useState('all');
@@ -107,6 +108,9 @@ export default function Resources() {
           </div>
         </div>
       </section>
+
+      {/* INFINITE OPPOSITE-DIRECTION MARQUEE UNIFIED DATAPOINTS SECTION */}
+      <UnifiedDataMarquee />
 
       <CTASection />
     </div>
